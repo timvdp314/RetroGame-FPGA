@@ -60,15 +60,12 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11856-LAPTOP-LCHRPCJC/incrSyn
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
@@ -80,7 +77,7 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.runs/synth_1/top.dcp
-  read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
+  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
   read_xdc C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

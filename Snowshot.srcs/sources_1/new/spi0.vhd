@@ -37,7 +37,8 @@ entity spi0 is
            spi_sck : in STD_LOGIC;
            spi_mosi : in STD_LOGIC;
            spi_cs : in STD_LOGIC;
-           data_out : out STD_LOGIC_VECTOR (27 downto 0));
+           data_out : out STD_LOGIC_VECTOR (27 downto 0);
+           spi_confirm : out STD_LOGIC);
 end spi0;
 
 architecture Behavioral of spi0 is
@@ -74,7 +75,14 @@ begin
             
             if (clk_cycle >= CLK_MAX) then
                 data_out <= s_data_out;
+
+                if ( to_integer(unsigned(s_data_out)) = 0 ) then
+                    spi_confirm <= '1';
+                end if;
+
                 clk_cycle <= 0;
+            else
+                spi_confirm <= '0';
             end if;
             
             sck_prev <= spi_sck;

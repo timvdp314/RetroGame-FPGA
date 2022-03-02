@@ -18,7 +18,6 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -58,7 +57,8 @@ component spi0 is
            spi_sck : in STD_LOGIC;
            spi_mosi : in STD_LOGIC;
            spi_cs : in STD_LOGIC;
-           data_out : out STD_LOGIC_VECTOR (27 downto 0));
+           data_out : out STD_LOGIC_VECTOR (27 downto 0);
+           spi_confirm : out STD_LOGIC);
 end component;
 
 
@@ -67,9 +67,9 @@ component engine is
             reset : in STD_LOGIC;
             pixel_xcoord : in INTEGER range 0 to 800;
             pixel_ycoord : in INTEGER range 0 to 521;
-            sprite_x : in INTEGER range 0 to 800;
-            sprite_y : in INTEGER range 0 to 521;
-            en : out STD_LOGIC;
+            sprite_data : in STD_LOGIC_VECTOR(27 downto 0);
+            spi_confirm : in STD_LOGIC;
+            en : out integer range 0 to 7; 
             countreset : out STD_LOGIC          
            );
 end component;
@@ -88,7 +88,7 @@ component rom is
     Port (clk          : in STD_LOGIC;
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
-          en           : in STD_LOGIC;
+          en           : in INTEGER range 0 to 7;
           ergb         : out std_logic_vector(12 downto 0)
           );
 end component;
@@ -112,45 +112,37 @@ signal s_spi_sck : STD_LOGIC;
 signal s_ergb : STD_LOGIC_VECTOR(12 downto 0);
 signal s_pixel_xcoord : INTEGER range 0 to 800;
 signal s_pixel_ycoord : INTEGER range 0 to 521;
-signal s_en : STD_LOGIC;
+signal s_en : integer range 0 to 7;
 signal s_countreset : STD_LOGIC;
 
-signal s_sprite_x : STD_LOGIC_VECTOR(9 downto 0);
-signal s_sprite_y : STD_LOGIC_VECTOR(9 downto 0);
-signal s_temp : STD_LOGIC_VECTOR(7 downto 0);
-
-signal i_sprite_x : INTEGER range 0 to 800;
-signal i_sprite_y : INTEGER range 0 to 521;
+signal s_data_out : STD_LOGIC_VECTOR(27 downto 0);
+signal s_spi_confirm : STD_LOGIC;
 
 begin
 
-    S0: clk_sync port map(clk => clk,
+    S0: clk_sync port map(clk => s_clk_vga,
                           clk_in => spi_sck,
                           clk_out => s_spi_sck);
 
-    S1: spi0 port map(clk => clk,
+    S1: spi0 port map(clk => s_clk_vga,
                       reset => reset,
                       spi_sck => s_spi_sck,
                       spi_mosi => spi_mosi,
                       spi_cs => spi_cc0,
-                      data_out(9 downto 0) => s_sprite_x,
-                      data_out(19 downto 10) => s_sprite_y,
-                      data_out(27 downto 20) => s_temp);
+                      data_out => s_data_out,
+                      spi_confirm => s_spi_confirm);
 
 
 	X0: clk_vga port map(clk_in => clk, 
 						 reset => reset, 
 						 clk_out => s_clk_vga);
 
-    i_sprite_x <= to_integer(unsigned(s_sprite_x));
-    i_sprite_y <= to_integer(unsigned(s_sprite_y));
-
     X1: engine port map(clk => s_clk_vga,
                         reset => reset,
                         pixel_xcoord => s_pixel_xcoord,
                         pixel_ycoord => s_pixel_ycoord,
-                        sprite_x => i_sprite_x,
-                        sprite_y => i_sprite_y,
+                        sprite_data => s_data_out,
+                        spi_confirm => s_spi_confirm,
                         en => s_en,
                         countreset => s_countreset);
 

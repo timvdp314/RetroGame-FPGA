@@ -18,10 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11856-LAPTOP-LCHRPCJC/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,12 +36,12 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/rom.vhd
+  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
 }
-read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc]
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_ooc.xdc]
