@@ -32,28 +32,23 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+use WORK.CONST_VGA.ALL;
+use WORK.CONST_SPRITES.ALL;
+use WORK.CONST_MISC.ALL;
+
 entity engine is
     Port (  clk : in STD_LOGIC;
             reset : in STD_LOGIC;
-            pixel_xcoord : in INTEGER range 0 to 800;
-            pixel_ycoord : in INTEGER range 0 to 521;
-            sprite_data : in STD_LOGIC_VECTOR(27 downto 0);
+            pixel_xcoord : in INTEGER range 0 to SCREEN_WIDTH;
+            pixel_ycoord : in INTEGER range 0 to SCREEN_HEIGHT;
+            sprite_data : in STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
             spi_confirm : in STD_LOGIC;
-            en : out INTEGER range 0 to 7;
+            en : out INTEGER range 0 to (SPRITE_COUNT - 1);
             countreset : out STD_LOGIC     
            );
 end engine;
 
 architecture Behavioral of engine is
-	-- Total screen size (including non-display area)
-	constant screen_width : integer := 800;
-	constant screen_height : integer := 521;
-
-	-- Display area
-    constant xmin : integer := 144;
-    constant xmax : integer := 784;
-	constant ymin : integer := 31;
-	constant ymax : integer := 511;
 
 	-- Square constants
 		-- Width and height
@@ -62,17 +57,17 @@ architecture Behavioral of engine is
 
     type struct_sprite is record
         en : std_logic;
-        x : integer range 0 to 800;
-        y : integer range 0 to 521;
+        x : integer range 0 to SCREEN_WIDTH;
+        y : integer range 0 to SCREEN_HEIGHT;
     end record struct_sprite;
 
-    type t_sprite_data is array (0 to 7) of struct_sprite;
+    type t_sprite_data is array (0 to (SPRITE_COUNT - 1) ) of struct_sprite;
 
     signal spr_data : t_sprite_data;
     signal spr_data_temp : t_sprite_data;
     signal spr_id : std_logic_vector(6 downto 0);
 
-    impure function checkSprite(id : integer range 0 to 7)
+    impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
     begin
         if 	(pixel_xcoord >= spr_data(id).x - (spr_width / 2) )  and 
@@ -108,7 +103,7 @@ begin
                 spr_data <= spr_data_temp;
             end if;
 
-            for I in 1 to 7 loop
+            for I in 1 to (SPRITE_COUNT - 1) loop
                 if ( checkSprite(I) = '1' ) then
                     en <= I;
                     exit;

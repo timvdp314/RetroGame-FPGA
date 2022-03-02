@@ -35,6 +35,7 @@ set_property ip_output_repo c:/Xilinx/Projects/RetroGame-FPGA/Snowshot.cache/ip 
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
+  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd

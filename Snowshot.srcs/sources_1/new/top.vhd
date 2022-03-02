@@ -50,6 +50,8 @@ component clk_sync is
            clk_out : out STD_LOGIC );
 end component;
 
+component constants is
+end component;
 
 component spi0 is
     Port ( clk : in STD_LOGIC;
