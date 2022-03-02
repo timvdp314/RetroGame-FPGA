@@ -32,24 +32,26 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+use WORK.CONST_SPRITES.ALL;
+
 entity rom is
       Port (clk          : in STD_LOGIC;
             reset        : in STD_LOGIC;
             countreset   : in STD_LOGIC;
-            en           : in integer range 0 to 7;
+            en           : in integer range 0 to (SPRITE_COUNT - 1);
             ergb         : out std_logic_vector(12 downto 0)
             );
 end rom;
 
 architecture Behavioral of rom is
 
-    type t_clk_count is array (0 to 7) of integer range 0 to 255;
+    type t_clk_count is array (0 to (SPRITE_COUNT - 1) ) of integer range 0 to 255;
 
     constant blockheight : integer := 10;
     constant blockwidth : integer := 10;
 
 	signal clk_count : t_clk_count;
-    signal i_address : integer range 0 to 7;
+    signal i_address : integer range 0 to (SPRITE_COUNT - 1);
 
 Type RomType is array (0 to blockheight - 1, 0 to blockwidth - 1) of std_logic_vector(12 downto 0);
 --type RomType is array (NATURAL rang <>) of std_logic_vector(12 downto 0);
@@ -118,14 +120,9 @@ begin
 
     if (reset = '1') then
         
-        clk_count(0) <= 0;
-        clk_count(1) <= 0;
-        clk_count(2) <= 0;
-        clk_count(3) <= 0;
-        clk_count(4) <= 0;
-        clk_count(5) <= 0;
-        clk_count(6) <= 0;
-        clk_count(7) <= 0;
+        for I in 0 to (SPRITE_COUNT - 1) loop
+            clk_count(I) <= 0;
+        end loop;
 
     elsif ( rising_edge(clk) ) then
 
@@ -144,14 +141,9 @@ begin
         end if;    
 
         if (countreset = '1') then
-            clk_count(0) <= 0;
-            clk_count(1) <= 0;
-            clk_count(2) <= 0;
-            clk_count(3) <= 0;
-            clk_count(4) <= 0;
-            clk_count(5) <= 0;
-            clk_count(6) <= 0;
-            clk_count(7) <= 0;
+            for I in 0 to (SPRITE_COUNT - 1) loop
+                clk_count(I) <= 0;
+            end loop;
         end if;
     end if;
 
