@@ -70,6 +70,7 @@ component engine is
             sprite_data : in STD_LOGIC_VECTOR(27 downto 0);
             spi_confirm : in STD_LOGIC;
             en : out integer range 0 to 7; 
+            rgb_background : out STD_LOGIC_VECTOR(11 downto 0);
             countreset : out STD_LOGIC          
            );
 end component;
@@ -98,6 +99,7 @@ component vga is
     Port ( 	clk : in STD_LOGIC;
             reset : in STD_LOGIC;
 			rgb_data : in STD_LOGIC_VECTOR(11 downto 0);
+            rgb_background : in STD_LOGIC_VECTOR(11 downto 0);
 			rgb_en : in STD_LOGIC;
 			pixel_xcoord : out INTEGER range 0 to 800; 
 			pixel_ycoord : out INTEGER range 0 to 512;
@@ -114,6 +116,7 @@ signal s_pixel_xcoord : INTEGER range 0 to 800;
 signal s_pixel_ycoord : INTEGER range 0 to 521;
 signal s_en : integer range 0 to 7;
 signal s_countreset : STD_LOGIC;
+signal s_rgb_background : STD_LOGIC_VECTOR(11 downto 0);
 
 signal s_data_out : STD_LOGIC_VECTOR(27 downto 0);
 signal s_spi_confirm : STD_LOGIC;
@@ -143,6 +146,7 @@ begin
                         pixel_ycoord => s_pixel_ycoord,
                         sprite_data => s_data_out,
                         spi_confirm => s_spi_confirm,
+                        rgb_background => s_rgb_background,
                         en => s_en,
                         countreset => s_countreset);
 
@@ -155,6 +159,7 @@ begin
 	X3: vga port map(clk => s_clk_vga, 
 					 reset => reset,
 					 rgb_data => s_ergb(11 downto 0),
+                     rgb_background => s_rgb_background,
 					 rgb_en => s_ergb(12),
 					 pixel_xcoord => s_pixel_xcoord,
 					 pixel_ycoord => s_pixel_ycoord,

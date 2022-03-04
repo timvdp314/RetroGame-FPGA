@@ -1,8 +1,13 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< Updated upstream
 | Date         : Wed Mar  2 10:01:09 2022
 | Host         : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
+=======
+| Date         : Fri Mar  4 12:11:42 2022
+| Host         : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
+>>>>>>> Stashed changes
 | Command      : report_clock_utilization -file top_clock_utilization_routed.rpt
 | Design       : top
 | Device       : 7a35t-cpg236
@@ -46,7 +51,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------+-----------------------+------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock            | Driver Pin            | Net                          |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------+-----------------------+------------------------------+
+<<<<<<< Updated upstream
 | g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |         484 |               0 |       40.000 | clk_out_clk_vga  | X0/inst/clkout1_buf/O | X0/inst/clk_out              |
+=======
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |         501 |               0 |       40.000 | clk_out_clk_vga  | X0/inst/clkout1_buf/O | X0/inst/clk_out              |
+>>>>>>> Stashed changes
 | g1        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_vga | X0/inst/clkf_buf/O    | X0/inst/clkfbout_buf_clk_vga |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------+-----------------------+------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -74,7 +83,11 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+<<<<<<< Updated upstream
 | X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  484 |  1200 |  197 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+=======
+| X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  497 |  1200 |  199 |   400 |    0 |    20 |    1 |    10 |    0 |    20 |
+>>>>>>> Stashed changes
 | X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
@@ -103,7 +116,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------------+-------------+----------------+-------------+----------+----------------+----------+-----------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock           | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net             |
 +-----------+-----------------+-------------------+-----------------+-------------+----------------+-------------+----------+----------------+----------+-----------------+
-| g0        | BUFG/O          | n/a               | clk_out_clk_vga |      40.000 | {0.000 20.000} |         484 |        0 |              0 |        0 | X0/inst/clk_out |
+| g0        | BUFG/O          | n/a               | clk_out_clk_vga |      40.000 | {0.000 20.000} |         499 |        0 |              0 |        0 | X0/inst/clk_out |
 +-----------+-----------------+-------------------+-----------------+-------------+----------------+-------------+----------+----------------+----------+-----------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -116,7 +129,11 @@ All Modules
 +----+------+----+
 | Y2 |    0 |  0 |
 | Y1 |    0 |  0 |
+<<<<<<< Updated upstream
 | Y0 |  484 |  0 |
+=======
+| Y0 |  499 |  0 |
+>>>>>>> Stashed changes
 +----+------+----+
 
 
@@ -149,7 +166,11 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net             |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------+
+<<<<<<< Updated upstream
 | g0        | n/a   | BUFG/O          | None       |         484 |               0 | 484 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | X0/inst/clk_out |
+=======
+| g0        | n/a   | BUFG/O          | None       |         499 |               0 | 497 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | X0/inst/clk_out |
+>>>>>>> Stashed changes
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)

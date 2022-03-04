@@ -39,7 +39,8 @@ entity engine is
             pixel_ycoord : in INTEGER range 0 to 521;
             sprite_data : in STD_LOGIC_VECTOR(27 downto 0);
             spi_confirm : in STD_LOGIC;
-            en : out INTEGER range 0 to 7;
+            en : out INTEGER range 0 to (SPRITE_COUNT - 1);
+            rgb_background : out STD_LOGIC_VECTOR(11 downto 0);
             countreset : out STD_LOGIC     
            );
 end engine;
@@ -49,11 +50,15 @@ architecture Behavioral of engine is
 	constant screen_width : integer := 800;
 	constant screen_height : integer := 521;
 
-	-- Display area
-    constant xmin : integer := 144;
-    constant xmax : integer := 784;
-	constant ymin : integer := 31;
-	constant ymax : integer := 511;
+component blk_mem_gen_0 is
+  Port ( 
+    clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+  );
+
+end component blk_mem_gen_0;
 
 	-- Square constants
 		-- Width and height
@@ -71,6 +76,7 @@ architecture Behavioral of engine is
     signal spr_data : t_sprite_data;
     signal spr_data_temp : t_sprite_data;
     signal spr_id : std_logic_vector(6 downto 0);
+    signal back_address : std_logic_vector (11 downto 0);
 
     impure function checkSprite(id : integer range 0 to 7)
               return std_logic is
@@ -89,15 +95,29 @@ architecture Behavioral of engine is
 
 begin
 
+    background_memory : blk_mem_gen_0 port map (
+    clka => clk,
+    ena => '1',
+    addra => back_address, --pixel waardes in 
+    douta => rgb_background); --dataoutput van de engine --rgb waardes uit
+
     process (clk, reset)
 
         variable spr_id : integer range 0 to 127;
+
+        variable x : integer range 0 to 50; 
+        variable y : integer range 0 to 50; 
 
     begin
 
         if (reset = '1') then
         
         elsif ( rising_edge(clk) ) then
+
+            x := pixel_xcoord mod 50;
+            y := pixel_ycoord mod 50;
+            
+            back_address <= std_logic_vector (to_unsigned (y * 50 + x,  back_address'length));
 
             spr_id := to_integer( unsigned(sprite_data(26 downto 20)) );
             spr_data_temp(spr_id).x <= to_integer( unsigned(sprite_data(9 downto 0)) );
