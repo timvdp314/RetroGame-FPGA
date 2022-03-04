@@ -21,6 +21,7 @@ entity vga is
     Port ( 	clk : in STD_LOGIC;
             reset : in STD_LOGIC;
 			rgb_data : in STD_LOGIC_VECTOR(11 downto 0);
+			rgb_background : in STD_LOGIC_VECTOR(11 downto 0);
 			rgb_en : in STD_LOGIC;
 			pixel_xcoord : out INTEGER range 0 to 800; 
 			pixel_ycoord : out INTEGER range 0 to 512;
@@ -33,19 +34,6 @@ architecture Behavioral of vga is
 	-- Total screen size (including non-display area)
 	constant screen_width : integer := 800;
 	constant screen_height : integer := 521;
-
-	-- Display area
-    constant xmin : integer := 144;
-    constant xmax : integer := 784;
-	constant ymin : integer := 31;
-	constant ymax : integer := 511;
-	constant rgb_background : STD_LOGIC_VECTOR(11 downto 0) := "0011"
-															&  "0011"
-															&  "0011";	
-
-	-- Clock counter
-	constant clk_count_max : integer := 25000000; -- 25*(10^6)
-	signal clk_count : integer;
 
 	-- Horizontal and vertical counters
 	signal hcount : integer range 0 to 800;
