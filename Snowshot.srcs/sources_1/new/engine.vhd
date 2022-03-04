@@ -34,6 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 use WORK.CONST_VGA.ALL;
 use WORK.CONST_SPRITES.ALL;
+use WORK.CONST_SPRITE_DATA.ALL;
 use WORK.CONST_MISC.ALL;
 
 entity engine is
@@ -50,11 +51,6 @@ end engine;
 
 architecture Behavioral of engine is
 
-	-- Square constants
-		-- Width and height
-		constant spr_width : integer := 10;
-		constant spr_height : integer := 10;
-
     type struct_sprite is record
         en : std_logic;
         x : integer range 0 to SCREEN_WIDTH;
@@ -70,10 +66,10 @@ architecture Behavioral of engine is
     impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
     begin
-        if 	(pixel_xcoord >= spr_data(id).x - (spr_width / 2) )  and 
-        (pixel_xcoord <  spr_data(id).x + (spr_width / 2) )  and 
-        (pixel_ycoord >= spr_data(id).y - (spr_height / 2) ) and
-        (pixel_ycoord <  spr_data(id).y + (spr_height / 2) ) and
+        if 	(pixel_xcoord >= spr_data(id).x - ( array_sprites(id).w / 2) )  and 
+        (pixel_xcoord <  spr_data(id).x + ( array_sprites(id).w / 2) )  and 
+        (pixel_ycoord >= spr_data(id).y - ( array_sprites(id).h / 2) ) and
+        (pixel_ycoord <  spr_data(id).y + ( array_sprites(id).h / 2) ) and
         (spr_data(id).en = '1') 
         then
             return '1';
@@ -102,7 +98,7 @@ begin
             if (spi_confirm = '1') then
                 spr_data <= spr_data_temp;
             end if;
-
+            
             for I in 1 to (SPRITE_COUNT - 1) loop
                 if ( checkSprite(I) = '1' ) then
                     en <= I;

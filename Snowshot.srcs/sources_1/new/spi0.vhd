@@ -45,7 +45,7 @@ end spi0;
 
 architecture Behavioral of spi0 is
 
-    signal clk_cycle : integer range 0 to CLK_MAX;
+    signal clk_cycle : integer range 0 to GFX_PACKET_SIZE;
     signal sck_prev : std_logic;
     signal s_data_out : std_logic_vector ( (GFX_PACKET_SIZE - 1) downto 0);
 
