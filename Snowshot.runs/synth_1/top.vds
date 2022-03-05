@@ -2,6 +2,7 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 # Start of session at: Wed Mar  2 09:59:28 2022
 # Process ID: 17748
@@ -14,6 +15,14 @@
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/synth_1/top.vds
 # Journal file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/synth_1\vivado.jou
+=======
+# Start of session at: Sat Mar  5 14:10:49 2022
+# Process ID: 18308
+# Current directory: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/top.vds
+# Journal file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1\vivado.jou
+>>>>>>> feature_multisprite
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a35tcpg236-1
@@ -22,6 +31,7 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 INFO: Helper process launched with PID 17996 
 ---------------------------------------------------------------------------------
@@ -38,27 +48,49 @@ INFO: [Synth 8-3491] module 'clk_vga' declared at 'C:/Xilinx/Projects/RetroGame-
 INFO: [Synth 8-638] synthesizing module 'clk_vga' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.runs/synth_1/.Xil/Vivado-17748-LAPTOP-LCHRPCJC/realtime/clk_vga_stub.vhdl:14]
 INFO: [Synth 8-3491] module 'engine' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:35' bound to instance 'X1' of component 'engine' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:140]
 INFO: [Synth 8-638] synthesizing module 'engine' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:47]
+=======
+INFO: Helper process launched with PID 3508 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 732.918 ; gain = 178.328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:49]
+INFO: [Synth 8-3491] module 'clk_sync' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:34' bound to instance 'S0' of component 'clk_sync' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'clk_sync' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'clk_sync' (1#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-3491] module 'spi0' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:36' bound to instance 'S1' of component 'spi0' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:133]
+INFO: [Synth 8-638] synthesizing module 'spi0' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'spi0' (2#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-3491] module 'clk_vga' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/.Xil/Vivado-18308-LAPTOP-LCHRPCJC/realtime/clk_vga_stub.vhdl:5' bound to instance 'X0' of component 'clk_vga' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'clk_vga' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/.Xil/Vivado-18308-LAPTOP-LCHRPCJC/realtime/clk_vga_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'engine' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:40' bound to instance 'X1' of component 'engine' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'engine' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:53]
+INFO: [Synth 8-3491] module 'rom_bg' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/.Xil/Vivado-18308-LAPTOP-LCHRPCJC/realtime/rom_bg_stub.vhdl:5' bound to instance 'B0' of component 'rom_bg' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'rom_bg' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/.Xil/Vivado-18308-LAPTOP-LCHRPCJC/realtime/rom_bg_stub.vhdl:15]
+>>>>>>> feature_multisprite
 WARNING: [Synth 8-5858] RAM spr_data_temp_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-5858] RAM spr_data_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-6014] Unused sequential element spr_id_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:102]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][en] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][x] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][y] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:103]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][en] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:78]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][x] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:78]
-WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][y] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:78]
-INFO: [Synth 8-256] done synthesizing module 'engine' (3#1) [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:47]
-INFO: [Synth 8-3491] module 'rom' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:35' bound to instance 'X2' of component 'rom' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'rom' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:44]
-WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:132]
-WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:133]
-INFO: [Synth 8-256] done synthesizing module 'rom' (4#1) [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:44]
-INFO: [Synth 8-3491] module 'vga' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:20' bound to instance 'X3' of component 'vga' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'vga' [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'vga' (5#1) [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element spr_id_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:117]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][en] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][x] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][y] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][en] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][x] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:83]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][y] was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'engine' (3#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:53]
+INFO: [Synth 8-3491] module 'rom' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:38' bound to instance 'X2' of component 'rom' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:156]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:47]
+WARNING: [Synth 8-6014] Unused sequential element w_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element h_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:74]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'rom' (4#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:47]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:21' bound to instance 'X3' of component 'vga' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'vga' (5#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:49]
 WARNING: [Synth 8-3331] design top has unconnected port spi_cc1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 796.590 ; gain = 242.078
 =======
 INFO: Helper process launched with PID 20060 
@@ -102,6 +134,9 @@ WARNING: [Synth 8-3331] design top has unconnected port spi_cc1
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 796.391 ; gain = 241.398
 >>>>>>> Stashed changes
+=======
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 799.770 ; gain = 245.180
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -114,6 +149,7 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 796.590 ; gain = 242.078
 ---------------------------------------------------------------------------------
@@ -125,11 +161,18 @@ Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 796.391 ; gain = 241.398
 >>>>>>> Stashed changes
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 799.770 ; gain = 245.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 799.770 ; gain = 245.180
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+<<<<<<< HEAD
 Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc] for cell 'X0'
 Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc] for cell 'X0'
 Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
@@ -165,11 +208,50 @@ Completed Processing XDC Constraints
 
 <<<<<<< Updated upstream
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 927.316 ; gain = 0.000
+=======
+Parsing XDC File [c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc] for cell 'X0'
+Finished Parsing XDC File [c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc] for cell 'X0'
+Parsing XDC File [c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg/rom_bg_in_context.xdc] for cell 'X1/B0'
+Finished Parsing XDC File [c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg/rom_bg_in_context.xdc] for cell 'X1/B0'
+Parsing XDC File [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:64]
+Finished Parsing XDC File [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.293 ; gain = 0.000
+>>>>>>> feature_multisprite
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 927.316 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 929.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 927.316 ; gain = 372.805
 =======
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 928.199 ; gain = 0.000
@@ -180,25 +262,39 @@ Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 928.199 ; gain = 373.207
 >>>>>>> Stashed changes
+=======
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.293 ; gain = 374.703
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 927.316 ; gain = 372.805
 =======
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 928.199 ; gain = 373.207
 >>>>>>> Stashed changes
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.293 ; gain = 374.703
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc}, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc}, line 4).
+=======
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga/clk_vga_in_context.xdc, line 4).
+>>>>>>> feature_multisprite
 Applied set_property DONT_TOUCH = true for X0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for X1/B0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 927.316 ; gain = 372.805
 ---------------------------------------------------------------------------------
@@ -210,6 +306,12 @@ Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; el
 ---------------------------------------------------------------------------------
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 928.199 ; gain = 373.207
 >>>>>>> Stashed changes
+=======
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 929.293 ; gain = 374.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 929.293 ; gain = 374.703
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,31 +324,34 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     14 Bit       Adders := 1     
 	   3 Input     11 Bit       Adders := 14    
 	   2 Input     11 Bit       Adders := 14    
 	   2 Input     10 Bit       Adders := 16    
-	   2 Input      8 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	               28 Bit    Registers := 2     
+	               14 Bit    Registers := 8     
 	               13 Bit    Registers := 1     
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 32    
-	                8 Bit    Registers := 8     
 	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 22    
 +---Muxes : 
 	   2 Input     28 Bit        Muxes := 1     
-	  10 Input     13 Bit        Muxes := 3     
-	   4 Input     13 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 24    
+	   8 Input     13 Bit        Muxes := 13    
+	   4 Input     13 Bit        Muxes := 2     
+	  15 Input     13 Bit        Muxes := 9     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 24    
 	   2 Input      5 Bit        Muxes := 2     
+	   8 Input      5 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 3     
 	   3 Input      2 Bit        Muxes := 1     
-	  10 Input      2 Bit        Muxes := 1     
+	  15 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 42    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -289,15 +394,18 @@ Detailed RTL Component Info :
 Module rom 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
 +---Registers : 
+	               14 Bit    Registers := 8     
 	               13 Bit    Registers := 1     
-	                8 Bit    Registers := 8     
 +---Muxes : 
-	  10 Input     13 Bit        Muxes := 3     
-	   4 Input     13 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 24    
-	  10 Input      2 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 24    
+	   8 Input     13 Bit        Muxes := 13    
+	   4 Input     13 Bit        Muxes := 2     
+	  15 Input     13 Bit        Muxes := 9     
+	   8 Input      5 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	  15 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 32    
 Module vga 
 Detailed RTL Component Info : 
@@ -327,16 +435,21 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP bg_address_reg, operation Mode is: (C'+(A:0x32)*B2)'.
+DSP Report: register bg_y_reg is absorbed into DSP bg_address_reg.
+DSP Report: register bg_x_reg is absorbed into DSP bg_address_reg.
+DSP Report: register bg_address_reg is absorbed into DSP bg_address_reg.
+DSP Report: operator bg_address0 is absorbed into DSP bg_address_reg.
+DSP Report: operator bg_address1 is absorbed into DSP bg_address_reg.
 WARNING: [Synth 8-3331] design top has unconnected port spi_cc1
-INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[0]' (FDRE) to 'X2/ergb_reg[1]'
-INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[1]' (FDRE) to 'X2/ergb_reg[2]'
-INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[2]' (FDRE) to 'X2/ergb_reg[3]'
-INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[3]' (FDRE) to 'X2/ergb_reg[4]'
+INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[0]' (FDRE) to 'X2/ergb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[1]' (FDRE) to 'X2/ergb_reg[3]'
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[4]' (FDRE) to 'X2/ergb_reg[5]'
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[5]' (FDRE) to 'X2/ergb_reg[6]'
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[6]' (FDRE) to 'X2/ergb_reg[7]'
-INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[7]' (FDRE) to 'X2/ergb_reg[8]'
+INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[7]' (FDRE) to 'X2/ergb_reg[10]'
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[8]' (FDRE) to 'X2/ergb_reg[9]'
+<<<<<<< HEAD
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[9]' (FDRE) to 'X2/ergb_reg[10]'
 INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[10]' (FDRE) to 'X2/ergb_reg[11]'
 <<<<<<< Updated upstream
@@ -356,6 +469,26 @@ Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elaps
 ---------------------------------------------------------------------------------
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 928.199 ; gain = 373.207
 >>>>>>> Stashed changes
+=======
+INFO: [Synth 8-3886] merging instance 'X2/ergb_reg[9]' (FDRE) to 'X2/ergb_reg[11]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 929.293 ; gain = 374.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|engine      | (C'+(A:0x32)*B2)' | 6      | 12     | 6      | -      | 12     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -369,21 +502,29 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'X0/clk_out' to pin 'X0/bbstub_clk_out/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 927.316 ; gain = 372.805
 =======
 Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 928.199 ; gain = 373.207
 >>>>>>> Stashed changes
+=======
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 941.609 ; gain = 387.020
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 982.316 ; gain = 427.805
 =======
 Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 987.223 ; gain = 432.230
 >>>>>>> Stashed changes
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1126.445 ; gain = 571.855
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -395,11 +536,15 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 982.316 ; gain = 427.805
 =======
 Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -423,11 +568,15 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -440,11 +589,15 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -456,41 +609,57 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
 =======
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 988.234 ; gain = 433.242
 >>>>>>> Stashed changes
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
+>>>>>>> feature_multisprite
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -501,7 +670,11 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |clk_vga       |         1|
+<<<<<<< HEAD
 |2     |blk_mem_gen_0 |         1|
+=======
+|2     |rom_bg        |         1|
+>>>>>>> feature_multisprite
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -510,18 +683,20 @@ Report Cell Usage:
 |      |Cell           |Count |
 +------+---------------+------+
 |1     |clk_vga_bbox_0 |     1|
-|2     |CARRY4         |    70|
-|3     |LUT1           |     2|
-|4     |LUT2           |    24|
-|5     |LUT3           |    73|
-|6     |LUT4           |    96|
-|7     |LUT5           |   246|
-|8     |LUT6           |   172|
-|9     |MUXF7          |     7|
-|10    |FDCE           |   117|
-|11    |FDRE           |   357|
-|12    |IBUF           |     4|
-|13    |OBUF           |    14|
+|2     |rom_bg_bbox_1  |     1|
+|3     |CARRY4         |   114|
+|4     |DSP48E1        |     1|
+|5     |LUT1           |    12|
+|6     |LUT2           |    97|
+|7     |LUT3           |   105|
+|8     |LUT4           |   116|
+|9     |LUT5           |   283|
+|10    |LUT6           |   301|
+|11    |MUXF7          |     4|
+|12    |FDCE           |   165|
+|13    |FDRE           |   373|
+|14    |IBUF           |     4|
+|15    |OBUF           |    14|
 +------+---------------+------+
 =======
 +------+---------------------+------+
@@ -548,25 +723,30 @@ Report Instance Areas:
 +------+---------+---------+------+
 |      |Instance |Module   |Cells |
 +------+---------+---------+------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 |1     |top      |         |  1183|
+=======
+|1     |top      |         |  1602|
+>>>>>>> feature_multisprite
 |2     |  S0     |clk_sync |    34|
 |3     |  S1     |spi0     |    89|
-|4     |  X1     |engine   |   796|
-|5     |  X2     |rom      |   117|
-|6     |  X3     |vga      |   128|
+|4     |  X1     |engine   |  1038|
+|5     |  X2     |rom      |   236|
+|6     |  X3     |vga      |   168|
 +------+---------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1127.512 ; gain = 572.922
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 988.078 ; gain = 302.840
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 988.078 ; gain = 433.566
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1127.512 ; gain = 443.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1127.512 ; gain = 572.922
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+<<<<<<< HEAD
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.133 ; gain = 0.000
 =======
 |1     |top      |         |  1338|
@@ -589,10 +769,14 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.141 ; gain = 0.000
 >>>>>>> Stashed changes
+=======
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1127.512 ; gain = 0.000
+>>>>>>> feature_multisprite
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< HEAD
 45 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 <<<<<<< Updated upstream
@@ -611,3 +795,14 @@ INFO: [Common 17-206] Exiting Vivado at Wed Mar  2 10:00:02 2022...
 =======
 INFO: [Common 17-206] Exiting Vivado at Fri Mar  4 12:09:50 2022...
 >>>>>>> Stashed changes
+=======
+43 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1127.512 ; gain = 814.316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1127.512 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  5 14:11:37 2022...
+>>>>>>> feature_multisprite

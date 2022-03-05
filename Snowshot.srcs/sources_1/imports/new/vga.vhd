@@ -16,28 +16,26 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use WORK.CONST_VGA.ALL;
 
 entity vga is
     Port ( 	clk : in STD_LOGIC;
             reset : in STD_LOGIC;
-			rgb_data : in STD_LOGIC_VECTOR(11 downto 0);
-			rgb_background : in STD_LOGIC_VECTOR(11 downto 0);
+			rgb_data : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
+			rgb_background : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			rgb_en : in STD_LOGIC;
-			pixel_xcoord : out INTEGER range 0 to 800; 
-			pixel_ycoord : out INTEGER range 0 to 512;
-			rgb_out : out STD_LOGIC_VECTOR(11 downto 0);
+			pixel_xcoord : out INTEGER range 0 to SCREEN_WIDTH; 
+			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
+			rgb_out : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			hsync, vsync : out STD_LOGIC
 			);
 end vga;
 
 architecture Behavioral of vga is
-	-- Total screen size (including non-display area)
-	constant screen_width : integer := 800;
-	constant screen_height : integer := 521;
 
 	-- Horizontal and vertical counters
-	signal hcount : integer range 0 to 800;
-	signal vcount : integer range 0 to 521;
+	signal hcount : integer range 0 to SCREEN_WIDTH;
+	signal vcount : integer range 0 to SCREEN_HEIGHT;
 
 begin
 
@@ -54,7 +52,7 @@ begin
 		pixel_xcoord <= hcount;
 		pixel_ycoord <= vcount;
 
-		if (hcount >= xmin) and (hcount < xmax) and (vcount >= ymin) and (vcount < ymax) then
+		if (hcount >= XMIN) and (hcount < XMAX) and (vcount >= YMIN) and (vcount < YMAX) then
 			 if (rgb_en = '1') then
         	 	rgb_out <= rgb_data;
 			 else
@@ -65,13 +63,13 @@ begin
 			rgb_out <= (others => '0');
 	    end if;
 	    
-		if hcount < 97 then
+		if hcount < HPORCH then
     		hsync <= '0';
     	else
     		hsync <= '1';
     	end if;
 
-    	if vcount < 3 then
+    	if vcount < VPORCH then
     		vsync <= '0';
     	else
     		vsync <= '1';
@@ -79,12 +77,12 @@ begin
 	 
     	hcount <= hcount + 1;
 	 
-    	if hcount = screen_width then
+    	if hcount = SCREEN_WIDTH then
     		vcount <= vcount + 1;
     		hcount <= 0;
     	end if;
 
-    	if vcount = screen_height then
+    	if vcount = SCREEN_HEIGHT then
             vcount <= 0;          
     	end if;
 	end if;

@@ -32,126 +32,67 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+use WORK.CONST_SPRITES.ALL;
+use WORK.CONST_SPRITE_DATA.ALL;
+
 entity rom is
       Port (clk          : in STD_LOGIC;
             reset        : in STD_LOGIC;
             countreset   : in STD_LOGIC;
-            en           : in integer range 0 to 7;
+            en           : in integer range 0 to (SPRITE_COUNT - 1);
             ergb         : out std_logic_vector(12 downto 0)
             );
 end rom;
 
 architecture Behavioral of rom is
 
-    type t_clk_count is array (0 to 7) of integer range 0 to 255;
+    type t_clk_count is array (0 to (SPRITE_COUNT - 1) ) of integer range 0 to SPRITE_SIZE_MAX;
 
-    constant blockheight : integer := 10;
-    constant blockwidth : integer := 10;
-
-	signal clk_count : t_clk_count;
-    signal i_address : integer range 0 to 7;
-
-Type RomType is array (0 to blockheight - 1, 0 to blockwidth - 1) of std_logic_vector(12 downto 0);
---type RomType is array (NATURAL rang <>) of std_logic_vector(12 downto 0);
-    
---sprite data
-Constant Rom0: RomType := (
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-   );
-
-Constant Rom1: RomType := (
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-   );
-   
-Constant Rom2: RomType := (
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-   );
-
-Constant Rom3: RomType := (
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF"),
-    (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-   );
+    signal i_address : integer range 0 to (SPRITE_COUNT - 1);
+    signal clk_count : t_clk_count;
 
 begin
 
     process (clk, reset)
 
-        variable row : integer := 0;
-        variable column : integer := 0;
+        variable row : integer range 0 to SPRITE_WIDTH_MAX := 0;
+        variable column : integer range 0 to SPRITE_HEIGHT_MAX := 0;
+        variable w : integer range 0 to SPRITE_WIDTH_MAX := 0;
+        variable h : integer range 0 to SPRITE_HEIGHT_MAX := 0;
 
     begin
 
     if (reset = '1') then
         
-        clk_count(0) <= 0;
-        clk_count(1) <= 0;
-        clk_count(2) <= 0;
-        clk_count(3) <= 0;
-        clk_count(4) <= 0;
-        clk_count(5) <= 0;
-        clk_count(6) <= 0;
-        clk_count(7) <= 0;
+        for I in 0 to (SPRITE_COUNT - 1) loop
+            clk_count(I) <= 0;
+        end loop;
 
     elsif ( rising_edge(clk) ) then
 
-        row := clk_count(en) / 10;
-        column := clk_count(en) mod 10;
+        w := array_sprites(en).w;
+        h := array_sprites(en).h;
+
+        row := clk_count(en) / w;
+        column := clk_count(en) mod w;
 
         if (en > 0) then
             clk_count(en) <= clk_count(en) + 1; 
-            ergb <= Rom0(row, column);
+            ergb <= array_sprites(en).rom(row, column);
         else
             ergb <= (others => '0');
         end if; 
     
-        if (clk_count(en) >= 99) then
+        if (clk_count(en) >= (w * h) - 1) then
             clk_count(en) <= 0;
         end if;    
 
+        -- clk_count(en) <= clk_count(en) mod (w * h);
+
         if (countreset = '1') then
-            clk_count(0) <= 0;
-            clk_count(1) <= 0;
-            clk_count(2) <= 0;
-            clk_count(3) <= 0;
-            clk_count(4) <= 0;
-            clk_count(5) <= 0;
-            clk_count(6) <= 0;
-            clk_count(7) <= 0;
+            for I in 0 to (SPRITE_COUNT - 1) loop
+                clk_count(I) <= 0;
+            end loop;
         end if;
     end if;
 

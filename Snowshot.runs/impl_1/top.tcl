@@ -67,13 +67,19 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+<<<<<<< HEAD
   set_param chipscope.maxJobs 2
   set_param synth.incrementalSynthesisCache {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/incrSyn}
+=======
+  set_param chipscope.maxJobs 3
+  set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1888-LAPTOP-LCHRPCJC/incrSyn
+>>>>>>> feature_multisprite
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
+<<<<<<< HEAD
   set_property webtalk.parent_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/wt} [current_project]
   set_property parent.project_path {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.xpr} [current_project]
   set_property ip_output_repo {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/ip}} [current_project]
@@ -83,6 +89,17 @@ set rc [catch {
   read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci}}
   read_ip -quiet {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
   read_xdc {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}
+=======
+  set_property webtalk.parent_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/wt [current_project]
+  set_property parent.project_path C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.xpr [current_project]
+  set_property ip_output_repo C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  add_files -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/top.dcp
+  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
+  read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci
+  read_xdc C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc
+>>>>>>> feature_multisprite
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -162,11 +179,15 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 =======
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 >>>>>>> Stashed changes
+=======
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+>>>>>>> feature_multisprite
   catch { write_mem_info -force top.mmi }
   write_bitstream -force top.bit 
   catch {write_debug_probes -quiet -force top}

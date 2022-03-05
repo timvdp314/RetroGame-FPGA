@@ -1,6 +1,7 @@
 Design Route Status
                                                :      # nets :
    ------------------------------------------- : ----------- :
+<<<<<<< HEAD
 <<<<<<< Updated upstream
    # of logical nets.......................... :        1204 :
        # of nets not needing routing.......... :         433 :
@@ -14,6 +15,13 @@ Design Route Status
        # of routable nets..................... :         909 :
            # of fully routed nets............. :         909 :
 >>>>>>> Stashed changes
+=======
+   # of logical nets.......................... :        1718 :
+       # of nets not needing routing.......... :         656 :
+           # of internally routed nets........ :         656 :
+       # of routable nets..................... :        1062 :
+           # of fully routed nets............. :        1062 :
+>>>>>>> feature_multisprite
        # of nets with routing errors.......... :           0 :
    ------------------------------------------- : ----------- :
 

@@ -30,6 +30,10 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+use WORK.CONST_VGA.ALL;
+use WORK.CONST_MISC.ALL;
+use WORK.CONST_SPRITES.ALL;
+
 entity top is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
@@ -37,7 +41,7 @@ entity top is
            spi_mosi : in STD_LOGIC;
            spi_cc0 : in STD_LOGIC;
            spi_cc1 : in STD_LOGIC;
-           rgb : out STD_LOGIC_VECTOR (11 downto 0);
+           rgb : out STD_LOGIC_VECTOR ( (PIXEL_DEPTH - 1) downto 0);
            hsync : out STD_LOGIC;
            vsync : out STD_LOGIC);
 end top;
@@ -50,14 +54,13 @@ component clk_sync is
            clk_out : out STD_LOGIC );
 end component;
 
-
 component spi0 is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
            spi_sck : in STD_LOGIC;
            spi_mosi : in STD_LOGIC;
            spi_cs : in STD_LOGIC;
-           data_out : out STD_LOGIC_VECTOR (27 downto 0);
+           data_out : out STD_LOGIC_VECTOR ( (GFX_PACKET_SIZE - 1) downto 0);
            spi_confirm : out STD_LOGIC);
 end component;
 
@@ -65,12 +68,12 @@ end component;
 component engine is
     Port (  clk : in STD_LOGIC;
             reset : in STD_LOGIC;
-            pixel_xcoord : in INTEGER range 0 to 800;
-            pixel_ycoord : in INTEGER range 0 to 521;
-            sprite_data : in STD_LOGIC_VECTOR(27 downto 0);
+            pixel_xcoord : in INTEGER range 0 to SCREEN_WIDTH;
+            pixel_ycoord : in INTEGER range 0 to SCREEN_HEIGHT;
+            sprite_data : in STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
             spi_confirm : in STD_LOGIC;
-            en : out integer range 0 to 7; 
-            rgb_background : out STD_LOGIC_VECTOR(11 downto 0);
+            en : out integer range 0 to (SPRITE_COUNT - 1); 
+            rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
             countreset : out STD_LOGIC          
            );
 end component;
@@ -89,7 +92,7 @@ component rom is
     Port (clk          : in STD_LOGIC;
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
-          en           : in INTEGER range 0 to 7;
+          en           : in INTEGER range 0 to (SPRITE_COUNT - 1);
           ergb         : out std_logic_vector(12 downto 0)
           );
 end component;
@@ -98,12 +101,12 @@ end component;
 component vga is
     Port ( 	clk : in STD_LOGIC;
             reset : in STD_LOGIC;
-			rgb_data : in STD_LOGIC_VECTOR(11 downto 0);
-            rgb_background : in STD_LOGIC_VECTOR(11 downto 0);
+			rgb_data : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
+            rgb_background : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			rgb_en : in STD_LOGIC;
-			pixel_xcoord : out INTEGER range 0 to 800; 
-			pixel_ycoord : out INTEGER range 0 to 512;
-			rgb_out : out STD_LOGIC_VECTOR(11 downto 0);
+			pixel_xcoord : out INTEGER range 0 to SCREEN_WIDTH; 
+			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
+			rgb_out : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			hsync, vsync : out STD_LOGIC
 			);
 end component;
@@ -112,13 +115,13 @@ end component;
 signal s_clk_vga : STD_LOGIC;
 signal s_spi_sck : STD_LOGIC;
 signal s_ergb : STD_LOGIC_VECTOR(12 downto 0);
-signal s_pixel_xcoord : INTEGER range 0 to 800;
-signal s_pixel_ycoord : INTEGER range 0 to 521;
-signal s_en : integer range 0 to 7;
+signal s_pixel_xcoord : INTEGER range 0 to SCREEN_WIDTH;
+signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;
+signal s_en : integer range 0 to (SPRITE_COUNT - 1);
 signal s_countreset : STD_LOGIC;
-signal s_rgb_background : STD_LOGIC_VECTOR(11 downto 0);
+signal s_rgb_background : STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 
-signal s_data_out : STD_LOGIC_VECTOR(27 downto 0);
+signal s_data_out : STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
 signal s_spi_confirm : STD_LOGIC;
 
 begin

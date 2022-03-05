@@ -1,8 +1,12 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 | Date             : Wed Mar  2 10:01:08 2022
+=======
+| Date             : Sat Mar  5 14:12:33 2022
+>>>>>>> feature_multisprite
 | Host             : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
 =======
 | Date             : Fri Mar  4 12:11:41 2022
@@ -35,6 +39,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 | Total On-Chip Power (W)  | 0.190        |
 | Design Power Budget (W)  | Unspecified* |
@@ -46,6 +51,12 @@ Table of Contents
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.122        |
 >>>>>>> Stashed changes
+=======
+| Total On-Chip Power (W)  | 0.195        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.123        |
+>>>>>>> feature_multisprite
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -64,6 +75,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
 | Clocks         |    <0.001 |        5 |       --- |             --- |
 <<<<<<< Updated upstream
 | Slice Logic    |    <0.001 |     1186 |       --- |             --- |
@@ -90,6 +102,22 @@ Table of Contents
 =======
 | Total          |     0.194 |          |           |                 |
 >>>>>>> Stashed changes
+=======
+| Clocks         |     0.001 |        5 |       --- |             --- |
+| Slice Logic    |    <0.001 |     1584 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      767 |     20800 |            3.69 |
+|   CARRY4       |    <0.001 |      114 |      8150 |            1.40 |
+|   Register     |    <0.001 |      538 |     41600 |            1.29 |
+|   F7/F8 Muxes  |    <0.001 |        4 |     32600 |            0.01 |
+|   Others       |     0.000 |       16 |       --- |             --- |
+| Signals        |    <0.001 |     1055 |       --- |             --- |
+| Block RAM      |    <0.001 |      1.5 |        50 |            3.00 |
+| MMCM           |     0.116 |        1 |         5 |           20.00 |
+| DSPs           |    <0.001 |        1 |        90 |            1.11 |
+| I/O            |     0.003 |       19 |       106 |           17.92 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.195 |          |           |                 |
+>>>>>>> feature_multisprite
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -99,11 +127,15 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 | Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |
 =======
 | Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
 >>>>>>> Stashed changes
+=======
+| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
+>>>>>>> feature_multisprite
 | Vccaux    |       1.800 |     0.077 |       0.064 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -174,11 +206,15 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 | top      |     0.118 |
 =======
 | top      |     0.122 |
 >>>>>>> Stashed changes
+=======
+| top      |     0.123 |
+>>>>>>> feature_multisprite
 |   X0     |     0.116 |
 |     inst |     0.116 |
 |   X1     |     0.002 |
