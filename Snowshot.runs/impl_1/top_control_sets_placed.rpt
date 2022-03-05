@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Mar  4 16:29:12 2022
+| Date         : Sat Mar  5 14:12:12 2022
 | Host         : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    27 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    95 |
+| Unused register locations in slices containing registers |    94 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | No                     |              10 |            6 |
 | No           | No                    | Yes                    |              10 |            4 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             343 |          134 |
-| Yes          | No                    | Yes                    |             155 |           72 |
-| Yes          | Yes                   | No                     |              19 |            8 |
+| Yes          | No                    | No                     |             344 |          124 |
+| Yes          | No                    | Yes                    |             155 |           76 |
+| Yes          | Yes                   | No                     |              19 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,33 +73,33 @@ Table of Contents
 +------------------+--------------------------+------------------------+------------------+----------------+
 |   Clock Signal   |       Enable Signal      |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
 +------------------+--------------------------+------------------------+------------------+----------------+
-|  X0/inst/clk_out | X3/reset[0]              | X3/vsync0              |                1 |              1 |
-|  X0/inst/clk_out | X3/reset[0]              | X3/hsync0              |                1 |              1 |
-|  X0/inst/clk_out | X3/reset[0]              | X1/SR[0]               |                2 |              5 |
+|  X0/inst/clk_out | X3/p_0_in                | X3/hsync0              |                1 |              1 |
+|  X0/inst/clk_out | X3/p_0_in                | X3/vsync0              |                1 |              1 |
 |  X0/inst/clk_out | S1/clk_cycle[4]_i_1_n_0  | reset_IBUF             |                2 |              5 |
-|  X0/inst/clk_out |                          |                        |                4 |             10 |
+|  X0/inst/clk_out | X3/p_0_in                | X1/SR[0]               |                3 |              5 |
+|  X0/inst/clk_out |                          |                        |                6 |             10 |
 |  X0/inst/clk_out |                          | reset_IBUF             |                4 |             10 |
-|  X0/inst/clk_out | X3/vcount[9]_i_1_n_0     | reset_IBUF             |                4 |             10 |
-|  X0/inst/clk_out | X3/reset[0]              | X3/rgb_out[11]_i_1_n_0 |                4 |             12 |
-|  X0/inst/clk_out | X1/en_reg[2]_1[0]        | reset_IBUF             |                6 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_2[0]        | reset_IBUF             |                5 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_3[0]        | reset_IBUF             |                6 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_7[0]        | reset_IBUF             |                7 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_5[0]        | reset_IBUF             |               10 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_6[0]        | reset_IBUF             |                7 |             14 |
-|  X0/inst/clk_out | X1/en_reg[2]_4[0]        | reset_IBUF             |                6 |             14 |
-|  X0/inst/clk_out | X1/en_reg[1]_0[0]        | reset_IBUF             |                9 |             14 |
-|  X0/inst/clk_out | X3/reset[0]              |                        |                8 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[20]_0[0] |                        |               11 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[21]_0[0] |                        |               10 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[22]_0[0] |                        |                8 |             21 |
-|  X0/inst/clk_out | S1/E[0]                  |                        |                9 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[21]_1[0] |                        |                7 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[26]_0[0] |                        |               10 |             21 |
-|  X0/inst/clk_out | S1/data_out_reg[21]_2[0] |                        |               13 |             21 |
-|  X0/inst/clk_out | S0/E[0]                  | reset_IBUF             |               10 |             28 |
-|  X0/inst/clk_out | S1/data_out0             |                        |                8 |             28 |
-|  X0/inst/clk_out | S1/spr_data_reg[1][x]0   |                        |               50 |            147 |
+|  X0/inst/clk_out | X3/vcount[9]_i_1_n_0     | reset_IBUF             |                3 |             10 |
+|  X0/inst/clk_out | X3/p_0_in                | X3/rgb_out[11]_i_1_n_0 |                2 |             12 |
+|  X0/inst/clk_out | X1/en_reg[0]_rep_3[0]    | reset_IBUF             |                7 |             14 |
+|  X0/inst/clk_out | X1/en_reg[2]_6[0]        | reset_IBUF             |               10 |             14 |
+|  X0/inst/clk_out | X1/en_reg[2]_4[0]        | reset_IBUF             |                5 |             14 |
+|  X0/inst/clk_out | X1/en_reg[2]_5[0]        | reset_IBUF             |                7 |             14 |
+|  X0/inst/clk_out | X1/en_reg[1]_rep_2[0]    | reset_IBUF             |                7 |             14 |
+|  X0/inst/clk_out | X1/en_reg[2]_7[0]        | reset_IBUF             |                8 |             14 |
+|  X0/inst/clk_out | X1/en_reg[1]_rep_1[0]    | reset_IBUF             |               10 |             14 |
+|  X0/inst/clk_out | X1/countreset_reg_1[0]   | reset_IBUF             |                6 |             14 |
+|  X0/inst/clk_out | S1/E[0]                  |                        |                7 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[25]_0[0] |                        |               10 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[20]_1[0] |                        |                9 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[26]_1[0] |                        |                9 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[26]_2[0] |                        |                8 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[26]_0[0] |                        |               11 |             21 |
+|  X0/inst/clk_out | S1/data_out_reg[20]_0[0] |                        |                7 |             21 |
+|  X0/inst/clk_out | X3/p_0_in                |                        |                9 |             22 |
+|  X0/inst/clk_out | S1/data_out0             |                        |                6 |             28 |
+|  X0/inst/clk_out | S0/E[0]                  | reset_IBUF             |               11 |             28 |
+|  X0/inst/clk_out | S1/spr_data_reg[1][x]0   |                        |               48 |            147 |
 +------------------+--------------------------+------------------------+------------------+----------------+
 
 

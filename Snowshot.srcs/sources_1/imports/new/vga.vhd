@@ -21,20 +21,17 @@ use WORK.CONST_VGA.ALL;
 entity vga is
     Port ( 	clk : in STD_LOGIC;
             reset : in STD_LOGIC;
-			rgb_data : in STD_LOGIC_VECTOR(11 downto 0);
+			rgb_data : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
+			rgb_background : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			rgb_en : in STD_LOGIC;
 			pixel_xcoord : out INTEGER range 0 to SCREEN_WIDTH; 
 			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
-			rgb_out : out STD_LOGIC_VECTOR(11 downto 0);
+			rgb_out : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			hsync, vsync : out STD_LOGIC
 			);
 end vga;
 
 architecture Behavioral of vga is
-
-	constant rgb_background : STD_LOGIC_VECTOR(11 downto 0) := "0011"
-															&  "0011"
-															&  "0011";	
 
 	-- Horizontal and vertical counters
 	signal hcount : integer range 0 to SCREEN_WIDTH;

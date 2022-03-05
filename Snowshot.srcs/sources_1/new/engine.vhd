@@ -45,11 +45,21 @@ entity engine is
             sprite_data : in STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
             spi_confirm : in STD_LOGIC;
             en : out INTEGER range 0 to (SPRITE_COUNT - 1);
+            rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
             countreset : out STD_LOGIC     
            );
 end engine;
 
 architecture Behavioral of engine is
+
+    component rom_bg is
+        Port ( 
+          clka : in STD_LOGIC;
+          ena : in STD_LOGIC;
+          addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+          douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+        );
+    end component rom_bg;
 
     type struct_sprite is record
         en : std_logic;
@@ -62,6 +72,10 @@ architecture Behavioral of engine is
     signal spr_data : t_sprite_data;
     signal spr_data_temp : t_sprite_data;
     signal spr_id : std_logic_vector(6 downto 0);
+
+    signal bg_address : std_logic_vector(11 downto 0);
+    signal bg_x : integer range 0 to BG_WIDTH;
+    signal bg_y : integer range 0 to BG_HEIGHT;
 
     impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
@@ -80,6 +94,11 @@ architecture Behavioral of engine is
 
 begin
 
+    B0 : rom_bg port map ( clka => clk,
+                           ena => '1',
+                           addra => bg_address, 
+                           douta => rgb_background); 
+
     process (clk, reset)
 
         variable spr_id : integer range 0 to 127;
@@ -89,6 +108,11 @@ begin
         if (reset = '1') then
         
         elsif ( rising_edge(clk) ) then
+
+            bg_x <= pixel_xcoord mod BG_WIDTH;
+            bg_y <= pixel_ycoord mod BG_HEIGHT;
+
+            bg_address <= std_logic_vector (to_unsigned (bg_y * BG_WIDTH + bg_x,  bg_address'length));
 
             spr_id := to_integer( unsigned(sprite_data(26 downto 20)) );
             spr_data_temp(spr_id).x <= to_integer( unsigned(sprite_data(9 downto 0)) );

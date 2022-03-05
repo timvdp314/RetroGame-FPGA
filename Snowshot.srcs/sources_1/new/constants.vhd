@@ -32,19 +32,21 @@ use IEEE.NUMERIC_STD.ALL;
 
 package CONST_VGA is
  
-    constant test : std_logic_vector(12 downto 0) := (others => '0');
+  constant test : std_logic_vector(12 downto 0) := (others => '0');
  
-    -- VGA
-    constant HPORCH : integer := 97;
-    constant VPORCH : integer := 3;
+  -- VGA
+  constant HPORCH : integer := 97;
+  constant VPORCH : integer := 3;
+
+  constant PIXEL_DEPTH : integer := 12;
 
 	-- Total screen size (including non-display area)
 	constant SCREEN_WIDTH : integer := 800;
 	constant SCREEN_HEIGHT : integer := 521;
 
 	-- Display area
-    constant XMIN : integer := 144;
-    constant XMAX : integer := 784;
+  constant XMIN : integer := 144;
+  constant XMAX : integer := 784;
 	constant YMIN : integer := 31;
 	constant YMAX : integer := 511;
    
@@ -60,11 +62,14 @@ package CONST_SPRITES is
     constant SPRITE_HEIGHT_MAX : integer := 100;
     constant SPRITE_SIZE_MAX : integer := SPRITE_WIDTH_MAX * SPRITE_HEIGHT_MAX;
 
-    constant PLAYER_WIDTH : integer := 14;
-    constant PLAYER_HEIGHT : integer := 14;
+    constant PLAYER_WIDTH : integer := 16;
+    constant PLAYER_HEIGHT : integer := 16;
 
     constant SNOWBALL_WIDTH : integer := 10;
     constant SNOWBALL_HEIGHT : integer := 10;
+
+    constant BG_WIDTH : integer := 50;
+    constant BG_HEIGHT : integer := 50;
 
 end package CONST_SPRITES;
 

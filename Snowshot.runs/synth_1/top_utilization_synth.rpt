@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Mar  4 16:28:38 2022
+| Date         : Sat Mar  5 14:11:37 2022
 | Host         : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1098 |     0 |     20800 |  5.28 |
-|   LUT as Logic          | 1098 |     0 |     20800 |  5.28 |
+| Slice LUTs*             |  768 |     0 |     20800 |  3.69 |
+|   LUT as Logic          |  768 |     0 |     20800 |  3.69 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  533 |     0 |     41600 |  1.28 |
-|   Register as Flip Flop |  533 |     0 |     41600 |  1.28 |
+| Slice Registers         |  538 |     0 |     41600 |  1.29 |
+|   Register as Flip Flop |  538 |     0 |     41600 |  1.29 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |   25 |     0 |     16300 |  0.15 |
-| F8 Muxes                |    7 |     0 |      8150 |  0.09 |
+| F7 Muxes                |    4 |     0 |     16300 |  0.02 |
+| F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 165   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 368   |          Yes |       Reset |            - |
+| 373   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -77,11 +77,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |        90 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    1 |     0 |        90 |  1.11 |
+|   DSP48E1 only |    1 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -149,19 +150,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  638 |                 LUT |
-| FDRE     |  368 |        Flop & Latch |
-| LUT5     |  362 |                 LUT |
+| FDRE     |  373 |        Flop & Latch |
+| LUT6     |  301 |                 LUT |
+| LUT5     |  283 |                 LUT |
 | FDCE     |  165 |        Flop & Latch |
-| LUT4     |   97 |                 LUT |
-| LUT3     |   92 |                 LUT |
-| CARRY4   |   76 |          CarryLogic |
-| LUT2     |   32 |                 LUT |
-| MUXF7    |   25 |               MuxFx |
+| LUT4     |  116 |                 LUT |
+| CARRY4   |  114 |          CarryLogic |
+| LUT3     |  105 |                 LUT |
+| LUT2     |   97 |                 LUT |
 | OBUF     |   14 |                  IO |
-| MUXF8    |    7 |               MuxFx |
+| LUT1     |   12 |                 LUT |
+| MUXF7    |    4 |               MuxFx |
 | IBUF     |    4 |                  IO |
-| LUT1     |    2 |                 LUT |
+| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 
@@ -171,6 +172,7 @@ Table of Contents
 +----------+------+
 | Ref Name | Used |
 +----------+------+
+| rom_bg   |    1 |
 | clk_vga  |    1 |
 +----------+------+
 
