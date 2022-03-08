@@ -1,17 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-| Date                      : Wed Mar  2 10:00:49 2022
-=======
-| Date                      : Sat Mar  5 14:12:12 2022
->>>>>>> feature_multisprite
-| Host                      : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
-=======
-| Date                      : Fri Mar  4 12:11:11 2022
+| Date                      : Tue Mar  8 17:02:16 2022
 | Host                      : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
->>>>>>> Stashed changes
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
 | Device                    : xc7a35t

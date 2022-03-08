@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Sat Mar  5 13:32:38 2022
 // Host        : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top rom_bg -prefix
+//               rom_bg_ rom_bg_sim_netlist.v
 // Design      : rom_bg
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -191,7 +191,6 @@ module rom_bg
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module rom_bg_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -219,7 +218,6 @@ module rom_bg_blk_mem_gen_generic_cstr
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module rom_bg_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -265,7 +263,6 @@ module rom_bg_blk_mem_gen_prim_width__parameterized0
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module rom_bg_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -650,7 +647,6 @@ module rom_bg_blk_mem_gen_prim_wrapper_init__parameterized0
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module rom_bg_blk_mem_gen_top
    (douta,
     clka,
@@ -698,7 +694,7 @@ endmodule
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "2500" *) 
 (* C_WRITE_DEPTH_B = "2500" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "12" *) (* C_WRITE_WIDTH_B = "12" *) (* C_XDEVICEFAMILY = "artix7" *) 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module rom_bg_blk_mem_gen_v8_4_3
    (clka,
     rsta,
@@ -914,7 +910,6 @@ module rom_bg_blk_mem_gen_v8_4_3
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3_synth" *) 
 module rom_bg_blk_mem_gen_v8_4_3_synth
    (douta,
     clka,

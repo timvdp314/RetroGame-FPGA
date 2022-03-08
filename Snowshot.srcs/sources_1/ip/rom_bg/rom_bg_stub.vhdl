@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Sat Mar  5 13:32:38 2022
 -- Host        : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top rom_bg -prefix
+--               rom_bg_ rom_bg_stub.vhdl
 -- Design      : rom_bg
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

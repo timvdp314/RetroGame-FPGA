@@ -1,0 +1,342 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar  2 14:26:55 2022
+# Process ID: 14136
+# Current directory: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23088 C:\Users\busra\Documents\Documenten\Leerjaar 2\Blok 7\RETROGAME_GIT\RetroGame-FPGA\Snowshot.xpr
+# Log file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/vivado.log
+# Journal file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA'
+INFO: [Project 1-313] Project file moved from 'C:/Xilinx/Projects/RetroGame-FPGA' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 757.715 ; gain = 93.398
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Wed Mar  2 14:48:42 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Wed Mar  2 14:48:42 2022] Launched impl_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38733A
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/busra/Documents/MATLAB/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../MATLAB/iceTile1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/busra/Documents/MATLAB/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/busra/Documents/MATLAB/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../MATLAB/iceTile1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
+launch_runs -jobs 8 blk_mem_gen_0_synth_1
+[Wed Mar  2 20:08:44 2022] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close [ open {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_background.vhd} w ]
+add_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_background.vhd}}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2521.707 ; gain = 154.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:45]
+INFO: [Synth 8-3491] module 'clk_sync' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:34' bound to instance 'S0' of component 'clk_sync' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'clk_sync' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'clk_sync' (1#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-3491] module 'spi0' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:36' bound to instance 'S1' of component 'spi0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'spi0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'spi0' (2#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-3491] module 'clk_vga' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/clk_vga_stub.vhdl:5' bound to instance 'X0' of component 'clk_vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'clk_vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/clk_vga_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'engine' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:39' bound to instance 'X1' of component 'engine' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'engine' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:51]
+WARNING: [Synth 8-5858] RAM spr_data_temp_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5858] RAM spr_data_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element spr_id_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][en] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][x] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][y] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][en] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][x] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][y] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'engine' (3#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:51]
+INFO: [Synth 8-3491] module 'rom' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:37' bound to instance 'X2' of component 'rom' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:139]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'rom' (4#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:46]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:21' bound to instance 'X3' of component 'vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'vga' (5#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:45]
+WARNING: [Synth 8-3331] design top has unconnected port spi_cc1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2560.727 ; gain = 193.180
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2578.566 ; gain = 211.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2578.566 ; gain = 211.020
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.dcp' for cell 'X0'
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:64]
+Finished Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2705.168 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2745.512 ; gain = 377.965
+30 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 2745.512 ; gain = 587.648
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+CRITICAL WARNING: [HDL 9-806] Syntax error near ":". [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:103]
+[Fri Mar  4 12:08:35 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2850.641 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:45]
+INFO: [Synth 8-3491] module 'clk_sync' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:34' bound to instance 'S0' of component 'clk_sync' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'clk_sync' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'clk_sync' (1#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd:40]
+INFO: [Synth 8-3491] module 'spi0' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:36' bound to instance 'S1' of component 'spi0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'spi0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'spi0' (2#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd:46]
+INFO: [Synth 8-3491] module 'clk_vga' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/clk_vga_stub.vhdl:5' bound to instance 'X0' of component 'clk_vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'clk_vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/clk_vga_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'engine' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:39' bound to instance 'X1' of component 'engine' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'engine' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:52]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'background_memory' of component 'blk_mem_gen_0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/.Xil/Vivado-14136-LAPTOP-VG095PM2/realtime/blk_mem_gen_0_stub.vhdl:15]
+WARNING: [Synth 8-5858] RAM spr_data_temp_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5858] RAM spr_data_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:119]
+WARNING: [Synth 8-6014] Unused sequential element spr_id_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:123]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][en] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:124]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][x] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:124]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_temp_reg[0][y] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:124]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][en] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][x] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element spr_data_reg[0][y] was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'engine' (3#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd:52]
+INFO: [Synth 8-3491] module 'rom' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:37' bound to instance 'X2' of component 'rom' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'rom' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element row_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:129]
+WARNING: [Synth 8-6014] Unused sequential element column_reg was removed.  [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'rom' (4#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd:46]
+INFO: [Synth 8-3491] module 'vga' declared at 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:21' bound to instance 'X3' of component 'vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'vga' (5#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:45]
+WARNING: [Synth 8-3331] design top has unconnected port spi_cc1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2850.641 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2850.641 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2850.641 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.dcp' for cell 'X0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'X1/background_memory'
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'spi_test'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'player_x[9]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'player_x[8]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'player_x[7]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'player_x[6]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'player_x[5]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'player_x[4]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'player_x[3]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'player_x[2]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'player_x[1]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'player_x[0]'. [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc:64]
+Finished Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2918.086 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2918.086 ; gain = 67.445
+32 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2918.086 ; gain = 67.445
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Fri Mar  4 12:10:23 2022] Launched impl_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38733A
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  4 12:17:37 2022...

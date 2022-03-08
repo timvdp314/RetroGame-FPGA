@@ -1,17 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-| Date         : Wed Mar  2 10:00:02 2022
-=======
-| Date         : Sat Mar  5 14:11:37 2022
->>>>>>> feature_multisprite
-| Host         : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
-=======
-| Date         : Fri Mar  4 12:09:50 2022
+| Date         : Tue Mar  8 17:01:22 2022
 | Host         : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
->>>>>>> Stashed changes
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a35tcpg236-1
@@ -39,26 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-| Slice LUTs*             |  482 |     0 |     20800 |  2.32 |
-|   LUT as Logic          |  482 |     0 |     20800 |  2.32 |
-=======
-| Slice LUTs*             |  626 |     0 |     20800 |  3.01 |
-|   LUT as Logic          |  626 |     0 |     20800 |  3.01 |
->>>>>>> Stashed changes
+| Slice LUTs*             |  451 |     0 |     20800 |  2.17 |
+|   LUT as Logic          |  451 |     0 |     20800 |  2.17 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  496 |     0 |     41600 |  1.19 |
-|   Register as Flip Flop |  496 |     0 |     41600 |  1.19 |
-=======
-| Slice LUTs*             |  768 |     0 |     20800 |  3.69 |
-|   LUT as Logic          |  768 |     0 |     20800 |  3.69 |
-|   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  538 |     0 |     41600 |  1.29 |
-|   Register as Flip Flop |  538 |     0 |     41600 |  1.29 |
->>>>>>> feature_multisprite
+| Slice Registers         |  446 |     0 |     41600 |  1.07 |
+|   Register as Flip Flop |  446 |     0 |     41600 |  1.07 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |    4 |     0 |     16300 |  0.02 |
+| F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -77,15 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-<<<<<<< HEAD
-| 117   |          Yes |           - |        Reset |
-| 12    |          Yes |         Set |            - |
-| 367   |          Yes |       Reset |            - |
-=======
-| 165   |          Yes |           - |        Reset |
+| 53    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 373   |          Yes |       Reset |            - |
->>>>>>> feature_multisprite
+| 393   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -178,70 +150,34 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-| FDRE     |  357 |        Flop & Latch |
-| LUT5     |  246 |                 LUT |
-| LUT6     |  172 |                 LUT |
-| FDCE     |  117 |        Flop & Latch |
-| LUT4     |   96 |                 LUT |
-| LUT3     |   73 |                 LUT |
-| CARRY4   |   70 |          CarryLogic |
-| LUT2     |   24 |                 LUT |
-=======
-| FDRE     |  373 |        Flop & Latch |
-| LUT6     |  301 |                 LUT |
-| LUT5     |  283 |                 LUT |
-| FDCE     |  165 |        Flop & Latch |
-| LUT4     |  116 |                 LUT |
-| CARRY4   |  114 |          CarryLogic |
-| LUT3     |  105 |                 LUT |
-| LUT2     |   97 |                 LUT |
->>>>>>> feature_multisprite
+| FDRE     |  393 |        Flop & Latch |
+| LUT5     |  210 |                 LUT |
+| LUT6     |  103 |                 LUT |
+| LUT4     |   98 |                 LUT |
+| CARRY4   |   82 |          CarryLogic |
+| LUT3     |   79 |                 LUT |
+| LUT2     |   72 |                 LUT |
+| FDCE     |   53 |        Flop & Latch |
 | OBUF     |   14 |                  IO |
-| LUT1     |   12 |                 LUT |
-| MUXF7    |    4 |               MuxFx |
+| LUT1     |    4 |                 LUT |
 | IBUF     |    4 |                  IO |
-<<<<<<< HEAD
-| LUT1     |    2 |                 LUT |
-=======
-| FDRE     |  367 |        Flop & Latch |
-| LUT6     |  258 |                 LUT |
-| LUT5     |  200 |                 LUT |
-| LUT4     |  121 |                 LUT |
-| FDCE     |  117 |        Flop & Latch |
-| CARRY4   |   87 |          CarryLogic |
-| LUT3     |   77 |                 LUT |
-| LUT2     |   65 |                 LUT |
-| OBUF     |   14 |                  IO |
-| FDSE     |   12 |        Flop & Latch |
-| IBUF     |    4 |                  IO |
-| LUT1     |    3 |                 LUT |
->>>>>>> Stashed changes
-=======
 | DSP48E1  |    1 |    Block Arithmetic |
->>>>>>> feature_multisprite
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-<<<<<<< HEAD
-+---------------+------+
-|    Ref Name   | Used |
-+---------------+------+
-| clk_vga       |    1 |
-| blk_mem_gen_0 |    1 |
-+---------------+------+
-=======
-+----------+------+
-| Ref Name | Used |
-+----------+------+
-| rom_bg   |    1 |
-| clk_vga  |    1 |
-+----------+------+
->>>>>>> feature_multisprite
++------------------+------+
+|     Ref Name     | Used |
++------------------+------+
+| rom_bg           |    1 |
+| clk_vga          |    1 |
+| blk_mem_snowball |    1 |
+| blk_mem_player2  |    1 |
+| blk_mem_player1  |    1 |
+| blk_mem_logo     |    1 |
++------------------+------+
 
 
 9. Instantiated Netlists

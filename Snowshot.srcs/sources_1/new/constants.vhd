@@ -58,8 +58,8 @@ package CONST_SPRITES is
     constant SPRITE_COUNT : integer := 8;
     constant SPRITE_ID_SIZE : integer := 7;
 
-    constant SPRITE_WIDTH_MAX : integer := 100;
-    constant SPRITE_HEIGHT_MAX : integer := 100;
+    constant SPRITE_WIDTH_MAX : integer := 60;
+    constant SPRITE_HEIGHT_MAX : integer := 60;
     constant SPRITE_SIZE_MAX : integer := SPRITE_WIDTH_MAX * SPRITE_HEIGHT_MAX;
 
     constant PLAYER_WIDTH : integer := 16;
@@ -79,104 +79,57 @@ USE WORK.CONST_SPRITES.ALL;
 
 package CONST_SPRITE_DATA is
 
+    constant ROM_SPRITE_BLOCKS : integer := 8;
+
+    constant ROM_NULL : integer := 0;
+    constant ROM_PLAYER1 : integer := 1;
+    constant ROM_PLAYER2 : integer := 2;
+    constant ROM_SNOWBALL : integer := 3;
+
     type RomType is array (NATURAL range 0 to 14, 
                           NATURAL range 0 to 14) of std_logic_vector(12 downto 0);
     
     type struct_sprite is record
        w : integer range 0 to SPRITE_WIDTH_MAX;
        h : integer range 0 to SPRITE_HEIGHT_MAX;
-       rom : RomType;
+       rom : integer range 0 to (ROM_SPRITE_BLOCKS - 1);
     end record struct_sprite;
 
     type t_arr_sprites is array (NATURAL range 0 to (SPRITE_COUNT - 1) ) of struct_sprite;
-
-    constant rom_player: RomType := (
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF"),
-        (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
-        (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
-        (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
-        (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
-        (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
-        (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
-        (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
-        (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
-        (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
-        (x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-    );
-
-    constant rom_player2: RomType := (
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-    );
-
-    constant rom_snowball: RomType := (
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
-        (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
-    );
 
     constant array_sprites : t_arr_sprites := ( 
 
     ( w => 1,
       h => 0,
-      rom => rom_player ),
+      rom => ROM_NULL ),
 
     ( w => PLAYER_WIDTH,
       h => PLAYER_HEIGHT,
-      rom => rom_player ),
+      rom => ROM_PLAYER1 ),
 
     ( w => PLAYER_WIDTH,
       h => PLAYER_HEIGHT,
-      rom => rom_player2 ),
+      rom => ROM_PLAYER2 ),
 
     ( w => SNOWBALL_WIDTH,
       h => SNOWBALL_HEIGHT,
-      rom => rom_snowball ),
+      rom => ROM_SNOWBALL ),
 
     ( w => SNOWBALL_WIDTH,
       h => SNOWBALL_HEIGHT,
-      rom => rom_snowball ),
+      rom => ROM_SNOWBALL ),
 
     ( w => SNOWBALL_WIDTH,
       h => SNOWBALL_HEIGHT,
-      rom => rom_snowball ),
+      rom => ROM_SNOWBALL ),
 
     ( w => SNOWBALL_WIDTH,
       h => SNOWBALL_HEIGHT,
-      rom => rom_snowball ),
+      rom => ROM_SNOWBALL ),
 
     ( w => SNOWBALL_WIDTH,
       h => SNOWBALL_HEIGHT,
-      rom => rom_snowball )
+      rom => ROM_SNOWBALL )
 );
 
 end package CONST_SPRITE_DATA;
