@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="rom_bg_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1646748116">
   <File Type="PA-TCL" Name="rom_bg.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="rom_bg_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="rom_bg_reports.tcl"/>
   <File Type="RDS-RDS" Name="rom_bg.vds"/>
-  <File Type="RDS-UTIL" Name="rom_bg_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="rom_bg_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="rom_bg.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="rom_bg_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="rom_bg_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rom_bg">
     <File Path="$PSRCDIR/sources_1/ip/rom_bg/rom_bg.xci">
       <FileInfo>

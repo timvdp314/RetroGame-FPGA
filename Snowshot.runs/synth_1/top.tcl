@@ -19,8 +19,6 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,10 +34,14 @@ set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/coe/iceTile1.coe}}
-add_files c:/Users/busra/Documents/MATLAB/player1.coe
-add_files c:/Users/busra/Documents/MATLAB/player2.coe
-add_files c:/Users/busra/Documents/MATLAB/logoSnowshot.coe
-add_files c:/Users/busra/Documents/MATLAB/snowball_new.coe
+add_files C:/Users/busra/Documents/MATLAB/player1.coe
+add_files C:/Users/busra/Documents/MATLAB/player2.coe
+add_files C:/Users/busra/Documents/MATLAB/logoSnowshot.coe
+add_files C:/Users/busra/Documents/MATLAB/snowball_new.coe
+add_files C:/Xilinx/ceo/player1.coe
+add_files C:/Xilinx/ceo/player2.coe
+add_files C:/Xilinx/ceo/snowball_new.coe
+add_files C:/Xilinx/ceo/logoSnowshot.coe
 read_vhdl -library xil_defaultlib {
   {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd}
   {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd}
@@ -58,17 +60,17 @@ set_property used_in_implementation false [get_files -all {{c:/Users/busra/Docum
 read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci}}
+read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci}}
+read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2_ooc.xdc}}]
 
-read_ip -quiet {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo_ooc.xdc}}]
-
-read_ip -quiet {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}
+read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_ooc.xdc}}]
+
+read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

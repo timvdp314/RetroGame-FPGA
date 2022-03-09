@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1646755216">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1646828537">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -119,6 +119,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../../../../../Xilinx/ceo/player1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../Xilinx/ceo/player2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../Xilinx/ceo/snowball_new.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../Xilinx/ceo/logoSnowshot.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -151,6 +175,6 @@
   <BlockFileSet Type="BlockSrcs" Name="rom_bg"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_player1"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_player2"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_logo"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_snowball"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_logo"/>
 </GenRun>

@@ -140,7 +140,7 @@ begin
 					rgb <= (others => '1');
 			end case;
 
-			if (rgb = "111111111111") then
+			if (rgb = "000011110000") then --AANPASSEN--
 				ergb <= '0' & rgb;
 			else
 				ergb <= '1' & rgb;
