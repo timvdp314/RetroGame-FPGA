@@ -95,7 +95,7 @@ architecture Behavioral of engine is
 
 begin
 
-    B0 : rom_bg port map ( clka => clk,
+    X0 : rom_bg port map ( clka => clk,
                            ena => '1',
                            addra => bg_address, 
                            douta => rgb_background); 

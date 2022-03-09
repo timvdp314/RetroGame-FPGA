@@ -91,11 +91,12 @@ end component;
 
 component rom_sprites is
     Port (clk          : in STD_LOGIC;
+          clk_vga      : in STD_LOGIC; 
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
           en           : in integer range 0 to (SPRITE_COUNT - 1);
-          rom_address  : out integer range 0 to (ROM_SPRITE_BLOCKS - 1);
-          rom_pixel    : out integer range 0 to (SPRITE_SIZE_MAX - 1)
+          rom_address  : out std_logic_vector(2 downto 0);
+          rom_pixel    : out std_logic_vector(SPRITE_SIZE_WIDTH downto 0)
           );
 end component;
 
@@ -103,11 +104,11 @@ end component;
 component rom_sprites_mux is
     Port  (   clk : in std_logic;
               reset : in std_logic;
-              rom_address : in integer range 0 to (ROM_SPRITE_BLOCKS - 1);
-              rom_pixel : in integer range 0 to (SPRITE_SIZE_MAX - 1);
+              rom_address : in std_logic_vector(2 downto 0);
+              rom_pixel : in std_logic_vector(SPRITE_SIZE_WIDTH downto 0);
               ergb : out std_logic_vector(12 downto 0)
     );
-  end component;
+end component;
 
 
 component vga is
@@ -131,8 +132,8 @@ signal s_spi_confirm : STD_LOGIC;
 
 signal s_ergb : STD_LOGIC_VECTOR(12 downto 0);
 signal s_rgb_background : STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-signal s_rom_address : INTEGER range 0 to (ROM_SPRITE_BLOCKS - 1);
-signal s_rom_pixel : INTEGER range 0 to (SPRITE_SIZE_MAX - 1);
+signal s_rom_address : STD_LOGIC_VECTOR(2 downto 0);
+signal s_rom_pixel : STD_LOGIC_VECTOR(SPRITE_SIZE_WIDTH downto 0);
 signal s_pixel_xcoord : INTEGER range 0 to SCREEN_WIDTH;
 signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;
 signal s_en : integer range 0 to (SPRITE_COUNT - 1);
@@ -157,7 +158,7 @@ begin
 						 reset => reset, 
 						 clk_out => s_clk_vga);
 
-    X1: engine port map(clk => s_clk_vga,
+    X1: engine port map(clk => clk,
                         reset => reset,
                         pixel_xcoord => s_pixel_xcoord,
                         pixel_ycoord => s_pixel_ycoord,
@@ -167,14 +168,15 @@ begin
                         en => s_en,
                         countreset => s_countreset);
 
-	X2: rom_sprites port map(clk => s_clk_vga,
+	X2: rom_sprites port map(clk => clk,
+                     clk_vga => s_clk_vga,
 					 reset => reset,
 					 countreset => s_countreset,
 					 en => s_en,
 					 rom_address => s_rom_address,
                      rom_pixel => s_rom_pixel);
 
-    X3: rom_sprites_mux port map(clk => s_clk_vga,
+    X3: rom_sprites_mux port map(clk => clk,
 	                reset => reset,
                     rom_address => s_rom_address,
                     rom_pixel => s_rom_pixel,

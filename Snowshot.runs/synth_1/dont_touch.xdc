@@ -3,5 +3,11 @@
 
 # XDC: new/cnst.xdc
 
+# IP: ip/blk_mem_logo/blk_mem_logo.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_logo || ORIG_REF_NAME==blk_mem_logo} -quiet] -quiet
+
+# IP: ip/rom_bg/rom_bg.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rom_bg || ORIG_REF_NAME==rom_bg} -quiet] -quiet
+
 # IP: ip/clk_vga/clk_vga.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_vga || ORIG_REF_NAME==clk_vga} -quiet] -quiet

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar  9 13:25:20 2022
+| Date         : Wed Mar  9 16:28:16 2022
 | Host         : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -53,7 +53,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 0 register/latch pins with no clock.
+ There are 492 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock
@@ -68,14 +68,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+ There are 1190 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 4 input ports with no input delay specified. (HIGH)
+ There are 5 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
@@ -127,7 +127,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     31.053        0.000                      0                  873        0.130        0.000                      0                  873        3.000        0.000                       0                   468  
+     35.231        0.000                      0                  190        0.131        0.000                      0                  190        3.000        0.000                       0                   126  
 
 
 All user specified timing constraints are met.
@@ -140,7 +140,7 @@ All user specified timing constraints are met.
 
 Clock               Waveform(ns)       Period(ns)      Frequency(MHz)
 -----               ------------       ----------      --------------
-clk                 {0.000 5.000}      10.000          100.000         
+X0/inst/clk_in      {0.000 5.000}      10.000          100.000         
   clk_out_clk_vga   {0.000 20.000}     40.000          25.000          
   clkfbout_clk_vga  {0.000 5.000}      10.000          100.000         
 
@@ -152,8 +152,8 @@ clk                 {0.000 5.000}      10.000          100.000
 
 Clock                   WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                   -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                                                                                                                                                                   3.000        0.000                       0                     1  
-  clk_out_clk_vga        31.053        0.000                      0                  873        0.130        0.000                      0                  873       19.500        0.000                       0                   464  
+X0/inst/clk_in                                                                                                                                                        3.000        0.000                       0                     1  
+  clk_out_clk_vga        35.231        0.000                      0                  190        0.131        0.000                      0                  190       19.500        0.000                       0                   122  
   clkfbout_clk_vga                                                                                                                                                    7.845        0.000                       0                     3  
 
 
@@ -182,8 +182,8 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 
 
 ---------------------------------------------------------------------------------------------------
-From Clock:  clk
-  To Clock:  clk
+From Clock:  X0/inst/clk_in
+  To Clock:  X0/inst/clk_in
 
 Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
 Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
@@ -193,16 +193,16 @@ PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Vio
 
 Pulse Width Checks
 --------------------------------------------------------------------------------------
-Clock Name:         clk
+Clock Name:         X0/inst/clk_in
 Waveform(ns):       { 0.000 5.000 }
 Period(ns):         10.000
-Sources:            { clk }
+Sources:            { X0/inst/clk_in }
 
 Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
 Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
 Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
-Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
 Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
 High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
 High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKIN1
 
@@ -212,28 +212,28 @@ High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000 
 From Clock:  clk_out_clk_vga
   To Clock:  clk_out_clk_vga
 
-Setup :            0  Failing Endpoints,  Worst Slack       31.053ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.130ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       35.231ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.131ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       19.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             31.053ns  (required time - arrival time)
-  Source:                 X4/pixel_ycoord_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/A[2]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.231ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.542ns  (logic 3.274ns (38.329%)  route 5.268ns (61.671%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.945ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.363ns  (logic 0.966ns (22.138%)  route 3.397ns (77.862%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.445ns = ( 41.445 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -243,78 +243,59 @@ Slack (MET) :             31.053ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.567    -0.945    X4/clk_out
-    SLICE_X12Y10         FDRE                                         r  X4/pixel_ycoord_reg[4]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y10         FDRE (Prop_fdre_C_Q)         0.518    -0.427 r  X4/pixel_ycoord_reg[4]/Q
-                         net (fo=33, routed)          2.205     1.778    X4/Q[4]
-    SLICE_X13Y2          LUT2 (Prop_lut2_I0_O)        0.124     1.902 r  X4/bg_y0_carry_i_1/O
-                         net (fo=1, routed)           0.000     1.902    X1/bg_y0_carry__0_0[2]
-    SLICE_X13Y2          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     2.303 r  X1/bg_y0_carry/CO[3]
-                         net (fo=1, routed)           0.000     2.303    X1/bg_y0_carry_n_0
-    SLICE_X13Y3          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     2.616 r  X1/bg_y0_carry__0/O[3]
-                         net (fo=5, routed)           0.840     3.456    X1/pixel_ycoord_reg[8][0]
-    SLICE_X12Y4          LUT2 (Prop_lut2_I1_O)        0.306     3.762 r  X1/bg_y0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     3.762    X1/bg_y0__23_carry_i_4_n_0
-    SLICE_X12Y4          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.427     4.189 r  X1/bg_y0__23_carry/O[1]
-                         net (fo=1, routed)           0.806     4.995    X4/bg_y0__29_carry__0[1]
-    SLICE_X12Y3          LUT2 (Prop_lut2_I1_O)        0.306     5.301 r  X4/bg_y0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     5.301    X1/bg_address_reg_3[1]
-    SLICE_X12Y3          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.879 r  X1/bg_y0__29_carry__0/O[2]
-                         net (fo=5, routed)           0.874     6.753    X4/bg_address_reg_2[2]
-    SLICE_X12Y1          LUT6 (Prop_lut6_I5_O)        0.301     7.054 r  X4/bg_address_reg_i_4/O
-                         net (fo=1, routed)           0.543     7.597    X1/A[0]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/A[2]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.745     5.992    X4/vcount[9]_i_1_n_0
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[2]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_A[2])
-                                                     -0.362    38.650    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.445    41.445    X4/clk_out
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[2]/C
+                         clock pessimism              0.080    41.525    
+                         clock uncertainty           -0.098    41.428    
+    SLICE_X11Y15         FDCE (Setup_fdce_C_CE)      -0.205    41.223    X4/vcount_reg[2]
   -------------------------------------------------------------------
-                         required time                         38.650    
-                         arrival time                          -7.597    
+                         required time                         41.223    
+                         arrival time                          -5.992    
   -------------------------------------------------------------------
-                         slack                                 31.053    
+                         slack                                 35.231    
 
-Slack (MET) :             31.067ns  (required time - arrival time)
-  Source:                 X4/pixel_ycoord_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/A[1]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.231ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[3]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.528ns  (logic 2.942ns (34.499%)  route 5.586ns (65.501%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.945ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.363ns  (logic 0.966ns (22.138%)  route 3.397ns (77.862%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.445ns = ( 41.445 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -324,78 +305,59 @@ Slack (MET) :             31.067ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.567    -0.945    X4/clk_out
-    SLICE_X12Y10         FDRE                                         r  X4/pixel_ycoord_reg[4]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y10         FDRE (Prop_fdre_C_Q)         0.518    -0.427 r  X4/pixel_ycoord_reg[4]/Q
-                         net (fo=33, routed)          2.205     1.778    X4/Q[4]
-    SLICE_X13Y2          LUT2 (Prop_lut2_I0_O)        0.124     1.902 r  X4/bg_y0_carry_i_1/O
-                         net (fo=1, routed)           0.000     1.902    X1/bg_y0_carry__0_0[2]
-    SLICE_X13Y2          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     2.303 r  X1/bg_y0_carry/CO[3]
-                         net (fo=1, routed)           0.000     2.303    X1/bg_y0_carry_n_0
-    SLICE_X13Y3          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     2.616 r  X1/bg_y0_carry__0/O[3]
-                         net (fo=5, routed)           0.840     3.456    X1/pixel_ycoord_reg[8][0]
-    SLICE_X12Y4          LUT2 (Prop_lut2_I1_O)        0.306     3.762 r  X1/bg_y0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     3.762    X1/bg_y0__23_carry_i_4_n_0
-    SLICE_X12Y4          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.252     4.014 r  X1/bg_y0__23_carry/O[0]
-                         net (fo=1, routed)           1.011     5.026    X4/bg_y0__29_carry__0[0]
-    SLICE_X12Y3          LUT2 (Prop_lut2_I1_O)        0.295     5.321 r  X4/bg_y0__29_carry__0_i_3/O
-                         net (fo=1, routed)           0.000     5.321    X1/bg_address_reg_3[0]
-    SLICE_X12Y3          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.427     5.748 r  X1/bg_y0__29_carry__0/O[1]
-                         net (fo=5, routed)           0.985     6.732    X1/pixel_ycoord_reg[5][1]
-    SLICE_X12Y1          LUT6 (Prop_lut6_I1_O)        0.306     7.038 r  X1/bg_address_reg_i_5/O
-                         net (fo=1, routed)           0.545     7.583    X1/bg_address_reg_i_5_n_0
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/A[1]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.745     5.992    X4/vcount[9]_i_1_n_0
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[3]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_A[1])
-                                                     -0.362    38.650    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.445    41.445    X4/clk_out
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[3]/C
+                         clock pessimism              0.080    41.525    
+                         clock uncertainty           -0.098    41.428    
+    SLICE_X11Y15         FDCE (Setup_fdce_C_CE)      -0.205    41.223    X4/vcount_reg[3]
   -------------------------------------------------------------------
-                         required time                         38.650    
-                         arrival time                          -7.583    
+                         required time                         41.223    
+                         arrival time                          -5.992    
   -------------------------------------------------------------------
-                         slack                                 31.067    
+                         slack                                 35.231    
 
-Slack (MET) :             31.197ns  (required time - arrival time)
-  Source:                 X4/pixel_ycoord_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/A[5]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.231ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[4]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.398ns  (logic 2.942ns (35.032%)  route 5.456ns (64.968%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.945ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.363ns  (logic 0.966ns (22.138%)  route 3.397ns (77.862%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.445ns = ( 41.445 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -405,78 +367,59 @@ Slack (MET) :             31.197ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.567    -0.945    X4/clk_out
-    SLICE_X12Y10         FDRE                                         r  X4/pixel_ycoord_reg[4]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y10         FDRE (Prop_fdre_C_Q)         0.518    -0.427 r  X4/pixel_ycoord_reg[4]/Q
-                         net (fo=33, routed)          2.205     1.778    X4/Q[4]
-    SLICE_X13Y2          LUT2 (Prop_lut2_I0_O)        0.124     1.902 r  X4/bg_y0_carry_i_1/O
-                         net (fo=1, routed)           0.000     1.902    X1/bg_y0_carry__0_0[2]
-    SLICE_X13Y2          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     2.303 r  X1/bg_y0_carry/CO[3]
-                         net (fo=1, routed)           0.000     2.303    X1/bg_y0_carry_n_0
-    SLICE_X13Y3          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     2.616 r  X1/bg_y0_carry__0/O[3]
-                         net (fo=5, routed)           0.840     3.456    X1/pixel_ycoord_reg[8][0]
-    SLICE_X12Y4          LUT2 (Prop_lut2_I1_O)        0.306     3.762 r  X1/bg_y0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     3.762    X1/bg_y0__23_carry_i_4_n_0
-    SLICE_X12Y4          CARRY4 (Prop_carry4_S[0]_O[0])
-                                                      0.252     4.014 r  X1/bg_y0__23_carry/O[0]
-                         net (fo=1, routed)           1.011     5.026    X4/bg_y0__29_carry__0[0]
-    SLICE_X12Y3          LUT2 (Prop_lut2_I1_O)        0.295     5.321 r  X4/bg_y0__29_carry__0_i_3/O
-                         net (fo=1, routed)           0.000     5.321    X1/bg_address_reg_3[0]
-    SLICE_X12Y3          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.427     5.748 r  X1/bg_y0__29_carry__0/O[1]
-                         net (fo=5, routed)           0.843     6.590    X4/bg_address_reg_2[1]
-    SLICE_X12Y1          LUT6 (Prop_lut6_I4_O)        0.306     6.896 r  X4/bg_address_reg_i_1/O
-                         net (fo=1, routed)           0.557     7.453    X1/A[3]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/A[5]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.745     5.992    X4/vcount[9]_i_1_n_0
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[4]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_A[5])
-                                                     -0.362    38.650    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.445    41.445    X4/clk_out
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[4]/C
+                         clock pessimism              0.080    41.525    
+                         clock uncertainty           -0.098    41.428    
+    SLICE_X11Y15         FDCE (Setup_fdce_C_CE)      -0.205    41.223    X4/vcount_reg[4]
   -------------------------------------------------------------------
-                         required time                         38.650    
-                         arrival time                          -7.453    
+                         required time                         41.223    
+                         arrival time                          -5.992    
   -------------------------------------------------------------------
-                         slack                                 31.197    
+                         slack                                 35.231    
 
-Slack (MET) :             31.214ns  (required time - arrival time)
-  Source:                 X4/pixel_ycoord_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/A[4]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.231ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[5]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.381ns  (logic 3.274ns (39.064%)  route 5.107ns (60.936%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.945ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.363ns  (logic 0.966ns (22.138%)  route 3.397ns (77.862%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.445ns = ( 41.445 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -486,78 +429,59 @@ Slack (MET) :             31.214ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.567    -0.945    X4/clk_out
-    SLICE_X12Y10         FDRE                                         r  X4/pixel_ycoord_reg[4]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y10         FDRE (Prop_fdre_C_Q)         0.518    -0.427 r  X4/pixel_ycoord_reg[4]/Q
-                         net (fo=33, routed)          2.205     1.778    X4/Q[4]
-    SLICE_X13Y2          LUT2 (Prop_lut2_I0_O)        0.124     1.902 r  X4/bg_y0_carry_i_1/O
-                         net (fo=1, routed)           0.000     1.902    X1/bg_y0_carry__0_0[2]
-    SLICE_X13Y2          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     2.303 r  X1/bg_y0_carry/CO[3]
-                         net (fo=1, routed)           0.000     2.303    X1/bg_y0_carry_n_0
-    SLICE_X13Y3          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     2.616 r  X1/bg_y0_carry__0/O[3]
-                         net (fo=5, routed)           0.840     3.456    X1/pixel_ycoord_reg[8][0]
-    SLICE_X12Y4          LUT2 (Prop_lut2_I1_O)        0.306     3.762 r  X1/bg_y0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     3.762    X1/bg_y0__23_carry_i_4_n_0
-    SLICE_X12Y4          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.427     4.189 r  X1/bg_y0__23_carry/O[1]
-                         net (fo=1, routed)           0.806     4.995    X4/bg_y0__29_carry__0[1]
-    SLICE_X12Y3          LUT2 (Prop_lut2_I1_O)        0.306     5.301 r  X4/bg_y0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     5.301    X1/bg_address_reg_3[1]
-    SLICE_X12Y3          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.879 r  X1/bg_y0__29_carry__0/O[2]
-                         net (fo=5, routed)           0.855     6.734    X4/bg_address_reg_2[2]
-    SLICE_X12Y1          LUT6 (Prop_lut6_I5_O)        0.301     7.035 r  X4/bg_address_reg_i_2/O
-                         net (fo=1, routed)           0.401     7.437    X1/A[2]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/A[4]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.745     5.992    X4/vcount[9]_i_1_n_0
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[5]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_A[4])
-                                                     -0.362    38.650    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.445    41.445    X4/clk_out
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[5]/C
+                         clock pessimism              0.080    41.525    
+                         clock uncertainty           -0.098    41.428    
+    SLICE_X11Y15         FDCE (Setup_fdce_C_CE)      -0.205    41.223    X4/vcount_reg[5]
   -------------------------------------------------------------------
-                         required time                         38.650    
-                         arrival time                          -7.437    
+                         required time                         41.223    
+                         arrival time                          -5.992    
   -------------------------------------------------------------------
-                         slack                                 31.214    
+                         slack                                 35.231    
 
-Slack (MET) :             31.438ns  (required time - arrival time)
-  Source:                 X4/pixel_ycoord_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/A[3]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.231ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[6]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.157ns  (logic 3.274ns (40.137%)  route 4.883ns (59.863%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.055ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.945ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.363ns  (logic 0.966ns (22.138%)  route 3.397ns (77.862%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.445ns = ( 41.445 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -567,78 +491,59 @@ Slack (MET) :             31.438ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.567    -0.945    X4/clk_out
-    SLICE_X12Y10         FDRE                                         r  X4/pixel_ycoord_reg[4]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y10         FDRE (Prop_fdre_C_Q)         0.518    -0.427 r  X4/pixel_ycoord_reg[4]/Q
-                         net (fo=33, routed)          2.205     1.778    X4/Q[4]
-    SLICE_X13Y2          LUT2 (Prop_lut2_I0_O)        0.124     1.902 r  X4/bg_y0_carry_i_1/O
-                         net (fo=1, routed)           0.000     1.902    X1/bg_y0_carry__0_0[2]
-    SLICE_X13Y2          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.401     2.303 r  X1/bg_y0_carry/CO[3]
-                         net (fo=1, routed)           0.000     2.303    X1/bg_y0_carry_n_0
-    SLICE_X13Y3          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     2.616 r  X1/bg_y0_carry__0/O[3]
-                         net (fo=5, routed)           0.840     3.456    X1/pixel_ycoord_reg[8][0]
-    SLICE_X12Y4          LUT2 (Prop_lut2_I1_O)        0.306     3.762 r  X1/bg_y0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     3.762    X1/bg_y0__23_carry_i_4_n_0
-    SLICE_X12Y4          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.427     4.189 r  X1/bg_y0__23_carry/O[1]
-                         net (fo=1, routed)           0.806     4.995    X4/bg_y0__29_carry__0[1]
-    SLICE_X12Y3          LUT2 (Prop_lut2_I1_O)        0.306     5.301 r  X4/bg_y0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     5.301    X1/bg_address_reg_3[1]
-    SLICE_X12Y3          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.879 r  X1/bg_y0__29_carry__0/O[2]
-                         net (fo=5, routed)           0.618     6.497    X4/bg_address_reg_2[2]
-    SLICE_X13Y1          LUT6 (Prop_lut6_I5_O)        0.301     6.798 r  X4/bg_address_reg_i_3/O
-                         net (fo=1, routed)           0.414     7.212    X1/A[1]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/A[3]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.745     5.992    X4/vcount[9]_i_1_n_0
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[6]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_A[3])
-                                                     -0.362    38.650    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.445    41.445    X4/clk_out
+    SLICE_X11Y15         FDCE                                         r  X4/vcount_reg[6]/C
+                         clock pessimism              0.080    41.525    
+                         clock uncertainty           -0.098    41.428    
+    SLICE_X11Y15         FDCE (Setup_fdce_C_CE)      -0.205    41.223    X4/vcount_reg[6]
   -------------------------------------------------------------------
-                         required time                         38.650    
-                         arrival time                          -7.212    
+                         required time                         41.223    
+                         arrival time                          -5.992    
   -------------------------------------------------------------------
-                         slack                                 31.438    
+                         slack                                 35.231    
 
-Slack (MET) :             31.520ns  (required time - arrival time)
-  Source:                 X4/pixel_xcoord_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/C[5]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.461ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[9]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.201ns  (logic 3.403ns (41.496%)  route 4.798ns (58.504%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.942ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.170ns  (logic 0.966ns (23.163%)  route 3.204ns (76.837%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.102ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.446ns = ( 41.446 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -648,78 +553,59 @@ Slack (MET) :             31.520ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.570    -0.942    X4/clk_out
-    SLICE_X14Y2          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.424 r  X4/pixel_xcoord_reg[0]/Q
-                         net (fo=31, routed)          1.006     0.583    X4/pixel_xcoord_reg[9]_0[0]
-    SLICE_X10Y0          LUT2 (Prop_lut2_I1_O)        0.124     0.707 r  X4/bg_x0_carry_i_3/O
-                         net (fo=1, routed)           0.000     0.707    X1/bg_x0_carry__0_0[0]
-    SLICE_X10Y0          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     1.240 r  X1/bg_x0_carry/CO[3]
-                         net (fo=1, routed)           0.000     1.240    X1/bg_x0_carry_n_0
-    SLICE_X10Y1          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     1.555 r  X1/bg_x0_carry__0/O[3]
-                         net (fo=5, routed)           0.984     2.538    X1/O[0]
-    SLICE_X11Y2          LUT2 (Prop_lut2_I1_O)        0.307     2.845 r  X1/bg_x0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     2.845    X1/bg_x0__23_carry_i_4_n_0
-    SLICE_X11Y2          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424     3.269 r  X1/bg_x0__23_carry/O[1]
-                         net (fo=1, routed)           0.946     4.216    X4/bg_x0__29_carry__0[1]
-    SLICE_X14Y2          LUT2 (Prop_lut2_I1_O)        0.303     4.519 r  X4/bg_x0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     4.519    X1/bg_address_reg_1[1]
-    SLICE_X14Y2          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.097 r  X1/bg_x0__29_carry__0/O[2]
-                         net (fo=5, routed)           1.151     6.248    X4/bg_address_reg[2]
-    SLICE_X11Y3          LUT6 (Prop_lut6_I5_O)        0.301     6.549 r  X4/bg_address_reg_i_6/O
-                         net (fo=1, routed)           0.710     7.259    X1/C[3]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/C[5]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.552     5.799    X4/vcount[9]_i_1_n_0
+    SLICE_X10Y14         FDCE                                         r  X4/vcount_reg[9]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_C[5])
-                                                     -0.233    38.779    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.446    41.446    X4/clk_out
+    SLICE_X10Y14         FDCE                                         r  X4/vcount_reg[9]/C
+                         clock pessimism              0.080    41.526    
+                         clock uncertainty           -0.098    41.429    
+    SLICE_X10Y14         FDCE (Setup_fdce_C_CE)      -0.169    41.260    X4/vcount_reg[9]
   -------------------------------------------------------------------
-                         required time                         38.779    
-                         arrival time                          -7.259    
+                         required time                         41.260    
+                         arrival time                          -5.799    
   -------------------------------------------------------------------
-                         slack                                 31.520    
+                         slack                                 35.461    
 
-Slack (MET) :             31.565ns  (required time - arrival time)
-  Source:                 X4/pixel_xcoord_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/C[3]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.529ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.156ns  (logic 3.403ns (41.723%)  route 4.753ns (58.277%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.942ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.064ns  (logic 0.966ns (23.767%)  route 3.098ns (76.233%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.104ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.444ns = ( 41.444 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -729,78 +615,59 @@ Slack (MET) :             31.565ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.570    -0.942    X4/clk_out
-    SLICE_X14Y2          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.424 r  X4/pixel_xcoord_reg[0]/Q
-                         net (fo=31, routed)          1.006     0.583    X4/pixel_xcoord_reg[9]_0[0]
-    SLICE_X10Y0          LUT2 (Prop_lut2_I1_O)        0.124     0.707 r  X4/bg_x0_carry_i_3/O
-                         net (fo=1, routed)           0.000     0.707    X1/bg_x0_carry__0_0[0]
-    SLICE_X10Y0          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     1.240 r  X1/bg_x0_carry/CO[3]
-                         net (fo=1, routed)           0.000     1.240    X1/bg_x0_carry_n_0
-    SLICE_X10Y1          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     1.555 r  X1/bg_x0_carry__0/O[3]
-                         net (fo=5, routed)           0.984     2.538    X1/O[0]
-    SLICE_X11Y2          LUT2 (Prop_lut2_I1_O)        0.307     2.845 r  X1/bg_x0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     2.845    X1/bg_x0__23_carry_i_4_n_0
-    SLICE_X11Y2          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424     3.269 r  X1/bg_x0__23_carry/O[1]
-                         net (fo=1, routed)           0.946     4.216    X4/bg_x0__29_carry__0[1]
-    SLICE_X14Y2          LUT2 (Prop_lut2_I1_O)        0.303     4.519 r  X4/bg_x0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     4.519    X1/bg_address_reg_1[1]
-    SLICE_X14Y2          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.097 r  X1/bg_x0__29_carry__0/O[2]
-                         net (fo=5, routed)           1.142     6.239    X4/bg_address_reg[2]
-    SLICE_X11Y3          LUT6 (Prop_lut6_I5_O)        0.301     6.540 r  X4/bg_address_reg_i_8/O
-                         net (fo=1, routed)           0.675     7.215    X1/C[1]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/C[3]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.446     5.693    X4/vcount[9]_i_1_n_0
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[0]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_C[3])
-                                                     -0.233    38.779    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.444    41.444    X4/clk_out
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[0]/C
+                         clock pessimism              0.080    41.524    
+                         clock uncertainty           -0.098    41.427    
+    SLICE_X9Y15          FDCE (Setup_fdce_C_CE)      -0.205    41.222    X4/vcount_reg[0]
   -------------------------------------------------------------------
-                         required time                         38.779    
-                         arrival time                          -7.215    
+                         required time                         41.222    
+                         arrival time                          -5.693    
   -------------------------------------------------------------------
-                         slack                                 31.565    
+                         slack                                 35.529    
 
-Slack (MET) :             31.571ns  (required time - arrival time)
-  Source:                 X4/pixel_xcoord_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/C[1]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.529ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        8.150ns  (logic 3.403ns (41.754%)  route 4.747ns (58.246%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.942ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.064ns  (logic 0.966ns (23.767%)  route 3.098ns (76.233%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.104ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.444ns = ( 41.444 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -810,78 +677,59 @@ Slack (MET) :             31.571ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.570    -0.942    X4/clk_out
-    SLICE_X14Y2          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.424 r  X4/pixel_xcoord_reg[0]/Q
-                         net (fo=31, routed)          1.006     0.583    X4/pixel_xcoord_reg[9]_0[0]
-    SLICE_X10Y0          LUT2 (Prop_lut2_I1_O)        0.124     0.707 r  X4/bg_x0_carry_i_3/O
-                         net (fo=1, routed)           0.000     0.707    X1/bg_x0_carry__0_0[0]
-    SLICE_X10Y0          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     1.240 r  X1/bg_x0_carry/CO[3]
-                         net (fo=1, routed)           0.000     1.240    X1/bg_x0_carry_n_0
-    SLICE_X10Y1          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     1.555 r  X1/bg_x0_carry__0/O[3]
-                         net (fo=5, routed)           0.984     2.538    X1/O[0]
-    SLICE_X11Y2          LUT2 (Prop_lut2_I1_O)        0.307     2.845 r  X1/bg_x0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     2.845    X1/bg_x0__23_carry_i_4_n_0
-    SLICE_X11Y2          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424     3.269 r  X1/bg_x0__23_carry/O[1]
-                         net (fo=1, routed)           0.946     4.216    X4/bg_x0__29_carry__0[1]
-    SLICE_X14Y2          LUT2 (Prop_lut2_I1_O)        0.303     4.519 r  X4/bg_x0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     4.519    X1/bg_address_reg_1[1]
-    SLICE_X14Y2          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.097 r  X1/bg_x0__29_carry__0/O[2]
-                         net (fo=5, routed)           1.149     6.246    X1/pixel_xcoord_reg[5][2]
-    SLICE_X11Y3          LUT6 (Prop_lut6_I0_O)        0.301     6.547 r  X1/bg_address_reg_i_10/O
-                         net (fo=1, routed)           0.662     7.209    X1/bg_address_reg_i_10_n_0
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/C[1]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.446     5.693    X4/vcount[9]_i_1_n_0
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[1]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_C[1])
-                                                     -0.233    38.779    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.444    41.444    X4/clk_out
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[1]/C
+                         clock pessimism              0.080    41.524    
+                         clock uncertainty           -0.098    41.427    
+    SLICE_X9Y15          FDCE (Setup_fdce_C_CE)      -0.205    41.222    X4/vcount_reg[1]
   -------------------------------------------------------------------
-                         required time                         38.779    
-                         arrival time                          -7.209    
+                         required time                         41.222    
+                         arrival time                          -5.693    
   -------------------------------------------------------------------
-                         slack                                 31.571    
+                         slack                                 35.529    
 
-Slack (MET) :             31.951ns  (required time - arrival time)
-  Source:                 X4/pixel_xcoord_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/C[4]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.529ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[7]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        7.770ns  (logic 3.403ns (43.795%)  route 4.367ns (56.205%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.942ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.064ns  (logic 0.966ns (23.767%)  route 3.098ns (76.233%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.104ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.444ns = ( 41.444 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -891,78 +739,59 @@ Slack (MET) :             31.951ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.570    -0.942    X4/clk_out
-    SLICE_X14Y2          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.424 r  X4/pixel_xcoord_reg[0]/Q
-                         net (fo=31, routed)          1.006     0.583    X4/pixel_xcoord_reg[9]_0[0]
-    SLICE_X10Y0          LUT2 (Prop_lut2_I1_O)        0.124     0.707 r  X4/bg_x0_carry_i_3/O
-                         net (fo=1, routed)           0.000     0.707    X1/bg_x0_carry__0_0[0]
-    SLICE_X10Y0          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     1.240 r  X1/bg_x0_carry/CO[3]
-                         net (fo=1, routed)           0.000     1.240    X1/bg_x0_carry_n_0
-    SLICE_X10Y1          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     1.555 r  X1/bg_x0_carry__0/O[3]
-                         net (fo=5, routed)           0.984     2.538    X1/O[0]
-    SLICE_X11Y2          LUT2 (Prop_lut2_I1_O)        0.307     2.845 r  X1/bg_x0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     2.845    X1/bg_x0__23_carry_i_4_n_0
-    SLICE_X11Y2          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424     3.269 r  X1/bg_x0__23_carry/O[1]
-                         net (fo=1, routed)           0.946     4.216    X4/bg_x0__29_carry__0[1]
-    SLICE_X14Y2          LUT2 (Prop_lut2_I1_O)        0.303     4.519 r  X4/bg_x0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     4.519    X1/bg_address_reg_1[1]
-    SLICE_X14Y2          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.097 r  X1/bg_x0__29_carry__0/O[2]
-                         net (fo=5, routed)           0.914     6.011    X4/bg_address_reg[2]
-    SLICE_X11Y3          LUT6 (Prop_lut6_I5_O)        0.301     6.312 r  X4/bg_address_reg_i_7/O
-                         net (fo=1, routed)           0.517     6.829    X1/C[2]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/C[4]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.446     5.693    X4/vcount[9]_i_1_n_0
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[7]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_C[4])
-                                                     -0.233    38.779    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.444    41.444    X4/clk_out
+    SLICE_X9Y15          FDCE                                         r  X4/vcount_reg[7]/C
+                         clock pessimism              0.080    41.524    
+                         clock uncertainty           -0.098    41.427    
+    SLICE_X9Y15          FDCE (Setup_fdce_C_CE)      -0.205    41.222    X4/vcount_reg[7]
   -------------------------------------------------------------------
-                         required time                         38.779    
-                         arrival time                          -6.829    
+                         required time                         41.222    
+                         arrival time                          -5.693    
   -------------------------------------------------------------------
-                         slack                                 31.951    
+                         slack                                 35.529    
 
-Slack (MET) :             32.250ns  (required time - arrival time)
-  Source:                 X4/pixel_xcoord_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/bg_address_reg/C[2]
-                            (rising edge-triggered cell DSP48E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+Slack (MET) :             35.620ns  (required time - arrival time)
+  Source:                 X4/hcount_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/vcount_reg[8]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clk_out_clk_vga rise@40.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        7.471ns  (logic 3.403ns (45.551%)  route 4.068ns (54.449%))
-  Logic Levels:           8  (CARRY4=4 LUT2=3 LUT6=1)
-  Clock Path Skew:        0.052ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    -1.454ns = ( 38.546 - 40.000 ) 
-    Source Clock Delay      (SCD):    -0.942ns
-    Clock Pessimism Removal (CPR):    0.564ns
+  Data Path Delay:        4.010ns  (logic 0.966ns (24.092%)  route 3.044ns (75.908%))
+  Logic Levels:           3  (LUT2=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.104ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.444ns = ( 41.444 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.628ns
+    Clock Pessimism Removal (CPR):    0.080ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -972,63 +801,44 @@ Slack (MET) :             32.250ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.233     2.691    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.575     1.575    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -6.961    -4.269 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -2.608    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.570    -0.942    X4/clk_out
-    SLICE_X14Y2          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                                                     -3.333    -1.757 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.628     1.628    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.424 r  X4/pixel_xcoord_reg[0]/Q
-                         net (fo=31, routed)          1.006     0.583    X4/pixel_xcoord_reg[9]_0[0]
-    SLICE_X10Y0          LUT2 (Prop_lut2_I1_O)        0.124     0.707 r  X4/bg_x0_carry_i_3/O
-                         net (fo=1, routed)           0.000     0.707    X1/bg_x0_carry__0_0[0]
-    SLICE_X10Y0          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.533     1.240 r  X1/bg_x0_carry/CO[3]
-                         net (fo=1, routed)           0.000     1.240    X1/bg_x0_carry_n_0
-    SLICE_X10Y1          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     1.555 r  X1/bg_x0_carry__0/O[3]
-                         net (fo=5, routed)           0.984     2.538    X1/O[0]
-    SLICE_X11Y2          LUT2 (Prop_lut2_I1_O)        0.307     2.845 r  X1/bg_x0__23_carry_i_4/O
-                         net (fo=1, routed)           0.000     2.845    X1/bg_x0__23_carry_i_4_n_0
-    SLICE_X11Y2          CARRY4 (Prop_carry4_S[0]_O[1])
-                                                      0.424     3.269 r  X1/bg_x0__23_carry/O[1]
-                         net (fo=1, routed)           0.946     4.216    X4/bg_x0__29_carry__0[1]
-    SLICE_X14Y2          LUT2 (Prop_lut2_I1_O)        0.303     4.519 r  X4/bg_x0__29_carry__0_i_2/O
-                         net (fo=1, routed)           0.000     4.519    X1/bg_address_reg_1[1]
-    SLICE_X14Y2          CARRY4 (Prop_carry4_S[1]_O[2])
-                                                      0.578     5.097 r  X1/bg_x0__29_carry__0/O[2]
-                         net (fo=5, routed)           0.438     5.535    X4/bg_address_reg[2]
-    SLICE_X14Y3          LUT6 (Prop_lut6_I5_O)        0.301     5.836 r  X4/bg_address_reg_i_9/O
-                         net (fo=1, routed)           0.693     6.529    X1/C[0]
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/C[2]
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.419     2.047 f  X4/hcount_reg[1]/Q
+                         net (fo=7, routed)           0.912     2.960    X4/hcount_reg_n_0_[1]
+    SLICE_X5Y15          LUT6 (Prop_lut6_I0_O)        0.299     3.259 r  X4/hsync_i_2/O
+                         net (fo=2, routed)           0.643     3.902    X4/hsync_i_2_n_0
+    SLICE_X5Y14          LUT5 (Prop_lut5_I0_O)        0.124     4.026 r  X4/hcount[9]_i_3/O
+                         net (fo=5, routed)           1.096     5.123    X4/hcount[9]_i_3_n_0
+    SLICE_X8Y15          LUT2 (Prop_lut2_I0_O)        0.124     5.247 r  X4/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.391     5.638    X4/vcount[9]_i_1_n_0
+    SLICE_X8Y15          FDCE                                         r  X4/vcount_reg[8]/CE
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                      40.000    40.000 r  
-    W5                                                0.000    40.000 r  clk (IN)
-                         net (fo=0)                   0.000    40.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           1.162    42.550    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         1.457    41.457    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -7.217    35.332 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    36.914    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         1.542    38.546    X1/clk_out
-    DSP48_X0Y0           DSP48E1                                      r  X1/bg_address_reg/CLK
-                         clock pessimism              0.564    39.110    
-                         clock uncertainty           -0.098    39.012    
-    DSP48_X0Y0           DSP48E1 (Setup_dsp48e1_CLK_C[2])
-                                                     -0.233    38.779    X1/bg_address_reg
+                                                     -3.129    38.328 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         1.444    41.444    X4/clk_out
+    SLICE_X8Y15          FDCE                                         r  X4/vcount_reg[8]/C
+                         clock pessimism              0.080    41.524    
+                         clock uncertainty           -0.098    41.427    
+    SLICE_X8Y15          FDCE (Setup_fdce_C_CE)      -0.169    41.258    X4/vcount_reg[8]
   -------------------------------------------------------------------
-                         required time                         38.779    
-                         arrival time                          -6.529    
+                         required time                         41.258    
+                         arrival time                          -5.638    
   -------------------------------------------------------------------
-                         slack                                 32.250    
+                         slack                                 35.620    
 
 
 
@@ -1036,560 +846,519 @@ Slack (MET) :             32.250ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.130ns  (arrival time - required time)
-  Source:                 X1/spr_data_temp_reg[2][y][1]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/spr_data_reg[2][y][1]/D
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 S1/s_data_out_reg[16]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/data_out_reg[16]/D
                             (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.228ns  (logic 0.141ns (61.814%)  route 0.087ns (38.186%))
+  Data Path Delay:        0.220ns  (logic 0.141ns (64.237%)  route 0.079ns (35.763%))
   Logic Levels:           0  
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.854ns
-    Source Clock Delay      (SCD):    -0.615ns
-    Clock Pessimism Removal (CPR):    -0.251ns
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.580ns
+    Clock Pessimism Removal (CPR):    0.255ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.566    -0.615    X1/clk_out
-    SLICE_X13Y3          FDRE                                         r  X1/spr_data_temp_reg[2][y][1]/C
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.580     0.580    S1/clk_out
+    SLICE_X7Y24          FDCE                                         r  S1/s_data_out_reg[16]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X13Y3          FDRE (Prop_fdre_C_Q)         0.141    -0.474 r  X1/spr_data_temp_reg[2][y][1]/Q
-                         net (fo=1, routed)           0.087    -0.387    X1/spr_data_temp_reg[2][y][1]
-    SLICE_X12Y3          FDRE                                         r  X1/spr_data_reg[2][y][1]/D
+    SLICE_X7Y24          FDCE (Prop_fdce_C_Q)         0.141     0.721 r  S1/s_data_out_reg[16]/Q
+                         net (fo=3, routed)           0.079     0.799    S1/Q[15]
+    SLICE_X6Y24          FDRE                                         r  S1/data_out_reg[16]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.836    -0.854    X1/clk_out
-    SLICE_X12Y3          FDRE                                         r  X1/spr_data_reg[2][y][1]/C
-                         clock pessimism              0.251    -0.602    
-    SLICE_X12Y3          FDRE (Hold_fdre_C_D)         0.085    -0.517    X1/spr_data_reg[2][y][1]
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.848     0.848    S1/clk_out
+    SLICE_X6Y24          FDRE                                         r  S1/data_out_reg[16]/C
+                         clock pessimism             -0.255     0.593    
+    SLICE_X6Y24          FDRE (Hold_fdre_C_D)         0.076     0.669    S1/data_out_reg[16]
   -------------------------------------------------------------------
-                         required time                          0.517    
-                         arrival time                          -0.387    
-  -------------------------------------------------------------------
-                         slack                                  0.130    
-
-Slack (MET) :             0.131ns  (arrival time - required time)
-  Source:                 X3/rgb_reg[9]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X3/ergb_reg[9]/D
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out_clk_vga
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.433%)  route 0.068ns (32.567%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.859ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.239ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.562    -0.619    X3/clk_out
-    SLICE_X9Y14          FDRE                                         r  X3/rgb_reg[9]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X9Y14          FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  X3/rgb_reg[9]/Q
-                         net (fo=2, routed)           0.068    -0.410    X3/sel0[9]
-    SLICE_X9Y14          FDRE                                         r  X3/ergb_reg[9]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.831    -0.859    X3/clk_out
-    SLICE_X9Y14          FDRE                                         r  X3/ergb_reg[9]/C
-                         clock pessimism              0.239    -0.619    
-    SLICE_X9Y14          FDRE (Hold_fdre_C_D)         0.078    -0.541    X3/ergb_reg[9]
-  -------------------------------------------------------------------
-                         required time                          0.541    
-                         arrival time                          -0.410    
+                         required time                         -0.669    
+                         arrival time                           0.799    
   -------------------------------------------------------------------
                          slack                                  0.131    
 
-Slack (MET) :             0.132ns  (arrival time - required time)
-  Source:                 S1/s_data_out_reg[15]/C
+Slack (MET) :             0.164ns  (arrival time - required time)
+  Source:                 S1/s_data_out_reg[8]/C
                             (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            S1/s_data_out_reg[14]/D
+  Destination:            S1/data_out_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_clk_vga
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
+  Data Path Delay:        0.253ns  (logic 0.141ns (55.701%)  route 0.112ns (44.299%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.580ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.580     0.580    S1/clk_out
+    SLICE_X7Y25          FDCE                                         r  S1/s_data_out_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y25          FDCE (Prop_fdce_C_Q)         0.141     0.721 r  S1/s_data_out_reg[8]/Q
+                         net (fo=3, routed)           0.112     0.833    S1/Q[7]
+    SLICE_X4Y25          FDRE                                         r  S1/data_out_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.848     0.848    S1/clk_out
+    SLICE_X4Y25          FDRE                                         r  S1/data_out_reg[8]/C
+                         clock pessimism             -0.255     0.593    
+    SLICE_X4Y25          FDRE (Hold_fdre_C_D)         0.076     0.669    S1/data_out_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -0.669    
+                         arrival time                           0.833    
+  -------------------------------------------------------------------
+                         slack                                  0.164    
+
+Slack (MET) :             0.186ns  (arrival time - required time)
+  Source:                 S0/D3_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/s_data_out_reg[6]/D
                             (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.265ns  (logic 0.186ns (70.098%)  route 0.079ns (29.902%))
+  Data Path Delay:        0.291ns  (logic 0.186ns (63.960%)  route 0.105ns (36.040%))
   Logic Levels:           1  (LUT5=1)
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.853ns
-    Source Clock Delay      (SCD):    -0.614ns
-    Clock Pessimism Removal (CPR):    -0.251ns
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.581ns
+    Clock Pessimism Removal (CPR):    0.255ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.567    -0.614    S1/clk_out
-    SLICE_X9Y2           FDCE                                         r  S1/s_data_out_reg[15]/C
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.581     0.581    S0/clk_out
+    SLICE_X5Y26          FDRE                                         r  S0/D3_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y2           FDCE (Prop_fdce_C_Q)         0.141    -0.473 r  S1/s_data_out_reg[15]/Q
-                         net (fo=3, routed)           0.079    -0.394    S0/Q[14]
-    SLICE_X8Y2           LUT5 (Prop_lut5_I0_O)        0.045    -0.349 r  S0/s_data_out[14]_i_1/O
-                         net (fo=1, routed)           0.000    -0.349    S1/D[14]
-    SLICE_X8Y2           FDCE                                         r  S1/s_data_out_reg[14]/D
+    SLICE_X5Y26          FDRE (Prop_fdre_C_Q)         0.141     0.722 r  S0/D3_reg/Q
+                         net (fo=31, routed)          0.105     0.826    S0/D3
+    SLICE_X4Y26          LUT5 (Prop_lut5_I3_O)        0.045     0.871 r  S0/s_data_out[6]_i_1/O
+                         net (fo=1, routed)           0.000     0.871    S1/D[6]
+    SLICE_X4Y26          FDCE                                         r  S1/s_data_out_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.837    -0.853    S1/clk_out
-    SLICE_X8Y2           FDCE                                         r  S1/s_data_out_reg[14]/C
-                         clock pessimism              0.251    -0.601    
-    SLICE_X8Y2           FDCE (Hold_fdce_C_D)         0.120    -0.481    S1/s_data_out_reg[14]
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.849     0.849    S1/clk_out
+    SLICE_X4Y26          FDCE                                         r  S1/s_data_out_reg[6]/C
+                         clock pessimism             -0.255     0.594    
+    SLICE_X4Y26          FDCE (Hold_fdce_C_D)         0.092     0.686    S1/s_data_out_reg[6]
   -------------------------------------------------------------------
-                         required time                          0.481    
-                         arrival time                          -0.349    
+                         required time                         -0.686    
+                         arrival time                           0.871    
   -------------------------------------------------------------------
-                         slack                                  0.132    
+                         slack                                  0.186    
 
-Slack (MET) :             0.133ns  (arrival time - required time)
-  Source:                 X3/rgb_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X3/ergb_reg[0]/D
+Slack (MET) :             0.188ns  (arrival time - required time)
+  Source:                 X4/hcount_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/pixel_xcoord_reg[8]/D
                             (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
+  Data Path Delay:        0.273ns  (logic 0.141ns (51.711%)  route 0.132ns (48.289%))
   Logic Levels:           0  
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.859ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.239ns
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.859ns
+    Source Clock Delay      (SCD):    0.589ns
+    Clock Pessimism Removal (CPR):    0.255ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.562    -0.619    X3/clk_out
-    SLICE_X9Y13          FDRE                                         r  X3/rgb_reg[0]/C
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.589     0.589    X4/clk_out
+    SLICE_X7Y14          FDCE                                         r  X4/hcount_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y13          FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  X3/rgb_reg[0]/Q
-                         net (fo=2, routed)           0.067    -0.411    X3/sel0[0]
-    SLICE_X9Y13          FDRE                                         r  X3/ergb_reg[0]/D
+    SLICE_X7Y14          FDCE (Prop_fdce_C_Q)         0.141     0.730 r  X4/hcount_reg[8]/Q
+                         net (fo=6, routed)           0.132     0.861    X4/hcount_reg_n_0_[8]
+    SLICE_X5Y14          FDRE                                         r  X4/pixel_xcoord_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.831    -0.859    X3/clk_out
-    SLICE_X9Y13          FDRE                                         r  X3/ergb_reg[0]/C
-                         clock pessimism              0.239    -0.619    
-    SLICE_X9Y13          FDRE (Hold_fdre_C_D)         0.075    -0.544    X3/ergb_reg[0]
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.859     0.859    X4/clk_out
+    SLICE_X5Y14          FDRE                                         r  X4/pixel_xcoord_reg[8]/C
+                         clock pessimism             -0.255     0.604    
+    SLICE_X5Y14          FDRE (Hold_fdre_C_D)         0.070     0.674    X4/pixel_xcoord_reg[8]
   -------------------------------------------------------------------
-                         required time                          0.544    
-                         arrival time                          -0.411    
+                         required time                         -0.674    
+                         arrival time                           0.861    
   -------------------------------------------------------------------
-                         slack                                  0.133    
+                         slack                                  0.188    
 
-Slack (MET) :             0.133ns  (arrival time - required time)
-  Source:                 X3/rgb_reg[8]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X3/ergb_reg[8]/D
+Slack (MET) :             0.189ns  (arrival time - required time)
+  Source:                 S1/s_data_out_reg[13]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/data_out_reg[13]/D
                             (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.209ns  (logic 0.141ns (67.454%)  route 0.068ns (32.546%))
+  Data Path Delay:        0.299ns  (logic 0.141ns (47.134%)  route 0.158ns (52.866%))
   Logic Levels:           0  
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.859ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.239ns
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.848ns
+    Source Clock Delay      (SCD):    0.580ns
+    Clock Pessimism Removal (CPR):    0.234ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.562    -0.619    X3/clk_out
-    SLICE_X9Y14          FDRE                                         r  X3/rgb_reg[8]/C
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.580     0.580    S1/clk_out
+    SLICE_X7Y25          FDCE                                         r  S1/s_data_out_reg[13]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y14          FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  X3/rgb_reg[8]/Q
-                         net (fo=2, routed)           0.068    -0.410    X3/sel0[8]
-    SLICE_X9Y14          FDRE                                         r  X3/ergb_reg[8]/D
+    SLICE_X7Y25          FDCE (Prop_fdce_C_Q)         0.141     0.721 r  S1/s_data_out_reg[13]/Q
+                         net (fo=3, routed)           0.158     0.879    S1/Q[12]
+    SLICE_X6Y24          FDRE                                         r  S1/data_out_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.831    -0.859    X3/clk_out
-    SLICE_X9Y14          FDRE                                         r  X3/ergb_reg[8]/C
-                         clock pessimism              0.239    -0.619    
-    SLICE_X9Y14          FDRE (Hold_fdre_C_D)         0.076    -0.543    X3/ergb_reg[8]
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.848     0.848    S1/clk_out
+    SLICE_X6Y24          FDRE                                         r  S1/data_out_reg[13]/C
+                         clock pessimism             -0.234     0.614    
+    SLICE_X6Y24          FDRE (Hold_fdre_C_D)         0.076     0.690    S1/data_out_reg[13]
   -------------------------------------------------------------------
-                         required time                          0.543    
-                         arrival time                          -0.410    
+                         required time                         -0.690    
+                         arrival time                           0.879    
   -------------------------------------------------------------------
-                         slack                                  0.133    
+                         slack                                  0.189    
 
-Slack (MET) :             0.134ns  (arrival time - required time)
-  Source:                 X1/spr_data_temp_reg[1][x][5]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/spr_data_reg[1][x][5]/D
+Slack (MET) :             0.192ns  (arrival time - required time)
+  Source:                 X4/hcount_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/pixel_xcoord_reg[5]/D
                             (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clk_out_clk_vga
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.232ns  (logic 0.141ns (60.749%)  route 0.091ns (39.251%))
+  Data Path Delay:        0.277ns  (logic 0.141ns (50.967%)  route 0.136ns (49.033%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.859ns
+    Source Clock Delay      (SCD):    0.589ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.589     0.589    X4/clk_out
+    SLICE_X7Y15          FDCE                                         r  X4/hcount_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y15          FDCE (Prop_fdce_C_Q)         0.141     0.730 r  X4/hcount_reg[5]/Q
+                         net (fo=9, routed)           0.136     0.865    X4/hcount_reg_n_0_[5]
+    SLICE_X5Y14          FDRE                                         r  X4/pixel_xcoord_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.859     0.859    X4/clk_out
+    SLICE_X5Y14          FDRE                                         r  X4/pixel_xcoord_reg[5]/C
+                         clock pessimism             -0.255     0.604    
+    SLICE_X5Y14          FDRE (Hold_fdre_C_D)         0.070     0.674    X4/pixel_xcoord_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -0.674    
+                         arrival time                           0.865    
+  -------------------------------------------------------------------
+                         slack                                  0.192    
+
+Slack (MET) :             0.193ns  (arrival time - required time)
+  Source:                 S1/s_data_out_reg[24]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/data_out_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_clk_vga
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
+  Data Path Delay:        0.267ns  (logic 0.141ns (52.784%)  route 0.126ns (47.216%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.583ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.583     0.583    S1/clk_out
+    SLICE_X4Y27          FDCE                                         r  S1/s_data_out_reg[24]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y27          FDCE (Prop_fdce_C_Q)         0.141     0.724 r  S1/s_data_out_reg[24]/Q
+                         net (fo=3, routed)           0.126     0.850    S1/Q[23]
+    SLICE_X6Y26          FDRE                                         r  S1/data_out_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.849     0.849    S1/clk_out
+    SLICE_X6Y26          FDRE                                         r  S1/data_out_reg[24]/C
+                         clock pessimism             -0.255     0.594    
+    SLICE_X6Y26          FDRE (Hold_fdre_C_D)         0.063     0.657    S1/data_out_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -0.657    
+                         arrival time                           0.850    
+  -------------------------------------------------------------------
+                         slack                                  0.193    
+
+Slack (MET) :             0.195ns  (arrival time - required time)
+  Source:                 S1/clk_cycle_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/clk_cycle_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_clk_vga
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
+  Data Path Delay:        0.328ns  (logic 0.186ns (56.635%)  route 0.142ns (43.365%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.821ns
+    Source Clock Delay      (SCD):    0.554ns
+    Clock Pessimism Removal (CPR):    0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.554     0.554    S1/clk_out
+    SLICE_X9Y26          FDCE                                         r  S1/clk_cycle_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y26          FDCE (Prop_fdce_C_Q)         0.141     0.695 f  S1/clk_cycle_reg[2]/Q
+                         net (fo=8, routed)           0.142     0.837    S1/clk_cycle[2]
+    SLICE_X8Y26          LUT5 (Prop_lut5_I1_O)        0.045     0.882 r  S1/clk_cycle[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.882    S1/clk_cycle[0]_i_1_n_0
+    SLICE_X8Y26          FDCE                                         r  S1/clk_cycle_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.821     0.821    S1/clk_out
+    SLICE_X8Y26          FDCE                                         r  S1/clk_cycle_reg[0]/C
+                         clock pessimism             -0.254     0.567    
+    SLICE_X8Y26          FDCE (Hold_fdce_C_D)         0.120     0.687    S1/clk_cycle_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.687    
+                         arrival time                           0.882    
+  -------------------------------------------------------------------
+                         slack                                  0.195    
+
+Slack (MET) :             0.202ns  (arrival time - required time)
+  Source:                 S1/s_data_out_reg[23]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            S1/data_out_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_clk_vga
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
+  Data Path Delay:        0.265ns  (logic 0.141ns (53.146%)  route 0.124ns (46.854%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.849ns
+    Source Clock Delay      (SCD):    0.583ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.583     0.583    S1/clk_out
+    SLICE_X4Y27          FDCE                                         r  S1/s_data_out_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y27          FDCE (Prop_fdce_C_Q)         0.141     0.724 r  S1/s_data_out_reg[23]/Q
+                         net (fo=3, routed)           0.124     0.848    S1/Q[22]
+    SLICE_X6Y26          FDRE                                         r  S1/data_out_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_clk_vga rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.849     0.849    S1/clk_out
+    SLICE_X6Y26          FDRE                                         r  S1/data_out_reg[23]/C
+                         clock pessimism             -0.255     0.594    
+    SLICE_X6Y26          FDRE (Hold_fdre_C_D)         0.052     0.646    S1/data_out_reg[23]
+  -------------------------------------------------------------------
+                         required time                         -0.646    
+                         arrival time                           0.848    
+  -------------------------------------------------------------------
+                         slack                                  0.202    
+
+Slack (MET) :             0.205ns  (arrival time - required time)
+  Source:                 X4/hcount_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            X4/pixel_xcoord_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_clk_vga
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
+  Data Path Delay:        0.273ns  (logic 0.141ns (51.597%)  route 0.132ns (48.403%))
   Logic Levels:           0  
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.826ns
-    Source Clock Delay      (SCD):    -0.588ns
-    Clock Pessimism Removal (CPR):    -0.250ns
+    Destination Clock Delay (DCD):    0.858ns
+    Source Clock Delay      (SCD):    0.589ns
+    Clock Pessimism Removal (CPR):    0.256ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.549     0.549    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.593    -0.588    X1/clk_out
-    SLICE_X7Y5           FDRE                                         r  X1/spr_data_temp_reg[1][x][5]/C
+                                                     -1.061    -0.512 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.589     0.589    X4/clk_out
+    SLICE_X5Y15          FDCE                                         r  X4/hcount_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y5           FDRE (Prop_fdre_C_Q)         0.141    -0.447 r  X1/spr_data_temp_reg[1][x][5]/Q
-                         net (fo=1, routed)           0.091    -0.356    X1/spr_data_temp_reg[1][x][5]
-    SLICE_X6Y5           FDRE                                         r  X1/spr_data_reg[1][x][5]/D
+    SLICE_X5Y15          FDCE (Prop_fdce_C_Q)         0.141     0.730 r  X4/hcount_reg[0]/Q
+                         net (fo=8, routed)           0.132     0.862    X4/hcount_reg_n_0_[0]
+    SLICE_X4Y15          FDRE                                         r  X4/pixel_xcoord_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out_clk_vga rise edge)
                                                       0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=499, routed)         0.817     0.817    X0/inst/clk_in
     MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.864    -0.826    X1/clk_out
-    SLICE_X6Y5           FDRE                                         r  X1/spr_data_reg[1][x][5]/C
-                         clock pessimism              0.250    -0.575    
-    SLICE_X6Y5           FDRE (Hold_fdre_C_D)         0.085    -0.490    X1/spr_data_reg[1][x][5]
+                                                     -1.375    -0.559 r  X0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    X0/inst/clk_out_clk_vga
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  X0/inst/clkout1_buf/O
+                         net (fo=122, routed)         0.858     0.858    X4/clk_out
+    SLICE_X4Y15          FDRE                                         r  X4/pixel_xcoord_reg[0]/C
+                         clock pessimism             -0.256     0.602    
+    SLICE_X4Y15          FDRE (Hold_fdre_C_D)         0.055     0.657    X4/pixel_xcoord_reg[0]
   -------------------------------------------------------------------
-                         required time                          0.490    
-                         arrival time                          -0.356    
+                         required time                         -0.657    
+                         arrival time                           0.862    
   -------------------------------------------------------------------
-                         slack                                  0.134    
-
-Slack (MET) :             0.134ns  (arrival time - required time)
-  Source:                 X1/spr_data_temp_reg[1][y][4]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/spr_data_reg[1][y][4]/D
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out_clk_vga
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.232ns  (logic 0.141ns (60.749%)  route 0.091ns (39.251%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.856ns
-    Source Clock Delay      (SCD):    -0.617ns
-    Clock Pessimism Removal (CPR):    -0.251ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.564    -0.617    X1/clk_out
-    SLICE_X9Y10          FDRE                                         r  X1/spr_data_temp_reg[1][y][4]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X9Y10          FDRE (Prop_fdre_C_Q)         0.141    -0.476 r  X1/spr_data_temp_reg[1][y][4]/Q
-                         net (fo=1, routed)           0.091    -0.385    X1/spr_data_temp_reg[1][y][4]
-    SLICE_X8Y10          FDRE                                         r  X1/spr_data_reg[1][y][4]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.834    -0.856    X1/clk_out
-    SLICE_X8Y10          FDRE                                         r  X1/spr_data_reg[1][y][4]/C
-                         clock pessimism              0.251    -0.604    
-    SLICE_X8Y10          FDRE (Hold_fdre_C_D)         0.085    -0.519    X1/spr_data_reg[1][y][4]
-  -------------------------------------------------------------------
-                         required time                          0.519    
-                         arrival time                          -0.385    
-  -------------------------------------------------------------------
-                         slack                                  0.134    
-
-Slack (MET) :             0.134ns  (arrival time - required time)
-  Source:                 X1/spr_data_temp_reg[3][y][8]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X1/spr_data_reg[3][y][8]/D
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out_clk_vga
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.232ns  (logic 0.141ns (60.749%)  route 0.091ns (39.251%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.855ns
-    Source Clock Delay      (SCD):    -0.616ns
-    Clock Pessimism Removal (CPR):    -0.251ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.565    -0.616    X1/clk_out
-    SLICE_X11Y7          FDRE                                         r  X1/spr_data_temp_reg[3][y][8]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X11Y7          FDRE (Prop_fdre_C_Q)         0.141    -0.475 r  X1/spr_data_temp_reg[3][y][8]/Q
-                         net (fo=1, routed)           0.091    -0.384    X1/spr_data_temp_reg[3][y][8]
-    SLICE_X10Y7          FDRE                                         r  X1/spr_data_reg[3][y][8]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.835    -0.855    X1/clk_out
-    SLICE_X10Y7          FDRE                                         r  X1/spr_data_reg[3][y][8]/C
-                         clock pessimism              0.251    -0.603    
-    SLICE_X10Y7          FDRE (Hold_fdre_C_D)         0.085    -0.518    X1/spr_data_reg[3][y][8]
-  -------------------------------------------------------------------
-                         required time                          0.518    
-                         arrival time                          -0.384    
-  -------------------------------------------------------------------
-                         slack                                  0.134    
-
-Slack (MET) :             0.142ns  (arrival time - required time)
-  Source:                 X3/s_rom_address_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5]
-                            (rising edge-triggered cell RAMB36E1 clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out_clk_vga
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.329ns  (logic 0.148ns (44.953%)  route 0.181ns (55.047%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.816ns
-    Source Clock Delay      (SCD):    -0.619ns
-    Clock Pessimism Removal (CPR):    -0.254ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.562    -0.619    X3/clk_out
-    SLICE_X8Y13          FDRE                                         r  X3/s_rom_address_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X8Y13          FDRE (Prop_fdre_C_Q)         0.148    -0.471 r  X3/s_rom_address_reg[1]/Q
-                         net (fo=5, routed)           0.181    -0.290    X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[1]
-    RAMB36_X0Y2          RAMB36E1                                     r  X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/ADDRARDADDR[5]
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.873    -0.816    X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
-    RAMB36_X0Y2          RAMB36E1                                     r  X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
-                         clock pessimism              0.254    -0.562    
-    RAMB36_X0Y2          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[5])
-                                                      0.130    -0.432    X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram
-  -------------------------------------------------------------------
-                         required time                          0.432    
-                         arrival time                          -0.290    
-  -------------------------------------------------------------------
-                         slack                                  0.142    
-
-Slack (MET) :             0.154ns  (arrival time - required time)
-  Source:                 X1/en_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            X2/rom_address_reg[1]/D
-                            (rising edge-triggered cell FDRE clocked by clk_out_clk_vga  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clk_out_clk_vga
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_out_clk_vga rise@0.000ns - clk_out_clk_vga rise@0.000ns)
-  Data Path Delay:        0.259ns  (logic 0.186ns (71.777%)  route 0.073ns (28.223%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    -0.828ns
-    Source Clock Delay      (SCD):    -0.590ns
-    Clock Pessimism Removal (CPR):    -0.250ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.440     0.667    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -2.360    -1.693 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -1.207    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.591    -0.590    X1/clk_out
-    SLICE_X4Y11          FDRE                                         r  X1/en_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X4Y11          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  X1/en_reg[2]/Q
-                         net (fo=3, routed)           0.073    -0.376    X1/s_en[2]
-    SLICE_X5Y11          LUT4 (Prop_lut4_I3_O)        0.045    -0.331 r  X1/rom_address[1]_i_1/O
-                         net (fo=1, routed)           0.000    -0.331    X2/rom_address_reg[1]_0
-    SLICE_X5Y11          FDRE                                         r  X2/rom_address_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_out_clk_vga rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    X0/inst/clk_in
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  X0/inst/clkin1_ibufg/O
-                         net (fo=1, routed)           0.480     0.894    X0/inst/clk_in_clk_vga
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.142    -2.248 r  X0/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -1.718    X0/inst/clk_out_clk_vga
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  X0/inst/clkout1_buf/O
-                         net (fo=462, routed)         0.862    -0.828    X2/clk_out
-    SLICE_X5Y11          FDRE                                         r  X2/rom_address_reg[1]/C
-                         clock pessimism              0.250    -0.577    
-    SLICE_X5Y11          FDRE (Hold_fdre_C_D)         0.092    -0.485    X2/rom_address_reg[1]
-  -------------------------------------------------------------------
-                         required time                          0.485    
-                         arrival time                          -0.331    
-  -------------------------------------------------------------------
-                         slack                                  0.154    
+                         slack                                  0.205    
 
 
 
@@ -1603,37 +1372,37 @@ Period(ns):         40.000
 Sources:            { X0/inst/mmcm_adv_inst/CLKOUT0 }
 
 Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period        n/a     DSP48E1/CLK         n/a            3.884         40.000      36.116     DSP48_X0Y0       X1/bg_address_reg/CLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         40.000      37.424     RAMB36_X0Y2      X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         40.000      37.424     RAMB36_X0Y2      X3/L4/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         40.000      37.424     RAMB18_X0Y2      X1/B0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
-Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         40.000      37.424     RAMB18_X0Y2      X1/B0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKBWRCLK
-Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         40.000      37.424     RAMB18_X0Y3      X3/L2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKARDCLK
-Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         40.000      37.424     RAMB18_X0Y3      X3/L2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         40.000      37.424     RAMB36_X0Y0      X1/B0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
-Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         40.000      37.424     RAMB36_X0Y0      X1/B0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLK
-Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         40.000      37.424     RAMB36_X0Y3      X3/L2/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     BUFG/I              n/a            2.155         40.000      37.845     BUFGCTRL_X0Y1    X0/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         40.000      38.751     MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y27      S0/D1_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X5Y26      S0/D2_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X5Y26      S0/D3_reg/C
+Min Period        n/a     FDCE/C              n/a            1.000         40.000      39.000     SLICE_X8Y26      S1/clk_cycle_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            1.000         40.000      39.000     SLICE_X9Y26      S1/clk_cycle_reg[1]/C
+Min Period        n/a     FDCE/C              n/a            1.000         40.000      39.000     SLICE_X9Y26      S1/clk_cycle_reg[2]/C
+Min Period        n/a     FDCE/C              n/a            1.000         40.000      39.000     SLICE_X9Y26      S1/clk_cycle_reg[3]/C
+Min Period        n/a     FDCE/C              n/a            1.000         40.000      39.000     SLICE_X9Y26      S1/clk_cycle_reg[4]/C
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       40.000      173.360    MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKOUT0
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y7       S0/D1_reg/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y0       S0/D2_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y0       S0/D2_reg/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y1       S0/D3_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y1       S0/D3_reg/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][6]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][7]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][8]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][9]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X10Y7      X1/spr_data_reg[7][y][0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y7       S0/D1_reg/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y0       S0/D2_reg/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y1       S0/D3_reg/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][6]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][7]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][8]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X2Y8       X1/spr_data_reg[7][x][9]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X10Y7      X1/spr_data_reg[7][y][0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X11Y2      X1/spr_data_reg[7][y][1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X10Y8      X1/spr_data_reg[7][y][2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y27      S0/D1_reg/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         20.000      19.500     SLICE_X8Y26      S1/clk_cycle_reg[0]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         20.000      19.500     SLICE_X9Y26      S1/clk_cycle_reg[1]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         20.000      19.500     SLICE_X9Y26      S1/clk_cycle_reg[2]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         20.000      19.500     SLICE_X9Y26      S1/clk_cycle_reg[3]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         20.000      19.500     SLICE_X9Y26      S1/clk_cycle_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y25      S1/data_out_reg[10]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y25      S1/data_out_reg[12]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y24      S1/data_out_reg[14]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y25      S1/data_out_reg[19]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[10]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[11]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[3]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[5]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[8]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X8Y19      X4/rgb_out_reg[9]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y27      S0/D1_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y27      S0/D1_reg/C
 
 
 
@@ -1655,7 +1424,7 @@ Period(ns):         10.000
 Sources:            { X0/inst/mmcm_adv_inst/CLKFBOUT }
 
 Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
-Min Period  n/a     BUFG/I               n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1    X0/inst/clkf_buf/I
+Min Period  n/a     BUFG/I               n/a            2.155         10.000      7.845      BUFGCTRL_X0Y2    X0/inst/clkf_buf/I
 Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKFBOUT
 Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKFBIN
 Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  X0/inst/mmcm_adv_inst/CLKFBIN

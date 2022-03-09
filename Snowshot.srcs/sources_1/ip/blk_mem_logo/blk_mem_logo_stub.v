@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Mar  9 13:14:12 2022
+// Date        : Tue Mar  8 14:29:02 2022
 // Host        : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok
-//               7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top blk_mem_logo -prefix
+//               blk_mem_logo_ blk_mem_logo_stub.v
 // Design      : blk_mem_logo
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

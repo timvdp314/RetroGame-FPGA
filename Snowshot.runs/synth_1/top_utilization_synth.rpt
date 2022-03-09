@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar  9 13:23:43 2022
+| Date         : Wed Mar  9 16:26:20 2022
 | Host         : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  451 |     0 |     20800 |  2.17 |
-|   LUT as Logic          |  451 |     0 |     20800 |  2.17 |
+| Slice LUTs*             |  883 |     0 |     20800 |  4.25 |
+|   LUT as Logic          |  883 |     0 |     20800 |  4.25 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  446 |     0 |     41600 |  1.07 |
-|   Register as Flip Flop |  446 |     0 |     41600 |  1.07 |
+| Slice Registers         |  605 |     0 |     41600 |  1.45 |
+|   Register as Flip Flop |  605 |     0 |     41600 |  1.45 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 53    |          Yes |           - |        Reset |
+| 165   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 393   |          Yes |       Reset |            - |
+| 440   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   18 |     0 |       106 | 16.98 |
+| Bonded IOB                  |   19 |     0 |       106 | 17.92 |
 | Bonded IPADs                |    0 |     0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
@@ -150,17 +150,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  393 |        Flop & Latch |
-| LUT5     |  210 |                 LUT |
-| LUT6     |  103 |                 LUT |
-| LUT4     |   98 |                 LUT |
-| CARRY4   |   82 |          CarryLogic |
-| LUT3     |   79 |                 LUT |
-| LUT2     |   72 |                 LUT |
-| FDCE     |   53 |        Flop & Latch |
+| FDRE     |  440 |        Flop & Latch |
+| LUT5     |  303 |                 LUT |
+| LUT6     |  294 |                 LUT |
+| LUT3     |  188 |                 LUT |
+| FDCE     |  165 |        Flop & Latch |
+| CARRY4   |  151 |          CarryLogic |
+| LUT4     |  136 |                 LUT |
+| LUT2     |  117 |                 LUT |
+| LUT1     |   23 |                 LUT |
 | OBUF     |   14 |                  IO |
-| LUT1     |    4 |                 LUT |
-| IBUF     |    4 |                  IO |
+| IBUF     |    5 |                  IO |
 | DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
@@ -168,16 +168,16 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+------------------+------+
-|     Ref Name     | Used |
-+------------------+------+
-| rom_bg           |    1 |
-| clk_vga          |    1 |
-| blk_mem_snowball |    1 |
-| blk_mem_player2  |    1 |
-| blk_mem_player1  |    1 |
-| blk_mem_logo     |    1 |
-+------------------+------+
++--------------------+------+
+|      Ref Name      | Used |
++--------------------+------+
+| rom_bg             |    1 |
+| clk_vga            |    1 |
+| blk_mem_snowball_1 |    1 |
+| blk_mem_santa      |    1 |
+| blk_mem_logo       |    1 |
+| blk_mem_guiseppe   |    1 |
++--------------------+------+
 
 
 9. Instantiated Netlists

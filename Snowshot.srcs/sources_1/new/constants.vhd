@@ -32,8 +32,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 package CONST_VGA is
  
-  constant test : std_logic_vector(12 downto 0) := (others => '0');
- 
   -- VGA
   constant HPORCH : integer := 97;
   constant VPORCH : integer := 3;
@@ -58,15 +56,17 @@ package CONST_SPRITES is
     constant SPRITE_COUNT : integer := 8;
     constant SPRITE_ID_SIZE : integer := 7;
 
-    constant SPRITE_WIDTH_MAX : integer := 60;
-    constant SPRITE_HEIGHT_MAX : integer := 60;
+    constant SPRITE_WIDTH_MAX : integer := 100;
+    constant SPRITE_HEIGHT_MAX : integer := 100;
     constant SPRITE_SIZE_MAX : integer := SPRITE_WIDTH_MAX * SPRITE_HEIGHT_MAX;
 
-    constant PLAYER_WIDTH : integer := 16;
-    constant PLAYER_HEIGHT : integer := 16;
+    constant SPRITE_SIZE_WIDTH : integer := 14;
 
-    constant SNOWBALL_WIDTH : integer := 10;
-    constant SNOWBALL_HEIGHT : integer := 10;
+    constant PLAYER_WIDTH : integer := 48;
+    constant PLAYER_HEIGHT : integer := 52;
+
+    constant SNOWBALL_WIDTH : integer := 22;
+    constant SNOWBALL_HEIGHT : integer := 20;
 
     constant BG_WIDTH : integer := 50;
     constant BG_HEIGHT : integer := 50;
@@ -79,12 +79,12 @@ USE WORK.CONST_SPRITES.ALL;
 
 package CONST_SPRITE_DATA is
 
-    constant ROM_SPRITE_BLOCKS : integer := 8;
+    constant ROM_SPRITE_BLOCKS : integer := 2; -- Width of std_logic_vector
 
-    constant ROM_NULL : integer := 0;
-    constant ROM_PLAYER1 : integer := 1;
-    constant ROM_PLAYER2 : integer := 2;
-    constant ROM_SNOWBALL : integer := 3;
+    constant ROM_NULL : std_logic_vector(ROM_SPRITE_BLOCKS downto 0) := "000";
+    constant ROM_PLAYER1 : std_logic_vector(ROM_SPRITE_BLOCKS downto 0) := "001";
+    constant ROM_PLAYER2 : std_logic_vector(ROM_SPRITE_BLOCKS downto 0) := "010";
+    constant ROM_SNOWBALL : std_logic_vector(ROM_SPRITE_BLOCKS downto 0) := "011";
 
     type RomType is array (NATURAL range 0 to 14, 
                           NATURAL range 0 to 14) of std_logic_vector(12 downto 0);
@@ -92,7 +92,7 @@ package CONST_SPRITE_DATA is
     type struct_sprite is record
        w : integer range 0 to SPRITE_WIDTH_MAX;
        h : integer range 0 to SPRITE_HEIGHT_MAX;
-       rom : integer range 0 to (ROM_SPRITE_BLOCKS - 1);
+       rom : std_logic_vector(ROM_SPRITE_BLOCKS downto 0);
     end record struct_sprite;
 
     type t_arr_sprites is array (NATURAL range 0 to (SPRITE_COUNT - 1) ) of struct_sprite;

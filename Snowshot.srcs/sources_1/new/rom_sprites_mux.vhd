@@ -37,8 +37,8 @@ use WORK.CONST_SPRITE_DATA.ALL;
 entity rom_sprites_mux is
  Port  (   clk : in std_logic;
            reset : in std_logic;
-           rom_address : in integer range 0 to (ROM_SPRITE_BLOCKS - 1);
-           rom_pixel : in integer range 0 to (SPRITE_SIZE_MAX - 1);
+           rom_address : in std_logic_vector(ROM_SPRITE_BLOCKS downto 0);
+           rom_pixel : in std_logic_vector(SPRITE_SIZE_WIDTH downto 0);
            ergb : out std_logic_vector(12 downto 0)
  );
 end rom_sprites_mux;
@@ -55,7 +55,7 @@ architecture Behavioral of rom_sprites_mux is
 	  
 	  end component blk_mem_logo;
 	  
-	  component blk_mem_player1 is
+	  component blk_mem_santa is
 		Port ( 
 		  clka : in STD_LOGIC;
 		  ena : in STD_LOGIC;
@@ -63,9 +63,9 @@ architecture Behavioral of rom_sprites_mux is
 		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
 		);
 		
-	  end component blk_mem_player1;
+	  end component blk_mem_santa;
 	  
-	  component blk_mem_player2 is
+	  component blk_mem_guiseppe is
 		Port ( 
 		  clka : in STD_LOGIC;
 		  ena : in STD_LOGIC;
@@ -73,17 +73,17 @@ architecture Behavioral of rom_sprites_mux is
 		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
 		);
 	  
-	  end component blk_mem_player2;
+	  end component blk_mem_guiseppe;
 	  
-	  component blk_mem_snowball is
+	  component blk_mem_snowball_1 is
 		Port ( 
 		  clka : in STD_LOGIC;
 		  ena : in STD_LOGIC;
-		  addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
+		  addra : in STD_LOGIC_VECTOR ( 8 downto 0 );
 		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
 		);
 	  
-	  end component blk_mem_snowball;
+	  end component blk_mem_snowball_1;
 
 	signal rgb_player1 : std_logic_vector(11 downto 0);
 	signal rgb_player2 : std_logic_vector(11 downto 0);
@@ -102,22 +102,22 @@ begin
    addra  => s_rom_address(14 downto 0),
    douta  => rgb_logo );
 
- L2 : blk_mem_player1 port map (
+ L2 : blk_mem_santa port map (
    clka => clk,
    ena => '1',
    addra => s_rom_address(11 downto 0),
    douta => rgb_player1 );
   
- L3 : blk_mem_player2 port map (
+ L3 : blk_mem_guiseppe port map (
    clka => clk,
    ena  => '1',
    addra  => s_rom_address(11 downto 0),
    douta  => rgb_player2 );
     
- L4 : blk_mem_snowball port map (
+ L4 : blk_mem_snowball_1 port map (
    clka => clk,
    ena  => '1',
-   addra  => s_rom_address( 10 downto 0 ),
+   addra  => s_rom_address( 8 downto 0 ),
    douta  => rgb_snowball );
 
 	process (reset, clk)
@@ -127,20 +127,20 @@ begin
 
 		elsif ( rising_edge(clk) ) then
 
-			s_rom_address <= std_logic_vector(to_unsigned(rom_address, s_rom_address'length));
+			s_rom_address <= rom_pixel;
 
 			case rom_address is
-				when 1 =>
+				when "001" =>
 					rgb <= rgb_player1;
-				when 2 => 
+				when "010" => 
 					rgb <= rgb_player2;
-				when 3 =>
+				when "011" =>
 					rgb <= rgb_snowball;
 				when others =>
-					rgb <= (others => '1');
+					rgb <= x"FFF";
 			end case;
 
-			if (rgb = "000011110000") then --AANPASSEN--
+			if (rgb = x"FFF") then
 				ergb <= '0' & rgb;
 			else
 				ergb <= '1' & rgb;
