@@ -73,7 +73,7 @@ component engine is
             pixel_ycoord : in INTEGER range 0 to SCREEN_HEIGHT;
             sprite_data : in STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
             spi_confirm : in STD_LOGIC;
-            en : out integer range 0 to (SPRITE_COUNT - 1); 
+            en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
             rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
             countreset : out STD_LOGIC          
            );
@@ -94,7 +94,7 @@ component rom_sprites is
           clk_vga      : in STD_LOGIC; 
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
-          en           : in integer range 0 to (SPRITE_COUNT - 1);
+          en           : in STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
           rom_address  : out std_logic_vector(2 downto 0);
           rom_pixel    : out std_logic_vector(SPRITE_SIZE_WIDTH downto 0)
           );
@@ -136,7 +136,7 @@ signal s_rom_address : STD_LOGIC_VECTOR(2 downto 0);
 signal s_rom_pixel : STD_LOGIC_VECTOR(SPRITE_SIZE_WIDTH downto 0);
 signal s_pixel_xcoord : INTEGER range 0 to SCREEN_WIDTH;
 signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;
-signal s_en : integer range 0 to (SPRITE_COUNT - 1);
+signal s_en : STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
 signal s_countreset : STD_LOGIC;
 
 begin

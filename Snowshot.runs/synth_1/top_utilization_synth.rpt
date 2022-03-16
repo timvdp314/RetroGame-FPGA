@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar  9 16:26:20 2022
-| Host         : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
+| Date         : Wed Mar 16 15:39:00 2022
+| Host         : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a35tcpg236-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  883 |     0 |     20800 |  4.25 |
-|   LUT as Logic          |  883 |     0 |     20800 |  4.25 |
+| Slice LUTs*             | 1285 |     0 |     20800 |  6.18 |
+|   LUT as Logic          | 1285 |     0 |     20800 |  6.18 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  605 |     0 |     41600 |  1.45 |
-|   Register as Flip Flop |  605 |     0 |     41600 |  1.45 |
+| Slice Registers         |  717 |     0 |     41600 |  1.72 |
+|   Register as Flip Flop |  717 |     0 |     41600 |  1.72 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 165   |          Yes |           - |        Reset |
+| 197   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 440   |          Yes |       Reset |            - |
+| 520   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,15 +150,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  440 |        Flop & Latch |
-| LUT5     |  303 |                 LUT |
-| LUT6     |  294 |                 LUT |
-| LUT3     |  188 |                 LUT |
-| FDCE     |  165 |        Flop & Latch |
-| CARRY4   |  151 |          CarryLogic |
-| LUT4     |  136 |                 LUT |
-| LUT2     |  117 |                 LUT |
-| LUT1     |   23 |                 LUT |
+| FDRE     |  520 |        Flop & Latch |
+| LUT3     |  352 |                 LUT |
+| LUT6     |  333 |                 LUT |
+| LUT5     |  312 |                 LUT |
+| LUT2     |  288 |                 LUT |
+| CARRY4   |  273 |          CarryLogic |
+| LUT4     |  226 |                 LUT |
+| FDCE     |  197 |        Flop & Latch |
+| LUT1     |   66 |                 LUT |
 | OBUF     |   14 |                  IO |
 | IBUF     |    5 |                  IO |
 | DSP48E1  |    1 |    Block Arithmetic |
@@ -168,16 +168,16 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+--------------------+------+
-|      Ref Name      | Used |
-+--------------------+------+
-| rom_bg             |    1 |
-| clk_vga            |    1 |
-| blk_mem_snowball_1 |    1 |
-| blk_mem_santa      |    1 |
-| blk_mem_logo       |    1 |
-| blk_mem_guiseppe   |    1 |
-+--------------------+------+
++------------------+------+
+|     Ref Name     | Used |
++------------------+------+
+| clk_vga          |    1 |
+| blk_mem_snowball |    1 |
+| blk_mem_player2  |    1 |
+| blk_mem_player1  |    1 |
+| blk_mem_icecube  |    1 |
+| blk_mem_bg       |    1 |
++------------------+------+
 
 
 9. Instantiated Netlists

@@ -45,49 +45,56 @@ end rom_sprites_mux;
 
 architecture Behavioral of rom_sprites_mux is
 
-	component blk_mem_logo is
-		Port ( 
-		  clka : in STD_LOGIC;
-		  ena : in STD_LOGIC;
-		  addra : in STD_LOGIC_VECTOR ( 14 downto 0 );
-		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-		);
+	-- component blk_mem_logo is
+	-- 	Port ( 
+	-- 	  clka : in STD_LOGIC;
+	-- 	  ena : in STD_LOGIC;
+	-- 	  addra : in STD_LOGIC_VECTOR ( 14 downto 0 );
+	-- 	  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+	-- 	);
 	  
-	  end component blk_mem_logo;
+	--   end component blk_mem_logo;
 	  
-	  component blk_mem_santa is
-		Port ( 
-		  clka : in STD_LOGIC;
-		  ena : in STD_LOGIC;
-		  addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
-		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-		);
-		
-	  end component blk_mem_santa;
-	  
-	  component blk_mem_guiseppe is
+	  component blk_mem_player1 is
 		Port ( 
 		  clka : in STD_LOGIC;
 		  ena : in STD_LOGIC;
 		  addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
 		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
 		);
+	  end component blk_mem_player1;
 	  
-	  end component blk_mem_guiseppe;
+	  component blk_mem_player2 is
+		Port ( 
+		  clka : in STD_LOGIC;
+		  ena : in STD_LOGIC;
+		  addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+		);
+	  end component blk_mem_player2;
 	  
-	  component blk_mem_snowball_1 is
+	  component blk_mem_snowball is
 		Port ( 
 		  clka : in STD_LOGIC;
 		  ena : in STD_LOGIC;
 		  addra : in STD_LOGIC_VECTOR ( 8 downto 0 );
 		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
 		);
-	  
-	  end component blk_mem_snowball_1;
+	  end component blk_mem_snowball;
+
+	  component blk_mem_icecube is
+		Port ( 
+		  clka : in STD_LOGIC;
+		  ena : in STD_LOGIC;
+		  addra : in STD_LOGIC_VECTOR ( 5 downto 0 );
+		  douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+		);
+	  end component;
 
 	signal rgb_player1 : std_logic_vector(11 downto 0);
 	signal rgb_player2 : std_logic_vector(11 downto 0);
 	signal rgb_snowball : std_logic_vector(11 downto 0);
+	signal rgb_icecube : std_logic_vector(11 downto 0);
 	signal rgb_logo : std_logic_vector(11 downto 0);
 	signal rgb : std_logic_vector(11 downto 0);
 
@@ -96,29 +103,35 @@ architecture Behavioral of rom_sprites_mux is
 	
 begin
 
- L1 : blk_mem_logo port map (
-   clka => clk,
-   ena  => '1',
-   addra  => s_rom_address(14 downto 0),
-   douta  => rgb_logo );
+--  L1 : blk_mem_logo port map (
+--    clka => clk,
+--    ena  => '1',
+--    addra  => s_rom_address(14 downto 0),
+--    douta  => rgb_logo );
 
- L2 : blk_mem_santa port map (
+ L2 : blk_mem_player1 port map (
    clka => clk,
    ena => '1',
    addra => s_rom_address(11 downto 0),
    douta => rgb_player1 );
   
- L3 : blk_mem_guiseppe port map (
+ L3 : blk_mem_player2 port map (
    clka => clk,
    ena  => '1',
    addra  => s_rom_address(11 downto 0),
    douta  => rgb_player2 );
     
- L4 : blk_mem_snowball_1 port map (
+ L4 : blk_mem_snowball port map (
    clka => clk,
    ena  => '1',
    addra  => s_rom_address( 8 downto 0 ),
    douta  => rgb_snowball );
+
+ L5 : blk_mem_icecube port map (
+   clka => clk,
+   ena  => '1',
+   addra  => s_rom_address( 5 downto 0 ),
+   douta  => rgb_icecube );
 
 	process (reset, clk)
 	begin
@@ -136,6 +149,8 @@ begin
 					rgb <= rgb_player2;
 				when "011" =>
 					rgb <= rgb_snowball;
+				when "100" =>
+					rgb <= rgb_icecube;
 				when others =>
 					rgb <= x"FFF";
 			end case;

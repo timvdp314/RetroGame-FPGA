@@ -40,7 +40,7 @@ entity rom_sprites is
            clk_vga      : in STD_LOGIC; 
            reset        : in STD_LOGIC;
            countreset   : in STD_LOGIC;
-           en           : in integer range 0 to (SPRITE_COUNT - 1);
+           en           : in STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
            rom_address  : out std_logic_vector(ROM_SPRITE_BLOCKS downto 0);
            rom_pixel    : out std_logic_vector(SPRITE_SIZE_WIDTH downto 0)
            );
@@ -63,7 +63,10 @@ begin
        variable column : integer range 0 to SPRITE_HEIGHT_MAX := 0;
        variable w : integer range 0 to SPRITE_WIDTH_MAX := 0;
        variable h : integer range 0 to SPRITE_HEIGHT_MAX := 0;
+       variable wtot : integer range 0 to SPRITE_WIDTH_MAX := 0;
+       variable htot : integer range 0 to SPRITE_HEIGHT_MAX := 0;
        variable i_rom_pixel : integer range 0 to SPRITE_SIZE_MAX;
+       variable i_en : integer range 0 to SPRITE_COUNT - 1;
 
    begin
 
@@ -75,29 +78,46 @@ begin
 
    elsif ( rising_edge(clk) ) then
 
-       clk_vga_prev <= clk_vga;
-
-       rom_pixel <= std_logic_vector(to_unsigned(i_rom_pixel, 15));
-
-       w := array_sprites(en).w;
-       h := array_sprites(en).h;
-
-       row := clk_count(en) / w;
-       column := clk_count(en) mod w;
-
-       if (en > 0) then
-            if (clk_vga = '1') and (clk_vga_prev = '0') then 
-                clk_count(en) <= clk_count(en) + 1; 
+        -- Determine which sprite will be drawn
+        for I in 0 to SPRITE_COUNT - 1 loop
+            if (en(I) = '1') then
+                i_en := I;
+                exit;
+            else
+                i_en := 0;
             end if;
-            rom_address <= array_sprites(en).rom;
-            i_rom_pixel := column + row * array_sprites(en).w;
+        end loop;
+
+        clk_vga_prev <= clk_vga;
+
+       rom_pixel <= std_logic_vector(to_unsigned(i_rom_pixel, SPRITE_SIZE_WIDTH + 1));
+
+       w := array_sprites(i_en).w;
+       wtot := w * array_sprites(i_en).nx;
+
+       h := array_sprites(i_en).h;
+       htot := h * array_sprites(i_en).ny;
+
+       row := (clk_count(i_en) mod (wtot * h)) / wtot;
+       column := clk_count(i_en) mod w;
+
+       if (i_en > 0) then
+            if (clk_vga = '1') and (clk_vga_prev = '0') then 
+                for I in 0 to SPRITE_COUNT - 1 loop
+                    if (en(I) = '1') then
+                        clk_count(I) <= clk_count(I) + 1;
+                    end if;
+                end loop;
+            end if;
+            rom_address <= array_sprites(i_en).rom;
+            i_rom_pixel := column + row * w;
        else
            rom_address <= "000";
            i_rom_pixel := 0;
        end if; 
     
-       if (clk_count(en) >= (w * h) - 1) then
-           clk_count(en) <= 0;
+       if (clk_count(i_en) >= (wtot) * (htot) - 1) then
+           clk_count(i_en) <= 0;
        end if;    
 
        if (countreset = '1') then
