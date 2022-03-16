@@ -1,0 +1,53 @@
+-- constant rom_player: RomType := (
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
+--         (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
+--         (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
+--         (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
+--         (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
+--         (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
+--         (x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05"),
+--         (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
+--         (x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1B05",x"1B05",x"1B05",x"1B05",x"1B05",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
+--     );
+
+--     constant rom_player2: RomType := (
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"100F",x"100F",x"100F",x"100F",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"100F",x"100F",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
+--     );
+
+--     constant rom_snowball: RomType := (
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"1FFF",x"1FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF"),
+--         (x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF",x"0FFF")
+--     );

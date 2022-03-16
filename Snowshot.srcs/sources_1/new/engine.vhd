@@ -42,24 +42,24 @@ entity engine is
             reset : in STD_LOGIC;
             pixel_xcoord : in INTEGER range 0 to SCREEN_WIDTH;
             pixel_ycoord : in INTEGER range 0 to SCREEN_HEIGHT;
-            sprite_data : in STD_LOGIC_VECTOR( (GFX_PACKET_SIZE - 1) downto 0);
+            sprite_data : in STD_LOGIC_VECTOR(GFX_PACKET_SIZE - 1 downto 0);
             spi_confirm : in STD_LOGIC;
-            en : out INTEGER range 0 to (SPRITE_COUNT - 1);
-            rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
+            en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
+            rgb_background : out STD_LOGIC_VECTOR(PIXEL_DEPTH - 1 downto 0);
             countreset : out STD_LOGIC     
            );
 end engine;
 
 architecture Behavioral of engine is
 
-    component rom_bg is
+    component blk_mem_bg is
         Port ( 
           clka : in STD_LOGIC;
           ena : in STD_LOGIC;
           addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
           douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
         );
-    end component rom_bg;
+    end component blk_mem_bg;
 
     type struct_sprite is record
         en : std_logic;
@@ -81,10 +81,10 @@ architecture Behavioral of engine is
     impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
     begin
-        if 	(pixel_xcoord >= spr_data(id).x - ( array_sprites(id).w / 2) )  and 
-        (pixel_xcoord <  spr_data(id).x + ( array_sprites(id).w / 2) )  and 
-        (pixel_ycoord >= spr_data(id).y - ( array_sprites(id).h / 2) ) and
-        (pixel_ycoord <  spr_data(id).y + ( array_sprites(id).h / 2) ) and
+        if 	(pixel_xcoord >= spr_data(id).x - ( (array_sprites(id).w * array_sprites(id).nx) / 2) )  and 
+        (pixel_xcoord <  spr_data(id).x + ( (array_sprites(id).w * array_sprites(id).nx) / 2) )  and 
+        (pixel_ycoord >= spr_data(id).y - ( (array_sprites(id).h * array_sprites(id).ny) / 2) ) and
+        (pixel_ycoord <  spr_data(id).y + ( (array_sprites(id).h * array_sprites(id).ny) / 2) ) and
         (spr_data(id).en = '1') 
         then
             return '1';
@@ -95,7 +95,7 @@ architecture Behavioral of engine is
 
 begin
 
-    B0 : rom_bg port map ( clka => clk,
+    X0 : blk_mem_bg port map ( clka => clk,
                            ena => '1',
                            addra => bg_address, 
                            douta => rgb_background); 
@@ -128,12 +128,7 @@ begin
             end if;
             
             for I in 1 to (SPRITE_COUNT - 1) loop
-                if ( checkSprite(I) = '1' ) then
-                    en <= I;
-                    exit;
-                else
-                    en <= 0;
-                end if;
+                en(I) <= checkSprite(I);
             end loop;
 
             if (pixel_ycoord >= ymax) then

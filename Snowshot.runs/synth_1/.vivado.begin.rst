@@ -1,13 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    <Process Command="vivado.bat" Owner="timvd" Host="LAPTOP-LCHRPCJC" Pid="8472" HostCore="12" HostMemory="017041244160">
-=======
-    <Process Command="vivado.bat" Owner="busra" Host="LAPTOP-VG095PM2" Pid="8168" HostCore="8" HostMemory="08263684096">
->>>>>>> Stashed changes
-=======
-    <Process Command="vivado.bat" Owner="timvd" Host="LAPTOP-LCHRPCJC" Pid="21184" HostCore="12" HostMemory="017041244160">
->>>>>>> feature_multisprite
+    <Process Command="vivado.bat" Owner="timvd" Host="LAPTOP-LCHRPCJC" Pid="19660" HostCore="12" HostMemory="017041244160">
     </Process>
 </ProcessHandle>

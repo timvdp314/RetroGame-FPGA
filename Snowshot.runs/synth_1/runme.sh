@@ -24,11 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-<<<<<<< HEAD
-HD_PWD='C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/synth_1'
-=======
 HD_PWD='C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1'
->>>>>>> feature_multisprite
 cd "$HD_PWD"
 
 HD_LOG=runme.log

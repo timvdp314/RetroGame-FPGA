@@ -17,12 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-<<<<<<< HEAD
-set_param chipscope.maxJobs 2
-=======
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1888-LAPTOP-LCHRPCJC/incrSyn
->>>>>>> feature_multisprite
+set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4220-LAPTOP-LCHRPCJC/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -32,39 +28,6 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-<<<<<<< HEAD
-set_property webtalk.parent_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.xpr} [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
-set_property default_lib xil_defaultlib [current_project]
-set_property target_language VHDL [current_project]
-set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/ip} [current_project]
-set_property ip_cache_permissions {read write} [current_project]
-add_files c:/Users/busra/Documents/MATLAB/iceTile1.coe
-read_vhdl -library xil_defaultlib {
-<<<<<<< Updated upstream
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
-=======
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd}
->>>>>>> Stashed changes
-}
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_ooc.xdc}}]
-=======
 set_property webtalk.parent_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/wt [current_project]
 set_property parent.project_path C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
@@ -73,12 +36,17 @@ set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/coe/iceTile1.coe
+add_files C:/Xilinx/coe/santa_1.coe
+add_files C:/Xilinx/coe/santa_2.coe
+add_files C:/Xilinx/coe/snowball_v4.coe
+add_files C:/Xilinx/coe/iceTile1.coe
+add_files c:/Xilinx/coe/iceCubeTile.coe
 read_vhdl -library xil_defaultlib {
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd
-  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom.vhd
+  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites.vhd
+  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites_mux.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
@@ -88,9 +56,20 @@ set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/Ret
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc]
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_ooc.xdc]
 
-read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci
-set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg_ooc.xdc]
->>>>>>> feature_multisprite
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg_ooc.xdc]
+
+read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -100,13 +79,8 @@ set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/Ret
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-<<<<<<< HEAD
-read_xdc {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}]
-=======
 read_xdc C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc
 set_property used_in_implementation false [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
->>>>>>> feature_multisprite
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

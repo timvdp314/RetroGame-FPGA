@@ -2,60 +2,110 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Mar  2 14:26:55 2022
-# Process ID: 14136
-# Current directory: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23088 C:\Users\busra\Documents\Documenten\Leerjaar 2\Blok 7\RETROGAME_GIT\RetroGame-FPGA\Snowshot.xpr
-# Log file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/vivado.log
-# Journal file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA\vivado.jou
+# Start of session at: Wed Mar  9 19:16:49 2022
+# Process ID: 16280
+# Current directory: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7004 C:\Xilinx\Projects\RetroGame-FPGA\RetroGame-FPGA\Snowshot.xpr
+# Log file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/vivado.log
+# Journal file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.xpr}
+open_project C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/coe/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/logoSnowshot.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/logoSnowshot.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/player1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/player2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/santa_1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/santa_2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/snowball_new.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_new.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/snowball_v4.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_v4.coe] -no_script -reset -force -quiet
+remove_files  {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/coe/iceTile1.coe C:/../MATLAB/iceTile1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/iceTile1.coe C:/../MATLAB/logoSnowshot.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/logoSnowshot.coe C:/../MATLAB/player1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player1.coe C:/../MATLAB/player2.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player2.coe C:/../MATLAB/santa_1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_1.coe C:/../MATLAB/santa_2.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_2.coe C:/../MATLAB/snowball_new.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_new.coe C:/../MATLAB/snowball_v4.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_v4.coe}
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_player1 -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_player1} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_player1]
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_player1] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+launch_runs -jobs 12 blk_mem_player1_synth_1
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_player2 -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_player2} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_2.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_player2]
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_player2] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+launch_runs -jobs 12 blk_mem_player2_synth_1
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_snowball -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_snowball} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {440} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/snowball_v4.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_snowball]
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_snowball] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+launch_runs -jobs 12 blk_mem_snowball_synth_1
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_bg -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_bg} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_bg]
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_bg] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+launch_runs -jobs 12 blk_mem_bg_synth_1
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-open_hw
-connect_hw_server
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-close_hw
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
-set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/busra/Documents/MATLAB/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_0]
-generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
-generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
-catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
-export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}]
-launch_runs -jobs 8 blk_mem_gen_0_synth_1
-export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-close [ open {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_background.vhd} w ]
-add_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_background.vhd}}
+launch_runs synth_1 -jobs 12
 update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
-close_design
-reset_run synth_1
-launch_runs synth_1 -jobs 8
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe/blk_mem_guiseppe.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_guiseppe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe/blk_mem_guiseppe.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa/blk_mem_santa.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_santa C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa/blk_mem_santa.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_snowball_1 C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg
+launch_runs synth_1 -jobs 12
 wait_on_run synth_1
-synth_design -rtl -name rtl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-close_hw
