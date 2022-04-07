@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Mar 16 17:44:21 2022
+-- Date        : Thu Apr  7 17:06:27 2022
 -- Host        : DESKTOP-I3AJVKN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
+--               C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

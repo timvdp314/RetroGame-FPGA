@@ -1,0 +1,955 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr  7 13:27:09 2022
+# Process ID: 27376
+# Current directory: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12856 C:\Users\thoma\Documents\GitHub\RetroGame-FPGA\Snowshot.xpr
+# Log file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/vivado.log
+# Journal file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 765.387 ; gain = 91.652
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:28:08 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:28:53 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:31:03 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 13:31:03 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property is_enabled false [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
+set_property is_enabled true [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:33:57 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:34:51 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+reset_target all [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -sync -no_script -force -quiet
+generate_target all [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 927.160 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP blk_mem_gen_0, cache-ID = 150fffc01342baf0; cache size = 5.762 MB.
+export_ip_user_files -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci'
+export_simulation -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:35:43 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1813.258 ; gain = 570.090
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1813.258 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:38 ; elapsed = 00:00:26 . Memory (MB): peak = 1848.277 ; gain = 921.117
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1958.684 ; gain = 110.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'sound_memory_main' of component 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element pwm_counter_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1997.152 ; gain = 148.875
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2021.043 ; gain = 172.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2021.043 ; gain = 172.766
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2138.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.160 ; gain = 289.883
+22 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2138.160 ; gain = 289.883
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2138.160 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2138.160 ; gain = 0.000
+[Thu Apr  7 13:37:34 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Apr  7 13:39:33 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 13:39:33 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Apr  7 13:45:41 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Apr  7 13:50:16 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 13:50:16 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2159.723 ; gain = 21.562
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'sound_memory_main' of component 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element pwm_counter_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2184.211 ; gain = 46.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2208.098 ; gain = 69.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2208.098 ; gain = 69.938
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2293.039 ; gain = 154.879
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+CRITICAL WARNING: [HDL 9-806] Syntax error near "clk_wiz_0". [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+CRITICAL WARNING: [HDL 9-806] Syntax error near ";". [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+[Thu Apr  7 13:55:58 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2293.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'sound_memory_main' of component 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element pwm_counter_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:93]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:109]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2293.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2293.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2293.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 108 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 2314.859 ; gain = 21.820
+current_design synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 13:59:12 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' is already up-to-date
+[Thu Apr  7 14:01:40 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_shortened.coe' provided. It will be converted relative to IP Instance files '../../../../in-game-downsampled_shortened.coe'
+set_property -dict [list CONFIG.Write_Depth_A {43549} CONFIG.Coe_File {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_shortened.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_shortened.coe' provided. It will be converted relative to IP Instance files '../../../../in-game-downsampled_shortened.coe'
+generate_target all [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2343.477 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_runs -jobs 8 blk_mem_gen_0_synth_1
+[Thu Apr  7 14:28:10 2022] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run blk_mem_gen_0_synth_1
+[Thu Apr  7 14:28:21 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:28:27 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:28:32 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:28:37 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:28:47 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:28:57 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:29:08 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:29:18 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+[Thu Apr  7 14:29:33 2022] Interrupt received
+
+*** Running vivado
+    with args -log blk_mem_gen_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source blk_mem_gen_0.tcl -notrace
+Command: synth_design -top blk_mem_gen_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11880 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 731.344 ; gain = 178.223
+---------------------------------------------------------------------------------
+wait_on_run: Time (s): cpu = 00:00:17 ; elapsed = 00:01:12 . Memory (MB): peak = 2343.477 ; gain = 0.000
+INFO: [Common 17-344] 'wait_on_run' was cancelled
+wait_on_run blk_mem_gen_0_synth_1
+[Thu Apr  7 14:29:37 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:29:42 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+[Thu Apr  7 14:29:47 2022] Waiting for blk_mem_gen_0_synth_1 to finish...
+[Thu Apr  7 14:29:47 2022] Interrupt received
+
+*** Running vivado
+    with args -log blk_mem_gen_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source blk_mem_gen_0.tcl -notrace
+Command: synth_design -top blk_mem_gen_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11880 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 731.344 ; gain = 178.223
+---------------------------------------------------------------------------------
+wait_on_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 2343.477 ; gain = 0.000
+INFO: [Common 17-344] 'wait_on_run' was cancelled
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Thu Apr  7 14:29:53 2022] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/blk_mem_gen_0_synth_1/runme.log
+[Thu Apr  7 14:29:54 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Thu Apr  7 14:34:01 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Thu Apr  7 14:35:14 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 14:42:15 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2343.508 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A37940A
+open_hw_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3284.367 ; gain = 940.859
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A37940A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A37940A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 16:20:49 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 16:20:49 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 16:22:41 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 16:22:41 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3571.230 ; gain = 55.270
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'sound_memory_main' of component 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element sound_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element pwm_counter_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:92]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:108]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+WARNING: [Synth 8-3848] Net sound2 in module/entity top does not have driver. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:21]
+WARNING: [Synth 8-3331] design top has unconnected port sound2
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3596.930 ; gain = 80.969
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3620.801 ; gain = 104.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3620.801 ; gain = 104.840
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 3640.652 ; gain = 124.762
+reset_run impl_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3640.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:5' bound to instance 'sound_memory_main' of component 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element sound_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element pwm_counter_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:92]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:108]
+WARNING: [Synth 8-5787] Register clk_counter_reg in module backgroundMusic is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3640.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3640.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3640.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'music/sound_memory_main'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sound2'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'sound2'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:8]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 3640.652 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 16:24:49 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 16:24:49 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 17:00:41 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 17:00:41 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.CLKOUT2_USED {false} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.48} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {48.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {46.875} CONFIG.MMCM_CLKOUT1_DIVIDE {1} CONFIG.NUM_OUT_CLKS {1} CONFIG.CLKOUT1_JITTER {331.095} CONFIG.CLKOUT1_PHASE_ERROR {301.601} CONFIG.CLKOUT2_JITTER {379.006} CONFIG.CLKOUT2_PHASE_ERROR {269.783}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 8 clk_wiz_0_synth_1
+[Thu Apr  7 17:05:51 2022] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_gen_0 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+INFO: [Project 1-386] Moving file 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci' from fileset 'blk_mem_gen_0' to fileset 'sources_1'.
+file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/inGameMusic.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/inGameMusic.vhd
+file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/inGameMusic.vhd
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/mainMenuMusic.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/mainMenuMusic.vhd
+file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/mainMenuMusic.vhd
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:51]
+ERROR: [Synth 8-3493] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' does not have matching formal port for component port 'clk_out2' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:51]
+ERROR: [Synth 8-285] failed synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+ERROR: [Synth 8-285] failed synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:20]
+WARNING: [Synth 8-3331] design backgroundMusic has unconnected port flagMainMusic
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3686.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3711.738 ; gain = 24.867
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3711.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3711.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3711.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3711.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:7]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3714.473 ; gain = 2.734
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_ZqDxM1wr.coe] -no_script -reset -force -quiet
+remove_files  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_ZqDxM1wr.coe
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3714.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3714.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3714.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3714.473 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:7]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 3729.098 ; gain = 14.625
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/main-menu-downsampled_looped.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/main-menu-downsampled_aSixbFFo.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_shortened.coe] -no_script -reset -force -quiet
+remove_files  {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/main-menu-downsampled_looped.coe C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/main-menu-downsampled_aSixbFFo.coe c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_shortened.coe}
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3729.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'backgroundMusic' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:5' bound to instance 'music' of component 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'backgroundMusic' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'sound_clock' of component 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:5' bound to instance 'sound_memory_ingame' of component 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/realtime/blk_mem_gen_1_stub.vhdl:15]
+WARNING: [Synth 8-6014] Unused sequential element temp_music_reg was removed.  [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'backgroundMusic' (1#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'top' (2#1) [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3729.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3729.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3729.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'music/sound_clock'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'music/sound_memory_ingame'
+INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'music/sound_clock/inst'
+Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+Finished Parsing XDC File [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'music/sound_clock/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'flag'. [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc:7]
+Finished Parsing XDC File [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3731.035 ; gain = 1.938
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Apr  7 17:11:46 2022] Launched synth_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Thu Apr  7 17:11:46 2022] Launched impl_1...
+Run output will be captured here: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.

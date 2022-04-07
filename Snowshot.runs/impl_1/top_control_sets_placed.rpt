@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Mar 16 17:50:34 2022
+| Date         : Thu Apr  7 17:13:02 2022
 | Host         : DESKTOP-I3AJVKN running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              51 |           28 |
+| No           | No                    | No                     |              51 |           37 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               1 |            1 |
-| Yes          | No                    | No                     |              17 |            5 |
+| Yes          | No                    | No                     |              17 |            3 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,12 +70,12 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------+---------------+------------------+------------------+----------------+
-|        Clock Signal        | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------------------+---------------+------------------+------------------+----------------+
-|  sound_clock/inst/clk_out1 |               | p_0_in           |                1 |              1 |
-|  sound_clock/inst/clk_out1 | music_addres  |                  |                5 |             17 |
-|  sound_clock/inst/clk_out1 |               |                  |               28 |             51 |
-+----------------------------+---------------+------------------+------------------+----------------+
++----------------------------------+---------------------------------------+------------------+------------------+----------------+
+|           Clock Signal           |             Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------------------------+---------------------------------------+------------------+------------------+----------------+
+|  music/sound_clock/inst/clk_out1 |                                       | music/p_0_in     |                1 |              1 |
+|  music/sound_clock/inst/clk_out1 | music/music_addres_ingame[16]_i_1_n_0 |                  |                3 |             17 |
+|  music/sound_clock/inst/clk_out1 |                                       |                  |               37 |             51 |
++----------------------------------+---------------------------------------+------------------+------------------+----------------+
 
 

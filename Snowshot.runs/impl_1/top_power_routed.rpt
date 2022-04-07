@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Mar 16 17:51:20 2022
+| Date             : Thu Apr  7 17:13:29 2022
 | Host             : DESKTOP-I3AJVKN running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.193        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.119        |
+| Dynamic (W)              | 0.120        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      386 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      149 |     20800 |            0.72 |
-|   CARRY4       |    <0.001 |        6 |      8150 |            0.07 |
+| Slice Logic    |    <0.001 |      440 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      193 |     20800 |            0.93 |
+|   CARRY4       |    <0.001 |        9 |      8150 |            0.11 |
 |   Register     |    <0.001 |       69 |     41600 |            0.17 |
 |   F7/F8 Muxes  |    <0.001 |       32 |     32600 |            0.10 |
 |   Others       |     0.000 |      121 |       --- |             --- |
-| Signals        |    <0.001 |      413 |       --- |             --- |
+| Signals        |    <0.001 |      473 |       --- |             --- |
 | Block RAM      |    <0.001 |       29 |        50 |           58.00 |
 | MMCM           |     0.118 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |        2 |       106 |            1.89 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |
+| Vccint    |       1.000 |     0.012 |       0.001 |      0.010 |
 | Vccaux    |       1.800 |     0.078 |       0.066 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -127,13 +127,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------+-------------------------------------+-----------------+
-| Clock              | Domain                              | Constraint (ns) |
-+--------------------+-------------------------------------+-----------------+
-| clk_2048           | clk_2048                            |            10.0 |
-| clk_out1_clk_wiz_0 | sound_clock/inst/clk_out1_clk_wiz_0 |            48.8 |
-| clkfbout_clk_wiz_0 | sound_clock/inst/clkfbout_clk_wiz_0 |            50.0 |
-+--------------------+-------------------------------------+-----------------+
++--------------------+-------------------------------------------+-----------------+
+| Clock              | Domain                                    | Constraint (ns) |
++--------------------+-------------------------------------------+-----------------+
+| clk                | clk                                       |            10.0 |
+| clk_out1_clk_wiz_0 | music/sound_clock/inst/clk_out1_clk_wiz_0 |            48.8 |
+| clkfbout_clk_wiz_0 | music/sound_clock/inst/clkfbout_clk_wiz_0 |            50.0 |
++--------------------+-------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -142,12 +142,13 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------+-----------+
-| Name          | Power (W) |
-+---------------+-----------+
-| top           |     0.119 |
-|   sound_clock |     0.119 |
-|     inst      |     0.119 |
-+---------------+-----------+
++-----------------+-----------+
+| Name            | Power (W) |
++-----------------+-----------+
+| top             |     0.120 |
+|   music         |     0.120 |
+|     sound_clock |     0.119 |
+|       inst      |     0.119 |
++-----------------+-----------+
 
 

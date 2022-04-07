@@ -17,7 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-25060-DESKTOP-I3AJVKN/incrSyn
+set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/incrSyn
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -34,15 +37,18 @@ set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_ZqDxM1wr.coe
-read_vhdl -library xil_defaultlib C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
-read_ip -quiet c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+add_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_looped.coe
+read_vhdl -library xil_defaultlib {
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/backgroundMusic.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
+}
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +58,8 @@ set_property used_in_implementation false [get_files -all c:/Users/thoma/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/constr.xdc
-set_property used_in_implementation false [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/constr.xdc]
+read_xdc C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc
+set_property used_in_implementation false [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/contr.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
