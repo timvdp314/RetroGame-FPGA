@@ -53,7 +53,7 @@
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module blk_mem_icecube (
+module blk_mem_iceCube (
   clka,
   ena,
   addra,
@@ -87,8 +87,8 @@ output wire [11 : 0] douta;
     .C_ALGORITHM(1),
     .C_PRIM_TYPE(1),
     .C_LOAD_INIT_FILE(1),
-    .C_INIT_FILE_NAME("blk_mem_icecube.mif"),
-    .C_INIT_FILE("blk_mem_icecube.mem"),
+    .C_INIT_FILE_NAME("blk_mem_iceCube.mif"),
+    .C_INIT_FILE("blk_mem_iceCube.mem"),
     .C_USE_DEFAULT_DATA(0),
     .C_DEFAULT_DATA("0"),
     .C_HAS_RSTA(0),

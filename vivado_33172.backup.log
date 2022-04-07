@@ -1,0 +1,743 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Apr  2 12:28:51 2022
+# Process ID: 33172
+# Current directory: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5116 C:\Users\busra\Documents\Documenten\Leerjaar 2\Blok 7\RETROGAME_GIT_NEW\RetroGame-FPGA\Snowshot.xpr
+# Log file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/vivado.log
+# Journal file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 783.207 ; gain = 114.238
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 12:29:43 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/busra/Documents/MATLAB/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../MATLAB/iceTile1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_bg_2 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_bg_2} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/busra/Documents/MATLAB/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_bg_2]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_bg_2' to 'blk_mem_bg_2' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/busra/Documents/MATLAB/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../MATLAB/iceTile1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_bg_2'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_bg_2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_bg_2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_bg_2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_bg_2'...
+catch { config_ip_cache -export [get_ips -all blk_mem_bg_2] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}]
+launch_runs -jobs 8 blk_mem_bg_2_synth_1
+[Sat Apr  2 12:32:37 2022] Launched blk_mem_bg_2_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_bg_2_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1_1/blk_mem_bg_1.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_bg_1 {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1_1/blk_mem_bg_1.xci}}
+INFO: [Project 1-386] Moving file 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1_1/blk_mem_bg_1.xci' from fileset 'blk_mem_bg_1' to fileset 'sources_1'.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 12:34:38 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Sat Apr  2 12:34:39 2022] Launched impl_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 12:36:14 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Sat Apr  2 12:36:14 2022] Launched impl_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 12:37:36 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+[Sat Apr  2 12:37:36 2022] Launched impl_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38733A
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num1 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num1} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num1]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num1' to 'blk_mem_num1' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num1'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num1'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num1'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num1] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}]
+launch_runs -jobs 8 blk_mem_num1_synth_1
+[Sat Apr  2 12:59:17 2022] Launched blk_mem_num1_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num1_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/2.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num2 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num2} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/2.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num2]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num2' to 'blk_mem_num2' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/2.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num2'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num2'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num2] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}]
+launch_runs -jobs 8 blk_mem_num2_synth_1
+[Sat Apr  2 12:59:59 2022] Launched blk_mem_num2_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num2_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/3.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/3.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num3 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num3} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/3.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num3]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num3' to 'blk_mem_num3' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/3.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/3.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num3'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num3'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num3'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num3'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num3'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num3] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}]
+launch_runs -jobs 8 blk_mem_num3_synth_1
+[Sat Apr  2 13:01:24 2022] Launched blk_mem_num3_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num3_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/4.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num4 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num4} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/4.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num4]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num4' to 'blk_mem_num4' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/4.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num4'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num4'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num4'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num4'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num4'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num4] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}]
+launch_runs -jobs 8 blk_mem_num4_synth_1
+[Sat Apr  2 13:03:23 2022] Launched blk_mem_num4_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num4_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/5.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/5.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num5 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num5} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/5.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num5]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num5' to 'blk_mem_num5' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/5.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/5.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num5'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num5'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num5'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num5'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num5'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num5] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}]
+launch_runs -jobs 8 blk_mem_num5_synth_1
+[Sat Apr  2 13:04:07 2022] Launched blk_mem_num5_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num5_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/6.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/6.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num6 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num6} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/6.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num6]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num6' to 'blk_mem_num6' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/6.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/6.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num6'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num6'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num6'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num6'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num6'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num6] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}]
+launch_runs -jobs 8 blk_mem_num6_synth_1
+[Sat Apr  2 13:04:56 2022] Launched blk_mem_num6_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num6_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/7.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/7.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num7 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num7} CONFIG.Interface_Type {Native} CONFIG.Use_AXI_ID {false} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Assume_Synchronous_Clk {false} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Operating_Mode_A {WRITE_FIRST} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Operating_Mode_B {WRITE_FIRST} CONFIG.Enable_B {Always_Enabled} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/7.coe} CONFIG.Use_RSTB_Pin {false} CONFIG.Reset_Type {SYNC} CONFIG.Port_A_Write_Rate {0} CONFIG.Port_B_Clock {0} CONFIG.Port_B_Enable_Rate {0} CONFIG.EN_SAFETY_CKT {false}] [get_ips blk_mem_num7]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num7' to 'blk_mem_num7' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/7.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/7.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num7'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num7'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num7'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num7'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num7'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num7] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}]
+launch_runs -jobs 8 blk_mem_num7_synth_1
+[Sat Apr  2 13:07:04 2022] Launched blk_mem_num7_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num7_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/8.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/8.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num8 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num8} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/8.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num8]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num8' to 'blk_mem_num8' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/8.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/8.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num8'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num8'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num8'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num8'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num8'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num8] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}]
+launch_runs -jobs 8 blk_mem_num8_synth_1
+[Sat Apr  2 13:08:39 2022] Launched blk_mem_num8_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num8_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/9.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/9.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_num9 -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_num9} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {100} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/9.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_num9]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_num9' to 'blk_mem_num9' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/9.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/9.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_num9'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_num9'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_num9'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_num9'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_num9'...
+catch { config_ip_cache -export [get_ips -all blk_mem_num9] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}]
+launch_runs -jobs 8 blk_mem_num9_synth_1
+[Sat Apr  2 13:09:30 2022] Launched blk_mem_num9_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_num9_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/boxingGloves_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/boxingGloves_1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_boxingGloves -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_boxingGloves} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/boxingGloves_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_boxingGloves]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_boxingGloves' to 'blk_mem_boxingGloves' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/boxingGloves_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/boxingGloves_1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_boxingGloves'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_boxingGloves'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_boxingGloves'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_boxingGloves'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_boxingGloves'...
+catch { config_ip_cache -export [get_ips -all blk_mem_boxingGloves] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}]
+launch_runs -jobs 8 blk_mem_boxingGloves_synth_1
+[Sat Apr  2 13:12:02 2022] Launched blk_mem_boxingGloves_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_boxingGloves_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/forceBoost_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/forceBoost_1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_forceBoost -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_forceBoost} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/forceBoost_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_forceBoost]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_forceBoost' to 'blk_mem_forceBoost' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/forceBoost_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/forceBoost_1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_forceBoost'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_forceBoost'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_forceBoost'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_forceBoost'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_forceBoost'...
+catch { config_ip_cache -export [get_ips -all blk_mem_forceBoost] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}]
+launch_runs -jobs 8 blk_mem_forceBoost_synth_1
+[Sat Apr  2 13:13:02 2022] Launched blk_mem_forceBoost_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_forceBoost_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/invincibility_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/invincibility_1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_invincibility -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_invincibility} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {400} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/invincibility_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_invincibility]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_invincibility' to 'blk_mem_invincibility' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/invincibility_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/invincibility_1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_invincibility'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_invincibility'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_invincibility'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_invincibility'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_invincibility'...
+catch { config_ip_cache -export [get_ips -all blk_mem_invincibility] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}]
+launch_runs -jobs 8 blk_mem_invincibility_synth_1
+[Sat Apr  2 13:14:22 2022] Launched blk_mem_invincibility_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_invincibility_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/life.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/life.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_life -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_life} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {144} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/life.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_life]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_life' to 'blk_mem_life' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/life.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/life.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_life'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_life'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_life'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_life'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_life'...
+catch { config_ip_cache -export [get_ips -all blk_mem_life] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}]
+launch_runs -jobs 8 blk_mem_life_synth_1
+[Sat Apr  2 13:15:36 2022] Launched blk_mem_life_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_life_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_back.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_back.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_1_back -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_1_back} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2184} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa1_back.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_1_back]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_1_back' to 'blk_mem_santa_1_back' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_back.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_back.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_1_back'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_1_back'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_1_back'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_1_back'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_1_back'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_1_back] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}]
+launch_runs -jobs 8 blk_mem_santa_1_back_synth_1
+[Sat Apr  2 13:17:59 2022] Launched blk_mem_santa_1_back_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_1_back_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_left.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_left.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_1_left -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_1_left} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2080} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa1_left.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_1_left]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_1_left' to 'blk_mem_santa_1_left' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_left.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_left.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_1_left'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_1_left'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_1_left'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_1_left'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_1_left'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_1_left] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}]
+launch_runs -jobs 8 blk_mem_santa_1_left_synth_1
+[Sat Apr  2 13:19:49 2022] Launched blk_mem_santa_1_left_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_1_left_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_right.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_right.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_1_right -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_1_right} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {1976} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa1_right.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_1_right]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_1_right' to 'blk_mem_santa_1_right' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa1_right.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa1_right.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_1_right'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_1_right'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_1_right'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_1_right'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_1_right'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_1_right] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}]
+launch_runs -jobs 8 blk_mem_santa_1_right_synth_1
+[Sat Apr  2 13:21:00 2022] Launched blk_mem_santa_1_right_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_1_right_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_back.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_back.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_2_back -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_2_back} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2184} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa2_back.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_2_back]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_2_back' to 'blk_mem_santa_2_back' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_back.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_back.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_2_back'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_2_back'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_2_back'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_2_back'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_2_back'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_2_back] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}]
+launch_runs -jobs 8 blk_mem_santa_2_back_synth_1
+[Sat Apr  2 13:22:33 2022] Launched blk_mem_santa_2_back_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_2_back_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_left.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_left.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_2_left -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_2_left} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2080} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa2_left.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_2_left]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_2_left' to 'blk_mem_santa_2_left' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_left.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_left.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_2_left'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_2_left'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_2_left'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_2_left'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_2_left'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_2_left] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}]
+launch_runs -jobs 8 blk_mem_santa_2_left_synth_1
+[Sat Apr  2 13:23:54 2022] Launched blk_mem_santa_2_left_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_2_left_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_right.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_right.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa_2_right -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa_2_right} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {1976} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa2_right.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa_2_right]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa_2_right' to 'blk_mem_santa_2_right' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa2_right.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa2_right.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa_2_right'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa_2_right'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa_2_right'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa_2_right'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa_2_right'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa_2_right] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}]
+launch_runs -jobs 8 blk_mem_santa_2_right_synth_1
+[Sat Apr  2 13:25:06 2022] Launched blk_mem_santa_2_right_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa_2_right_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa_1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa1_front -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa1_front} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa1_front]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa1_front' to 'blk_mem_santa1_front' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa_1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa1_front'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa1_front'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa1_front'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa1_front'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa1_front'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa1_front] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}]
+launch_runs -jobs 8 blk_mem_santa1_front_synth_1
+[Sat Apr  2 14:59:07 2022] Launched blk_mem_santa1_front_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa1_front_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa_2.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_santa2_front -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_santa2_front} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_2.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_santa2_front]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_santa2_front' to 'blk_mem_santa2_front' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/santa_2.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_santa2_front'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_santa2_front'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_santa2_front'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_santa2_front'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_santa2_front'...
+catch { config_ip_cache -export [get_ips -all blk_mem_santa2_front] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2386.746 ; gain = 0.000
+launch_runs -jobs 8 blk_mem_santa2_front_synth_1
+[Sat Apr  2 15:01:22 2022] Launched blk_mem_santa2_front_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_santa2_front_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/snowball_v4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/snowball_v4.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_snowball -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_snowball} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {440} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/snowball_v4.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_snowball]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_snowball' to 'blk_mem_snowball' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/snowball_v4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/snowball_v4.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_snowball'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_snowball'...
+catch { config_ip_cache -export [get_ips -all blk_mem_snowball] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2413.066 ; gain = 0.000
+launch_runs -jobs 8 blk_mem_snowball_synth_1
+[Sat Apr  2 15:04:37 2022] Launched blk_mem_snowball_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_snowball_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/iceTile1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_bg -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_bg} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_bg]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_bg' to 'blk_mem_bg' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/iceTile1.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_bg'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_bg'...
+catch { config_ip_cache -export [get_ips -all blk_mem_bg] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}]
+create_ip_run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2413.547 ; gain = 0.000
+launch_runs -jobs 8 blk_mem_bg_synth_1
+[Sat Apr  2 15:10:04 2022] Launched blk_mem_bg_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_bg_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceCubeTile.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/iceCubeTile.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_iceCube -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_iceCube} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {64} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/iceCubeTile.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_iceCube]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_iceCube' to 'blk_mem_iceCube' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceCubeTile.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/iceCubeTile.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_iceCube'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_iceCube'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_iceCube'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_iceCube'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_iceCube'...
+catch { config_ip_cache -export [get_ips -all blk_mem_iceCube] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}]
+create_ip_run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2482.156 ; gain = 0.000
+launch_runs -jobs 8 blk_mem_iceCube_synth_1
+[Sat Apr  2 15:12:56 2022] Launched blk_mem_iceCube_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_iceCube_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_bg_2 {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci}}
+INFO: [Project 1-386] Moving file 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2/blk_mem_bg_2.xci' from fileset 'blk_mem_bg_2' to fileset 'sources_1'.
+remove_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2482.156 ; gain = 0.000
+file delete -force {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_2}
+export_ip_user_files -of_objects  [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube_1/blk_mem_icecube_1.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_icecube_1 {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube_1/blk_mem_icecube_1.xci}}
+INFO: [Project 1-386] Moving file 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube_1/blk_mem_icecube_1.xci' from fileset 'blk_mem_icecube_1' to fileset 'sources_1'.
+remove_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2482.156 ; gain = 0.000
+file delete -force {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube_1}
+export_ip_user_files -of_objects  [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1/blk_mem_player_1.xci}}
+file delete -force {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_1}
+export_ip_user_files -of_objects  [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2/blk_mem_player_2.xci}}
+file delete -force {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player_2}
+export_ip_user_files -of_objects  [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_snowball_1 {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci}}
+INFO: [Project 1-386] Moving file 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci' from fileset 'blk_mem_snowball_1' to fileset 'sources_1'.
+file delete -force {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/logoSnowshot.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/logoSnowshot.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_logo -dir {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {blk_mem_logo} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {17200} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/logoSnowshot.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_logo]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_logo' to 'blk_mem_logo' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/logoSnowshot.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../Xilinx/coe/logoSnowshot.coe'
+generate_target {instantiation_template} [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_logo'...
+generate_target all [get_files  {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_logo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_logo'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_logo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_logo'...
+catch { config_ip_cache -export [get_ips -all blk_mem_logo] }
+export_ip_user_files -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}]
+launch_runs -jobs 8 blk_mem_logo_synth_1
+[Sat Apr  2 15:25:09 2022] Launched blk_mem_logo_synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_logo_synth_1/runme.log
+export_simulation -of_objects [get_files {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}] -directory {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files} -ipstatic_source_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 15:31:07 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Sat Apr  2 15:33:31 2022] Launched synth_1...
+Run output will be captured here: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.dcp' for cell 'X0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.dcp' for cell 'X1/X0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.dcp' for cell 'X3/L1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.dcp' for cell 'X3/L10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.dcp' for cell 'X3/L11'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.dcp' for cell 'X3/L12'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.dcp' for cell 'X3/L13'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.dcp' for cell 'X3/L14'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.dcp' for cell 'X3/L15'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.dcp' for cell 'X3/L16'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.dcp' for cell 'X3/L17'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.dcp' for cell 'X3/L18'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.dcp' for cell 'X3/L19'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.dcp' for cell 'X3/L2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.dcp' for cell 'X3/L20'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.dcp' for cell 'X3/L21'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.dcp' for cell 'X3/L22'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.dcp' for cell 'X3/L23'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.dcp' for cell 'X3/L24'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.dcp' for cell 'X3/L3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.dcp' for cell 'X3/L4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.dcp' for cell 'X3/L5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.dcp' for cell 'X3/L6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.dcp' for cell 'X3/L7'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.dcp' for cell 'X3/L8'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.dcp' for cell 'X3/L9'
+INFO: [Netlist 29-17] Analyzing 325 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, X0/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'X0/clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'X0/inst'
+Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc:57]
+get_clocks: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 3484.711 ; gain = 532.488
+Finished Parsing XDC File [c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'X0/inst'
+Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+Finished Parsing XDC File [C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3484.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3561.266 ; gain = 1066.605
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  4 10:48:25 2022...

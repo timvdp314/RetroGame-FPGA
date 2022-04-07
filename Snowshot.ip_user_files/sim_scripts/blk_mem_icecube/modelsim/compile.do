@@ -20,7 +20,7 @@ vlog -work blk_mem_gen_v8_4_3 -64 -incr \
 "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
 
 vlog -work xil_defaultlib -64 -incr \
-"../../../../Snowshot.srcs/sources_1/ip/blk_mem_icecube/sim/blk_mem_icecube.v" \
+"../../../../Snowshot.srcs/sources_1/ip/blk_mem_iceCube/sim/blk_mem_iceCube.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

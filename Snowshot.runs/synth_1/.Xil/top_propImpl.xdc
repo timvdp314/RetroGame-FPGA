@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc rfile:../../../Snowshot.srcs/constrs_1/new/cnst.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc} rfile:../../../Snowshot.srcs/constrs_1/new/cnst.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

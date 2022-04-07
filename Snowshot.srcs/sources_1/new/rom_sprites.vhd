@@ -88,7 +88,7 @@ begin
             end if;
         end loop;
 
-        clk_vga_prev <= clk_vga;
+       clk_vga_prev <= clk_vga;
 
        rom_pixel <= std_logic_vector(to_unsigned(i_rom_pixel, SPRITE_SIZE_WIDTH + 1));
 
@@ -112,7 +112,7 @@ begin
             rom_address <= array_sprites(i_en).rom;
             i_rom_pixel := column + row * w;
        else
-           rom_address <= "000";
+           rom_address <= "00000";
            i_rom_pixel := 0;
        end if; 
     

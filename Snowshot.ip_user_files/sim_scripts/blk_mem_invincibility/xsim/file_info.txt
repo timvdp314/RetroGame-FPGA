@@ -1,0 +1,2 @@
+blk_mem_invincibility.v,verilog,xil_defaultlib,../../../../Snowshot.srcs/sources_1/ip/blk_mem_invincibility/sim/blk_mem_invincibility.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

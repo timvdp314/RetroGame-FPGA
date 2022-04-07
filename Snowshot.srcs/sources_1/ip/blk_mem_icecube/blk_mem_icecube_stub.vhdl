@@ -1,18 +1,18 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Mar 16 14:37:08 2022
--- Host        : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube_stub.vhdl
--- Design      : blk_mem_icecube
+-- Date        : Sat Apr  2 15:14:20 2022
+-- Host        : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok
+--               7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube_stub.vhdl}
+-- Design      : blk_mem_iceCube
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity blk_mem_icecube is
+entity blk_mem_iceCube is
   Port ( 
     clka : in STD_LOGIC;
     ena : in STD_LOGIC;
@@ -20,9 +20,9 @@ entity blk_mem_icecube is
     douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
   );
 
-end blk_mem_icecube;
+end blk_mem_iceCube;
 
-architecture stub of blk_mem_icecube is
+architecture stub of blk_mem_iceCube is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;

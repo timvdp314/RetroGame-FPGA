@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Mar  9 19:22:35 2022
--- Host        : LAPTOP-LCHRPCJC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_sim_netlist.vhdl
+-- Date        : Sat Apr  2 15:06:18 2022
+-- Host        : LAPTOP-VG095PM2 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok
+--               7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_sim_netlist.vhdl}
 -- Design      : blk_mem_snowball
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_icecube_synth_1'
+HD_PWD='C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_iceCube_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log blk_mem_icecube.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_icecube.tcl
+EAStep vivado -log blk_mem_iceCube.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_iceCube.tcl

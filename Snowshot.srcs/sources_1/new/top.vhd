@@ -42,6 +42,7 @@ entity top is
            spi_mosi : in STD_LOGIC;
            spi_cc0 : in STD_LOGIC;
            spi_cc1 : in STD_LOGIC;
+           transition : in STD_LOGIC;
            rgb : out STD_LOGIC_VECTOR ( (PIXEL_DEPTH - 1) downto 0);
            hsync : out STD_LOGIC;
            vsync : out STD_LOGIC);
@@ -75,7 +76,10 @@ component engine is
             spi_confirm : in STD_LOGIC;
             en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
             rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-            countreset : out STD_LOGIC          
+            countreset : out STD_LOGIC    
+--            rgb_transition : out STD_LOGIC_VECTOR(11 downto 0) := "0011"
+--															   &  "0011"
+--															   &  "0011"        
            );
 end component;
 
@@ -95,7 +99,7 @@ component rom_sprites is
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
           en           : in STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
-          rom_address  : out std_logic_vector(2 downto 0);
+          rom_address  : out std_logic_vector(4 downto 0);
           rom_pixel    : out std_logic_vector(SPRITE_SIZE_WIDTH downto 0)
           );
 end component;
@@ -104,7 +108,7 @@ end component;
 component rom_sprites_mux is
     Port  (   clk : in std_logic;
               reset : in std_logic;
-              rom_address : in std_logic_vector(2 downto 0);
+              rom_address : in std_logic_vector(4 downto 0);
               rom_pixel : in std_logic_vector(SPRITE_SIZE_WIDTH downto 0);
               ergb : out std_logic_vector(12 downto 0)
     );
@@ -121,6 +125,7 @@ component vga is
 			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
 			rgb_out : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			hsync, vsync : out STD_LOGIC
+			--transition_en : in STD_LOGIC 
 			);
 end component;
 
@@ -132,12 +137,14 @@ signal s_spi_confirm : STD_LOGIC;
 
 signal s_ergb : STD_LOGIC_VECTOR(12 downto 0);
 signal s_rgb_background : STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-signal s_rom_address : STD_LOGIC_VECTOR(2 downto 0);
+signal s_rom_address : STD_LOGIC_VECTOR(4 downto 0);
 signal s_rom_pixel : STD_LOGIC_VECTOR(SPRITE_SIZE_WIDTH downto 0);
 signal s_pixel_xcoord : INTEGER range 0 to SCREEN_WIDTH;
 signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;
 signal s_en : STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
 signal s_countreset : STD_LOGIC;
+
+signal s_transition : STD_LOGIC;
 
 begin
 
@@ -191,6 +198,7 @@ begin
 					 pixel_ycoord => s_pixel_ycoord,
 					 rgb_out => rgb,
 					 hsync => hsync,
+				--	 transition_en => s_transition,
 					 vsync => vsync);
 
 

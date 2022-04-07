@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="blk_mem_icecube_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1647437758">
-  <File Type="PA-TCL" Name="blk_mem_icecube.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="blk_mem_icecube_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="blk_mem_icecube_reports.tcl"/>
-  <File Type="RDS-RDS" Name="blk_mem_icecube.vds"/>
-  <File Type="RDS-UTIL" Name="blk_mem_icecube_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="blk_mem_icecube_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="blk_mem_icecube.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="blk_mem_icecube_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="blk_mem_icecube_timing_summary_synth.pb"/>
-  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_icecube">
-    <File Path="$PSRCDIR/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci">
+<GenRun Id="blk_mem_iceCube_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1648905176">
+  <File Type="PA-TCL" Name="blk_mem_iceCube.tcl"/>
+  <File Type="REPORTS-TCL" Name="blk_mem_iceCube_reports.tcl"/>
+  <File Type="RDS-RDS" Name="blk_mem_iceCube.vds"/>
+  <File Type="RDS-UTIL" Name="blk_mem_iceCube_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="blk_mem_iceCube_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="blk_mem_iceCube.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_iceCube">
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -18,12 +15,12 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TopModule" Val="blk_mem_icecube"/>
+      <Option Name="TopModule" Val="blk_mem_iceCube"/>
       <Option Name="UseBlackboxStub" Val="1"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_icecube">
-    <File Path="$PSRCDIR/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci">
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_iceCube">
+    <File Path="$PSRCDIR/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -31,7 +28,7 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TopModule" Val="blk_mem_icecube"/>
+      <Option Name="TopModule" Val="blk_mem_iceCube"/>
       <Option Name="UseBlackboxStub" Val="1"/>
     </Config>
   </FileSet>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_bg_synth_1'
+HD_PWD='C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/blk_mem_bg_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

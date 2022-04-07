@@ -46,7 +46,8 @@ entity engine is
             spi_confirm : in STD_LOGIC;
             en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
             rgb_background : out STD_LOGIC_VECTOR(PIXEL_DEPTH - 1 downto 0);
-            countreset : out STD_LOGIC     
+          --  en_transition : in STD_LOGIC;
+            countreset : out STD_LOGIC							   															
            );
 end engine;
 
@@ -60,6 +61,7 @@ architecture Behavioral of engine is
           douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
         );
     end component blk_mem_bg;
+    
 
     type struct_sprite is record
         en : std_logic;
@@ -77,10 +79,13 @@ architecture Behavioral of engine is
     signal bg_address : std_logic_vector(11 downto 0);
     signal bg_x : integer range 0 to BG_WIDTH;
     signal bg_y : integer range 0 to BG_HEIGHT;
+    
+ 
 
     impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
     begin
+
         if 	(pixel_xcoord >= spr_data(id).x - ( (array_sprites(id).w * array_sprites(id).nx) / 2) )  and 
         (pixel_xcoord <  spr_data(id).x + ( (array_sprites(id).w * array_sprites(id).nx) / 2) )  and 
         (pixel_ycoord >= spr_data(id).y - ( (array_sprites(id).h * array_sprites(id).ny) / 2) ) and
@@ -98,14 +103,19 @@ begin
     X0 : blk_mem_bg port map ( clka => clk,
                            ena => '1',
                            addra => bg_address, 
-                           douta => rgb_background); 
+                           douta => rgb_background);
+                           
 
     process (clk, reset)
 
         variable spr_id : integer range 0 to 127;
-
-        variable x : integer range 0 to 50; 
-        variable y : integer range 0 to 50; 
+        
+        
+        
+       --    XMIN := XMIN + 10;      
+       --    XMAX := XMIN - 10;
+       --    YMIN := XMIN + 10;
+       --    YMAX := XMIN - 10;
 
     begin
 
@@ -113,10 +123,23 @@ begin
         
         elsif ( rising_edge(clk) ) then
 
+           
+            --if (pixel_ycoord = SCREEN_HEIGHT) then
+             
+              
+--                if( XMIN < pixel_xcoord) and  (pixel_xcoord< XMAX) and (YMAX < pixel_ycoord) and (pixel_ycoord < YMIN) then
+--                     rgb_transition : STD_LOGIC_VECTOR(11 downto 0) := "000"
+--                                                                        &  "0011"
+--                                                                        &  "0011";
+
+
+
+
             bg_x <= pixel_xcoord mod BG_WIDTH;
             bg_y <= pixel_ycoord mod BG_HEIGHT;
 
-            bg_address <= std_logic_vector (to_unsigned (bg_y * BG_WIDTH + bg_x,  bg_address'length));
+            bg_address <=  std_logic_vector (to_unsigned (bg_y * BG_WIDTH + bg_x,  bg_address'length));   
+               
 
             spr_id := to_integer( unsigned(sprite_data(26 downto 20)) );
             spr_data_temp(spr_id).x <= to_integer( unsigned(sprite_data(9 downto 0)) );

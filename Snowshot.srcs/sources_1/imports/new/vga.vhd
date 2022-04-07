@@ -36,6 +36,7 @@ architecture Behavioral of vga is
 	-- Horizontal and vertical counters
 	signal hcount : integer range 0 to SCREEN_WIDTH;
 	signal vcount : integer range 0 to SCREEN_HEIGHT;
+	
 
 begin
 
@@ -53,10 +54,12 @@ begin
 		pixel_ycoord <= vcount;
 
 		if (hcount >= XMIN) and (hcount < XMAX) and (vcount >= YMIN) and (vcount < YMAX) then
-			 if (rgb_en = '1') then
+			 if (rgb_en = '1') then --and (transition_en = '0') then
         	 	rgb_out <= rgb_data;
-			 else
+			 else -- (rgb_en = '1') --and (transition_en = '0') then
 			 	rgb_out <= rgb_background;
+			-- else 
+			--     rgb_out <= rgb_transition;
 			 end if;
 	    else 
 		-- Turn off rgb once outside display area

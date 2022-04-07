@@ -60,33 +60,50 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4220-LAPTOP-LCHRPCJC/incrSyn
+  set_param chipscope.maxJobs 2
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/wt [current_project]
-  set_property parent.project_path C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.xpr [current_project]
-  set_property ip_output_repo C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/top.dcp
-  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
-  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci
-  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci
-  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci
-  read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci
-  read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci
-  read_xdc C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc
+  add_files -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1/top.dcp}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}
+  read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}
+  read_xdc {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

@@ -52,7 +52,7 @@
 -- The following code must appear in the VHDL architecture header.
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
-COMPONENT blk_mem_icecube
+COMPONENT blk_mem_iceCube
   PORT (
     clka : IN STD_LOGIC;
     ena : IN STD_LOGIC;
@@ -66,7 +66,7 @@ END COMPONENT;
 -- body. Substitute your own instance name and net names.
 
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
-your_instance_name : blk_mem_icecube
+your_instance_name : blk_mem_iceCube
   PORT MAP (
     clka => clka,
     ena => ena,
@@ -75,7 +75,7 @@ your_instance_name : blk_mem_icecube
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 
--- You must compile the wrapper file blk_mem_icecube.vhd when simulating
--- the core, blk_mem_icecube. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file blk_mem_iceCube.vhd when simulating
+-- the core, blk_mem_iceCube. When compiling the wrapper file, be sure to
 -- reference the VHDL simulation library.
 

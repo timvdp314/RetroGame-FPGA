@@ -1,0 +1,213 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Mar  9 19:16:49 2022
+# Process ID: 16280
+# Current directory: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7004 C:\Xilinx\Projects\RetroGame-FPGA\RetroGame-FPGA\Snowshot.xpr
+# Log file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/vivado.log
+# Journal file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT/RetroGame-FPGA' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/player1.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/player1.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/player2.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/player2.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/logoSnowshot.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/logoSnowshot.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/snowball_new.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/snowball_new.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/iceTile1.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/iceTile1.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/santa_1.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/santa_1.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/santa_2.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/santa_2.coe'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/../MATLAB/snowball_v4.coe', nor could it be found using path 'C:/Users/busra/Documents/MATLAB/snowball_v4.coe'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 779.285 ; gain = 118.477
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/coe/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/iceTile1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/logoSnowshot.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/logoSnowshot.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/player1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/player2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/santa_1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_1.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/santa_2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_2.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/snowball_new.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_new.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/../MATLAB/snowball_v4.coe] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_v4.coe] -no_script -reset -force -quiet
+remove_files  {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/coe/iceTile1.coe C:/../MATLAB/iceTile1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/iceTile1.coe C:/../MATLAB/logoSnowshot.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/logoSnowshot.coe C:/../MATLAB/player1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player1.coe C:/../MATLAB/player2.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/player2.coe C:/../MATLAB/santa_1.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_1.coe C:/../MATLAB/santa_2.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/santa_2.coe C:/../MATLAB/snowball_new.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_new.coe C:/../MATLAB/snowball_v4.coe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/MATLAB/snowball_v4.coe}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/santa_1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_player1 -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_player1} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_player1]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_player1' to 'blk_mem_player1' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/santa_1.coe'
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_player1'...
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_player1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_player1'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_player1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_player1'...
+catch { config_ip_cache -export [get_ips -all blk_mem_player1] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci]
+launch_runs -jobs 12 blk_mem_player1_synth_1
+[Wed Mar  9 19:19:45 2022] Launched blk_mem_player1_synth_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_player1_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player1/blk_mem_player1.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/santa_2.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_player2 -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_player2} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2496} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/santa_2.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_player2]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_player2' to 'blk_mem_player2' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/santa_2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/santa_2.coe'
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_player2'...
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_player2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_player2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_player2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_player2'...
+catch { config_ip_cache -export [get_ips -all blk_mem_player2] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci]
+launch_runs -jobs 12 blk_mem_player2_synth_1
+[Wed Mar  9 19:20:32 2022] Launched blk_mem_player2_synth_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_player2_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_player2/blk_mem_player2.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+can't use empty string as operand of "*"
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/snowball_v4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/snowball_v4.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_snowball -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_snowball} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {440} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/snowball_v4.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_snowball]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_snowball' to 'blk_mem_snowball' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/snowball_v4.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/snowball_v4.coe'
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_snowball'...
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_snowball'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_snowball'...
+catch { config_ip_cache -export [get_ips -all blk_mem_snowball] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci]
+launch_runs -jobs 12 blk_mem_snowball_synth_1
+[Wed Mar  9 19:21:20 2022] Launched blk_mem_snowball_synth_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_snowball_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/iceTile1.coe'
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_bg -dir c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {blk_mem_bg} CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {2500} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Xilinx/coe/iceTile1.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_bg]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'blk_mem_bg' to 'blk_mem_bg' is not allowed and is ignored.
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Xilinx/coe/iceTile1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../coe/iceTile1.coe'
+generate_target {instantiation_template} [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_bg'...
+generate_target all [get_files  c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_bg'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_bg'...
+catch { config_ip_cache -export [get_ips -all blk_mem_bg] }
+export_ip_user_files -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci]
+launch_runs -jobs 12 blk_mem_bg_synth_1
+[Wed Mar  9 19:22:09 2022] Launched blk_mem_bg_synth_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_bg_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci] -directory C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'rom_bg'...
+ERROR: [Ipptcl 7-519] NULL COE Data pointer: Unable to open the file 
+ERROR: [Common 17-39] 'ipgui::get_coe_val' failed due to earlier errors.
+CRITICAL WARNING: [IP_Flow 19-1747] Failed to deliver file 'c:/Xilinx/Vivado/2019.1/data/ip/xilinx/blk_mem_gen_v8_4/hdl/mem_init_file.xit': ERROR: [Common 17-39] 'ipgui::get_coe_val' failed due to earlier errors.
+
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3505] IP Generation error: Failed to generate IP 'rom_bg'. Failed to generate 'Vivado VHDL Synthesis' outputs: 
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to generate IP 'rom_bg'. Failed to generate 'Vivado VHDL Synthesis' outputs: 
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe/blk_mem_guiseppe.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_guiseppe C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe/blk_mem_guiseppe.xci
+INFO: [Project 1-386] Moving file 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe/blk_mem_guiseppe.xci' from fileset 'blk_mem_guiseppe' to fileset 'sources_1'.
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_guiseppe
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa/blk_mem_santa.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_santa C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa/blk_mem_santa.xci
+INFO: [Project 1-386] Moving file 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa/blk_mem_santa.xci' from fileset 'blk_mem_santa' to fileset 'sources_1'.
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_snowball_1 C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci
+INFO: [Project 1-386] Moving file 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1/blk_mem_snowball_1.xci' from fileset 'blk_mem_snowball_1' to fileset 'sources_1'.
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball_1
+export_ip_user_files -of_objects  [get_files C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci] -no_script -reset -force -quiet
+remove_files  C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg/rom_bg.xci
+file delete -force C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/rom_bg
+launch_runs synth_1 -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Wed Mar  9 19:24:24 2022] Launched synth_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci' is already up-to-date
+[Wed Mar  9 19:25:17 2022] Launched impl_1...
+Run output will be captured here: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A38950A
+set_property PROGRAM.FILE {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  9 19:27:37 2022...
