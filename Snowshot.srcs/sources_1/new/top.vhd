@@ -42,7 +42,7 @@ entity top is
            spi_mosi : in STD_LOGIC;
            spi_cc0 : in STD_LOGIC;
            spi_cc1 : in STD_LOGIC;
-           transition : in STD_LOGIC;
+           enab_transition : in STD_LOGIC;
            rgb : out STD_LOGIC_VECTOR ( (PIXEL_DEPTH - 1) downto 0);
            hsync : out STD_LOGIC;
            vsync : out STD_LOGIC);
@@ -76,10 +76,10 @@ component engine is
             spi_confirm : in STD_LOGIC;
             en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
             rgb_background : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-            countreset : out STD_LOGIC    
---            rgb_transition : out STD_LOGIC_VECTOR(11 downto 0) := "0011"
---															   &  "0011"
---															   &  "0011"        
+            countreset : out STD_LOGIC;
+            rgb_transition : out STD_LOGIC_VECTOR(11 downto 0);
+            en_transition : in STD_LOGIC
+                         
            );
 end component;
 
@@ -124,8 +124,9 @@ component vga is
 			pixel_xcoord : out INTEGER range 0 to SCREEN_WIDTH; 
 			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
 			rgb_out : out STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-			hsync, vsync : out STD_LOGIC
-			--transition_en : in STD_LOGIC 
+			hsync, vsync : out STD_LOGIC;
+			rgb_transition : in STD_LOGIC_VECTOR(11 downto 0);
+			enable_transition : in STD_LOGIC
 			);
 end component;
 
@@ -144,7 +145,7 @@ signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;
 signal s_en : STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
 signal s_countreset : STD_LOGIC;
 
-signal s_transition : STD_LOGIC;
+signal s_transition : STD_LOGIC_VECTOR(11 downto 0);
 
 begin
 
@@ -173,7 +174,9 @@ begin
                         spi_confirm => s_spi_confirm,
                         rgb_background => s_rgb_background,
                         en => s_en,
-                        countreset => s_countreset);
+                        countreset => s_countreset,
+                        rgb_transition => s_transition, 
+                        en_transition=> enab_transition );
 
 	X2: rom_sprites port map(clk => clk,
                      clk_vga => s_clk_vga,
@@ -193,13 +196,13 @@ begin
 					 reset => reset,
 					 rgb_data => s_ergb(11 downto 0),
                      rgb_background => s_rgb_background,
+                     rgb_transition => s_transition,
+                     enable_transition => enab_transition,
 					 rgb_en => s_ergb(12),
 					 pixel_xcoord => s_pixel_xcoord,
 					 pixel_ycoord => s_pixel_ycoord,
 					 rgb_out => rgb,
 					 hsync => hsync,
-				--	 transition_en => s_transition,
 					 vsync => vsync);
-
 
 end Behavioral;

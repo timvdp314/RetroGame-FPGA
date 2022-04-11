@@ -23,6 +23,8 @@ entity vga is
             reset : in STD_LOGIC;
 			rgb_data : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
 			rgb_background : in STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
+			rgb_transition : in STD_LOGIC_VECTOR(11 downto 0);
+			enable_transition : in STD_LOGIC;
 			rgb_en : in STD_LOGIC;
 			pixel_xcoord : out INTEGER range 0 to SCREEN_WIDTH; 
 			pixel_ycoord : out INTEGER range 0 to SCREEN_HEIGHT;
@@ -54,13 +56,14 @@ begin
 		pixel_ycoord <= vcount;
 
 		if (hcount >= XMIN) and (hcount < XMAX) and (vcount >= YMIN) and (vcount < YMAX) then
-			 if (rgb_en = '1') then --and (transition_en = '0') then
+			 if (rgb_en = '1') and (enable_transition = '0') then
         	 	rgb_out <= rgb_data;
-			 else -- (rgb_en = '1') --and (transition_en = '0') then
+	         elsif (rgb_en = '0') and (enable_transition = '0')  then
 			 	rgb_out <= rgb_background;
-			-- else 
-			--     rgb_out <= rgb_transition;
+		    else 
+			    rgb_out <= rgb_transition;
 			 end if;
+	   
 	    else 
 		-- Turn off rgb once outside display area
 			rgb_out <= (others => '0');

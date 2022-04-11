@@ -63,7 +63,7 @@ add_files C:/Xilinx/coe/snowball_v4.coe
 add_files C:/Xilinx/coe/iceTile1.coe
 add_files C:/Xilinx/coe/iceCubeTile.coe
 add_files C:/Xilinx/coe/logoSnowshot.coe
-add_files c:/Xilinx/coe/transition.coe
+add_files C:/Xilinx/coe/transition.coe
 read_vhdl -library xil_defaultlib {
   {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd}
   {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd}

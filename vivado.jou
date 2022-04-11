@@ -2,13 +2,104 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  7 17:34:29 2022
-# Process ID: 7200
+# Start of session at: Mon Apr 11 09:20:45 2022
+# Process ID: 3400
 # Current directory: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17556 C:\Users\busra\Documents\Documenten\Leerjaar 2\Blok 7\RETROGAME_GIT_NEW\RetroGame-FPGA\Snowshot.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1980 C:\Users\busra\Documents\Documenten\Leerjaar 2\Blok 7\RETROGAME_GIT_NEW\RetroGame-FPGA\Snowshot.xpr
 # Log file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/vivado.log
 # Journal file: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.xpr}
 update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw

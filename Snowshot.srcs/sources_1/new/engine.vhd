@@ -46,7 +46,8 @@ entity engine is
             spi_confirm : in STD_LOGIC;
             en : out STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
             rgb_background : out STD_LOGIC_VECTOR(PIXEL_DEPTH - 1 downto 0);
-          --  en_transition : in STD_LOGIC;
+            rgb_transition : out STD_LOGIC_VECTOR(11 downto 0);
+            en_transition : in STD_LOGIC;
             countreset : out STD_LOGIC							   															
            );
 end engine;
@@ -80,7 +81,18 @@ architecture Behavioral of engine is
     signal bg_x : integer range 0 to BG_WIDTH;
     signal bg_y : integer range 0 to BG_HEIGHT;
     
- 
+    signal x1 : integer := 144;
+    signal x2 : integer := 784;
+    signal y1 : integer := 31;
+    signal y2 : integer := 511;
+    
+    signal signalPrev : std_logic;
+    signal signalCurrent : std_logic;
+    signal counterTransition : integer;
+    
+    constant rgb_tran : STD_LOGIC_VECTOR(11 downto 0) := "0011"
+													  &  "0011"
+													  &  "0011";
 
     impure function checkSprite(id : integer range 0 to (SPRITE_COUNT - 1) )
               return std_logic is
@@ -111,36 +123,45 @@ begin
         variable spr_id : integer range 0 to 127;
         
         
-        
-       --    XMIN := XMIN + 10;      
-       --    XMAX := XMIN - 10;
-       --    YMIN := XMIN + 10;
-       --    YMAX := XMIN - 10;
-
-    begin
+          begin
 
         if (reset = '1') then
         
         elsif ( rising_edge(clk) ) then
-
+        
+           signalPrev <= signalCurrent;
+           signalCurrent <= en_transition;
            
-            --if (pixel_ycoord = SCREEN_HEIGHT) then
-             
+            if (signalCurrent = '1' and signalPrev = '0') then
+            
+            -- hier scherm helemaal zwart
+              x1 <= 144;
+              x2  <= 784;
+              y1  <= 31;
+              y2  <= 511;
               
---                if( XMIN < pixel_xcoord) and  (pixel_xcoord< XMAX) and (YMAX < pixel_ycoord) and (pixel_ycoord < YMIN) then
---                     rgb_transition : STD_LOGIC_VECTOR(11 downto 0) := "000"
---                                                                        &  "0011"
---                                                                        &  "0011";
-
-
-
-
+             counterTransition <= 0;
+             end if;
+              
+            if (counterTransition < 30) then
+              counterTransition <= counterTransition + 1;
+             x1  <= x1 + 10;
+             x2  <= x2 - 10;
+             y1  <= y1 + 10;
+             y2  <= y2 - 10;
+              
+             end if;
+                                 
             bg_x <= pixel_xcoord mod BG_WIDTH;
             bg_y <= pixel_ycoord mod BG_HEIGHT;
 
             bg_address <=  std_logic_vector (to_unsigned (bg_y * BG_WIDTH + bg_x,  bg_address'length));   
+                      
+            if( x1 < pixel_xcoord) and  (pixel_xcoord< x2) and (y1 < pixel_ycoord) and (pixel_ycoord < y2) then
+                    rgb_transition <= rgb_tran; 
+            end if;
                
-
+               
             spr_id := to_integer( unsigned(sprite_data(26 downto 20)) );
             spr_data_temp(spr_id).x <= to_integer( unsigned(sprite_data(9 downto 0)) );
             spr_data_temp(spr_id).y <= to_integer( unsigned(sprite_data(19 downto 10)) );

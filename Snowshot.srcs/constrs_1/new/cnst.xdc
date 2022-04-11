@@ -38,3 +38,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports spi_cc1]
 set_property IOSTANDARD LVCMOS33 [get_ports spi_cc0]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
 set_property IOSTANDARD LVCMOS33 [get_ports hsync]
+
+
+set_property PACKAGE_PIN A15 [get_ports enab_transition]
+set_property IOSTANDARD LVCMOS33 [get_ports enab_transition]
