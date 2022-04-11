@@ -2,65 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Apr 11 11:15:58 2022
-# Process ID: 9152
+# Start of session at: Mon Apr 11 11:33:47 2022
+# Process ID: 17952
 # Current directory: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25152 C:\Users\thoma\Documents\GitHub\RetroGame-FPGA\Snowshot.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26180 C:\Users\thoma\Documents\GitHub\RetroGame-FPGA\Snowshot.xpr
 # Log file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/vivado.log
 # Journal file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.xpr
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num1 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num2 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num3 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num4 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num5 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num6 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num7 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num8 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8
-export_ip_user_files -of_objects  [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci] -no_script -reset -force -quiet
-remove_files  -fileset blk_mem_num9 C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci
-file delete -force C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9
-create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
-set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {116975} CONFIG.Read_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_looped.coe} CONFIG.Port_A_Write_Rate {0}] [get_ips blk_mem_gen_0]
-generate_target {instantiation_template} [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
-generate_target all [get_files  c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
-catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
-export_ip_user_files -of_objects [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
-launch_runs -jobs 8 blk_mem_gen_0_synth_1
-export_simulation -of_objects [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci] -directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-close [ open C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/background_music.vhd w ]
-add_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/background_music.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.48} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {48.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {46.875} CONFIG.CLKOUT1_JITTER {331.095} CONFIG.CLKOUT1_PHASE_ERROR {301.601}] [get_ips clk_wiz_0]
-generate_target {instantiation_template} [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-generate_target all [get_files  c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
-export_ip_user_files -of_objects [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
-launch_runs -jobs 8 clk_wiz_0_synth_1
-export_simulation -of_objects [get_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files -ipstatic_source_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/modelsim} {questa=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/questa} {riviera=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/riviera} {activehdl=C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1

@@ -31,6 +31,7 @@ set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+<<<<<<< HEAD
 add_files C:/MATLAB/santa_1.coe
 add_files C:/MATLAB/santa_2.coe
 add_files C:/MATLAB/snowball_v4.coe
@@ -89,6 +90,39 @@ add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/iceCubeTile.coe
 add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/logoSnowshot.coe
 add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/transition.coe
 add_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_looped.coe
+=======
+add_files C:/Users/busra/Documents/MATLAB/santa_1.coe
+add_files C:/Users/busra/Documents/MATLAB/santa_2.coe
+add_files C:/Users/busra/Documents/MATLAB/snowball_v4.coe
+add_files C:/Users/busra/Documents/MATLAB/iceCubeTile.coe
+add_files C:/Users/busra/Documents/MATLAB/iceTile1.coe
+add_files C:/Xilinx/coe/1.coe
+add_files C:/Xilinx/coe/2.coe
+add_files C:/Xilinx/coe/3.coe
+add_files C:/Xilinx/coe/4.coe
+add_files C:/Xilinx/coe/5.coe
+add_files C:/Xilinx/coe/6.coe
+add_files C:/Xilinx/coe/7.coe
+add_files C:/Xilinx/coe/8.coe
+add_files C:/Xilinx/coe/9.coe
+add_files C:/Xilinx/coe/boxingGloves_1.coe
+add_files C:/Xilinx/coe/forceBoost_1.coe
+add_files C:/Xilinx/coe/invincibility_1.coe
+add_files C:/Xilinx/coe/life.coe
+add_files C:/Xilinx/coe/santa1_back.coe
+add_files C:/Xilinx/coe/santa1_left.coe
+add_files C:/Xilinx/coe/santa1_right.coe
+add_files C:/Xilinx/coe/santa2_back.coe
+add_files C:/Xilinx/coe/santa2_left.coe
+add_files C:/Xilinx/coe/santa2_right.coe
+add_files C:/Xilinx/coe/santa_1.coe
+add_files C:/Xilinx/coe/santa_2.coe
+add_files C:/Xilinx/coe/snowball_v4.coe
+add_files C:/Xilinx/coe/iceTile1.coe
+add_files C:/Xilinx/coe/iceCubeTile.coe
+add_files C:/Xilinx/coe/logoSnowshot.coe
+add_files C:/Xilinx/coe/transition.coe
+>>>>>>> acd9166b2a9cb141ff7222061f1ff92844f2da1e
 read_vhdl -library xil_defaultlib {
   C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/background_music.vhd
   C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd

@@ -2,9 +2,15 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+<<<<<<< HEAD
 # Start of session at: Mon Apr 11 11:29:10 2022
 # Process ID: 25716
 # Current directory: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1
+=======
+# Start of session at: Mon Apr 11 11:00:13 2022
+# Process ID: 12600
+# Current directory: C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.runs/synth_1
+>>>>>>> acd9166b2a9cb141ff7222061f1ff92844f2da1e
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1/top.vds
 # Journal file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/synth_1\vivado.jou
