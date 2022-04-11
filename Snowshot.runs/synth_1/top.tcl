@@ -17,142 +17,149 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/wt [current_project]
+set_property parent.project_path C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo {c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files C:/Users/busra/Documents/MATLAB/santa_1.coe
-add_files C:/Users/busra/Documents/MATLAB/santa_2.coe
-add_files C:/Users/busra/Documents/MATLAB/snowball_v4.coe
-add_files C:/Users/busra/Documents/MATLAB/iceCubeTile.coe
-add_files C:/Users/busra/Documents/MATLAB/iceTile1.coe
-add_files C:/Xilinx/coe/1.coe
-add_files C:/Xilinx/coe/2.coe
-add_files C:/Xilinx/coe/3.coe
-add_files C:/Xilinx/coe/4.coe
-add_files C:/Xilinx/coe/5.coe
-add_files C:/Xilinx/coe/6.coe
-add_files C:/Xilinx/coe/7.coe
-add_files C:/Xilinx/coe/8.coe
-add_files C:/Xilinx/coe/9.coe
-add_files C:/Xilinx/coe/boxingGloves_1.coe
-add_files C:/Xilinx/coe/forceBoost_1.coe
-add_files C:/Xilinx/coe/invincibility_1.coe
-add_files C:/Xilinx/coe/life.coe
-add_files C:/Xilinx/coe/santa1_back.coe
-add_files C:/Xilinx/coe/santa1_left.coe
-add_files C:/Xilinx/coe/santa1_right.coe
-add_files C:/Xilinx/coe/santa2_back.coe
-add_files C:/Xilinx/coe/santa2_left.coe
-add_files C:/Xilinx/coe/santa2_right.coe
-add_files C:/Xilinx/coe/santa_1.coe
-add_files C:/Xilinx/coe/santa_2.coe
-add_files C:/Xilinx/coe/snowball_v4.coe
-add_files C:/Xilinx/coe/iceTile1.coe
-add_files C:/Xilinx/coe/iceCubeTile.coe
-add_files C:/Xilinx/coe/logoSnowshot.coe
-add_files c:/Xilinx/coe/transition.coe
+add_files C:/MATLAB/santa_1.coe
+add_files C:/MATLAB/santa_2.coe
+add_files C:/MATLAB/snowball_v4.coe
+add_files C:/MATLAB/iceCubeTile.coe
+add_files C:/MATLAB/iceTile1.coe
+add_files C:/../../../Xilinx/coe/1.coe
+add_files C:/../../../Xilinx/coe/2.coe
+add_files C:/../../../Xilinx/coe/3.coe
+add_files C:/../../../Xilinx/coe/4.coe
+add_files C:/../../../Xilinx/coe/5.coe
+add_files C:/../../../Xilinx/coe/6.coe
+add_files C:/../../../Xilinx/coe/7.coe
+add_files C:/../../../Xilinx/coe/8.coe
+add_files C:/../../../Xilinx/coe/9.coe
+add_files C:/../../../Xilinx/coe/boxingGloves_1.coe
+add_files C:/../../../Xilinx/coe/forceBoost_1.coe
+add_files C:/../../../Xilinx/coe/invincibility_1.coe
+add_files C:/../../../Xilinx/coe/life.coe
+add_files C:/../../../Xilinx/coe/santa1_back.coe
+add_files C:/../../../Xilinx/coe/santa1_left.coe
+add_files C:/../../../Xilinx/coe/santa1_right.coe
+add_files C:/../../../Xilinx/coe/santa2_back.coe
+add_files C:/../../../Xilinx/coe/santa2_left.coe
+add_files C:/../../../Xilinx/coe/santa2_right.coe
+add_files C:/../../../Xilinx/coe/santa_1.coe
+add_files C:/../../../Xilinx/coe/santa_2.coe
+add_files C:/../../../Xilinx/coe/snowball_v4.coe
+add_files C:/../../../Xilinx/coe/iceTile1.coe
+add_files C:/../../../Xilinx/coe/iceCubeTile.coe
+add_files C:/../../../Xilinx/coe/logoSnowshot.coe
+add_files C:/../../../Xilinx/coe/transition.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/2.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/3.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/4.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/5.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/6.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/7.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/8.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/9.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/boxingGloves_1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/forceBoost_1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/invincibility_1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/life.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa1_back.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa1_left.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa1_right.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa2_back.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa2_left.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa2_right.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa_1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/santa_2.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/snowball_v4.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/iceTile1.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/iceCubeTile.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/logoSnowshot.coe
+add_files C:/Users/thoma/Documents/GitHub/Xilinx/coe/transition.coe
+add_files c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/in-game-downsampled_looped.coe
 read_vhdl -library xil_defaultlib {
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites_mux.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd}
-  {C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd}
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/background_music.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/engine.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/rom_sprites_mux.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/spi0.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/imports/new/vga.vhd
+  C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/new/top.vhd
 }
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_vga/clk_vga_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num1/blk_mem_num1_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num2/blk_mem_num2_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num3/blk_mem_num3_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num4/blk_mem_num4_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num5/blk_mem_num5_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num6/blk_mem_num6_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num7/blk_mem_num7_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num8/blk_mem_num8_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_num9/blk_mem_num9_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_boxingGloves/blk_mem_boxingGloves_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_forceBoost/blk_mem_forceBoost_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_invincibility/blk_mem_invincibility_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_back/blk_mem_santa_1_back_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_left/blk_mem_santa_1_left_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_1_right/blk_mem_santa_1_right_ooc.xdc}}]
+read_ip -quiet C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_back/blk_mem_santa_2_back_ooc.xdc}}]
+read_ip -quiet c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_left/blk_mem_santa_2_left_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa_2_right/blk_mem_santa_2_right_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_front/blk_mem_santa1_front_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_front/blk_mem_santa2_front_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_snowball/blk_mem_snowball_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg/blk_mem_bg_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_iceCube/blk_mem_iceCube_ooc.xdc}}]
-
-read_ip -quiet {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_logo/blk_mem_logo_ooc.xdc}}]
+read_ip -quiet c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -162,8 +169,8 @@ set_property used_in_implementation false [get_files -all {{c:/Users/busra/Docum
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/busra/Documents/Documenten/Leerjaar 2/Blok 7/RETROGAME_GIT_NEW/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc}}]
+read_xdc C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc
+set_property used_in_implementation false [get_files C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.srcs/constrs_1/new/cnst.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

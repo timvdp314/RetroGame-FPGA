@@ -185,86 +185,86 @@ architecture Behavioral of rom_sprites_mux is
       );
     end component blk_mem_santa_2_right;
     
-    component blk_mem_num1 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num1;
+--    component blk_mem_num1 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num1;
     
-    component blk_mem_num2 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num2;
+--    component blk_mem_num2 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num2;
     
-    component blk_mem_num3 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num3;
+--    component blk_mem_num3 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num3;
     
-    component blk_mem_num4 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num4;
+--    component blk_mem_num4 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num4;
     
-    component blk_mem_num5 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num5;
+--    component blk_mem_num5 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num5;
     
-    component blk_mem_num6 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num6;
+--    component blk_mem_num6 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num6;
     
-    component blk_mem_num7 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num7;
+--    component blk_mem_num7 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num7;
     
-    component blk_mem_num8 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num8;
+--    component blk_mem_num8 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num8;
     
-    component blk_mem_num9 is
-      Port ( 
-        clka : in STD_LOGIC;
-        ena : in STD_LOGIC;
-        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
-        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
-      );
-    end component blk_mem_num9;
+--    component blk_mem_num9 is
+--      Port ( 
+--        clka : in STD_LOGIC;
+--        ena : in STD_LOGIC;
+--        addra : in STD_LOGIC_VECTOR ( 6 downto 0 );
+--        douta : out STD_LOGIC_VECTOR ( 11 downto 0 )
+--      );
+--    end component blk_mem_num9;
     
 	signal rgb_num1 : std_logic_vector(11 downto 0);
 	signal rgb_num2 : std_logic_vector(11 downto 0);
@@ -390,59 +390,59 @@ begin
         addra => s_rom_address ( 10 downto 0 ),
         douta => rgb_santa2_right );
         
-  L16: blk_mem_num1 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num1 );
+--  L16: blk_mem_num1 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num1 );
 
-  L17: blk_mem_num2 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num2 );
+--  L17: blk_mem_num2 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num2 );
           
-  L18: blk_mem_num3 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num3 );
+--  L18: blk_mem_num3 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num3 );
                   
-  L19: blk_mem_num4 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num4 );
+--  L19: blk_mem_num4 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num4 );
                
-  L20: blk_mem_num5 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num5 );
+--  L20: blk_mem_num5 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num5 );
         
-  L21: blk_mem_num6 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num6 );
+--  L21: blk_mem_num6 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num6 );
                
-  L22: blk_mem_num7 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num7 );
+--  L22: blk_mem_num7 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num7 );
                
-  L23: blk_mem_num8 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num8 );
+--  L23: blk_mem_num8 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num8 );
               
-  L24: blk_mem_num9 port map ( 
-        clka => clk,
-        ena => '1',
-        addra => s_rom_address ( 6 downto 0 ),
-        douta => rgb_num9 );
+--  L24: blk_mem_num9 port map ( 
+--        clka => clk,
+--        ena => '1',
+--        addra => s_rom_address ( 6 downto 0 ),
+--        douta => rgb_num9 );
 
 
 	process (reset, clk)

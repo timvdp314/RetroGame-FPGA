@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1649345187">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1649669346">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -15,6 +15,12 @@
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/background_music.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -275,6 +281,168 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Xilinx/coe/1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/3.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/4.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/5.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/6.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/7.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/8.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/9.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/boxingGloves_1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/forceBoost_1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/invincibility_1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/life.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa1_back.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa1_left.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa1_right.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa2_back.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa2_left.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa2_right.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa_1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/santa_2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/snowball_v4.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/iceTile1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/iceCubeTile.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/logoSnowshot.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Xilinx/coe/transition.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/in-game-downsampled_looped.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -304,29 +472,22 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num9"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_logo"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num1"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_1_right"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num2"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_2_right"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num3"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa1_front"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num4"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa2_front"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num5"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_iceCube"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num6"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num7"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_num8"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_boxingGloves"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_forceBoost"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_invincibility"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_1_right"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_life"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_1_left"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_1_back"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_2_left"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_1_left"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_2_back"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_2_left"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa_2_right"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa1_front"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa2_front"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_snowball"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_bg"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_iceCube"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_logo"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

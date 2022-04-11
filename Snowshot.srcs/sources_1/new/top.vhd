@@ -45,7 +45,8 @@ entity top is
            transition : in STD_LOGIC;
            rgb : out STD_LOGIC_VECTOR ( (PIXEL_DEPTH - 1) downto 0);
            hsync : out STD_LOGIC;
-           vsync : out STD_LOGIC);
+           vsync : out STD_LOGIC;
+           sound : out STD_LOGIC);
 end top;
 
 architecture Behavioral of top is
@@ -129,6 +130,12 @@ component vga is
 			);
 end component;
 
+component backgroundMusic is
+    Port(
+        clk_100 : in STD_LOGIC;
+        sound_music : out STD_LOGIC
+    );
+end component backgroundMusic;
 
 signal s_clk_vga : STD_LOGIC;
 signal s_spi_sck : STD_LOGIC;
@@ -200,6 +207,8 @@ begin
 					 hsync => hsync,
 				--	 transition_en => s_transition,
 					 vsync => vsync);
+
+    music : backgroundMusic port map(clk_100 => clk, sound_music => sound); 
 
 
 end Behavioral;
