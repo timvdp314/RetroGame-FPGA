@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr  7 15:39:54 2022
+# Process ID: 3404
+# Current directory: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_santa2_right_synth_1
+# Command line: vivado.exe -log blk_mem_santa2_right.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_santa2_right.tcl
+# Log file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_santa2_right_synth_1/blk_mem_santa2_right.vds
+# Journal file: C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.runs/blk_mem_santa2_right_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_santa2_right.tcl -notrace

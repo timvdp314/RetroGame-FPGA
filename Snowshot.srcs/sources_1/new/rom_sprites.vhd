@@ -112,7 +112,7 @@ begin
             rom_address <= array_sprites(i_en).rom;
             i_rom_pixel := column + row * w;
        else
-           rom_address <= "000";
+           rom_address <= (others => '0');
            i_rom_pixel := 0;
        end if; 
     

@@ -95,7 +95,7 @@ component rom_sprites is
           reset        : in STD_LOGIC;
           countreset   : in STD_LOGIC;
           en           : in STD_LOGIC_VECTOR (SPRITE_COUNT - 1 downto 0);
-          rom_address  : out std_logic_vector(2 downto 0);
+          rom_address  : out std_logic_vector(ROM_SPRITE_BLOCKS downto 0);
           rom_pixel    : out std_logic_vector(SPRITE_SIZE_WIDTH downto 0)
           );
 end component;
@@ -104,7 +104,7 @@ end component;
 component rom_sprites_mux is
     Port  (   clk : in std_logic;
               reset : in std_logic;
-              rom_address : in std_logic_vector(2 downto 0);
+              rom_address : in std_logic_vector(ROM_SPRITE_BLOCKS downto 0);
               rom_pixel : in std_logic_vector(SPRITE_SIZE_WIDTH downto 0);
               ergb : out std_logic_vector(12 downto 0)
     );
@@ -132,7 +132,7 @@ signal s_spi_confirm : STD_LOGIC;
 
 signal s_ergb : STD_LOGIC_VECTOR(12 downto 0);
 signal s_rgb_background : STD_LOGIC_VECTOR( (PIXEL_DEPTH - 1) downto 0);
-signal s_rom_address : STD_LOGIC_VECTOR(2 downto 0);
+signal s_rom_address : STD_LOGIC_VECTOR(ROM_SPRITE_BLOCKS downto 0);
 signal s_rom_pixel : STD_LOGIC_VECTOR(SPRITE_SIZE_WIDTH downto 0);
 signal s_pixel_xcoord : INTEGER range 0 to SCREEN_WIDTH;
 signal s_pixel_ycoord : INTEGER range 0 to SCREEN_HEIGHT;

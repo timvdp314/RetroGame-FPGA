@@ -18,10 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/timvd/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4220-LAPTOP-LCHRPCJC/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -40,7 +37,15 @@ add_files C:/Xilinx/coe/santa_1.coe
 add_files C:/Xilinx/coe/santa_2.coe
 add_files C:/Xilinx/coe/snowball_v4.coe
 add_files C:/Xilinx/coe/iceTile1.coe
-add_files c:/Xilinx/coe/iceCubeTile.coe
+add_files C:/Xilinx/coe/iceCubeTile.coe
+add_files C:/Xilinx/coe/santa1_right.coe
+add_files C:/Xilinx/coe/santa1_left.coe
+add_files C:/Xilinx/coe/santa1_back.coe
+add_files C:/Xilinx/coe/santa2_right.coe
+add_files C:/Xilinx/coe/santa2_left.coe
+add_files C:/Xilinx/coe/santa2_back.coe
+add_files C:/Xilinx/coe/life.coe
+add_files c:/Xilinx/coe/play.coe
 read_vhdl -library xil_defaultlib {
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/clk_sync.vhd
   C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/new/constants.vhd
@@ -68,8 +73,29 @@ set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/Ret
 read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg.xci
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_bg_1/blk_mem_bg_ooc.xdc]
 
-read_ip -quiet c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube.xci
 set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_icecube/blk_mem_icecube_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_right/blk_mem_santa1_right.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_right/blk_mem_santa1_right_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_left/blk_mem_santa1_left.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_left/blk_mem_santa1_left_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_back/blk_mem_santa1_back.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa1_back/blk_mem_santa1_back_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_right/blk_mem_santa2_right.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_right/blk_mem_santa2_right_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_left/blk_mem_santa2_left.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_left/blk_mem_santa2_left_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_back/blk_mem_santa2_back.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_santa2_back/blk_mem_santa2_back_ooc.xdc]
+
+read_ip -quiet C:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life.xci
+set_property used_in_implementation false [get_files -all c:/Xilinx/Projects/RetroGame-FPGA/RetroGame-FPGA/Snowshot.srcs/sources_1/ip/blk_mem_life/blk_mem_life_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

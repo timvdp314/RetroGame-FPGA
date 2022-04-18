@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1647441492">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1650121719">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -119,6 +119,54 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../coe/santa1_right.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/santa1_left.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/santa1_back.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/santa2_right.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/santa2_left.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/santa2_back.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/life.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../coe/play.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
@@ -150,7 +198,14 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_icecube"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_player1"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa1_right"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_player2"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa2_right"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa1_left"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa1_back"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_snowball"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_bg"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa2_back"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_santa2_left"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_life"/>
 </GenRun>
