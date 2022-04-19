@@ -18,11 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/.Xil/Vivado-27376-DESKTOP-I3AJVKN/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a35tcpg236-1

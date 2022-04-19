@@ -52,8 +52,7 @@ begin
     pwm_process_main: process(signal_clk_ingame) is
         variable temp_music : STD_LOGIC_VECTOR(7 downto 0) := std_logic_vector(to_unsigned(16#80#, 8));
     begin
-    
-        if (rising_edge(signal_clk_ingame) ) then
+        if (rising_edge(signal_clk_ingame)) then
             if unsigned(music_data_ingame) = 0 then
                 temp_music := std_logic_vector(to_unsigned(16#80#, 8));
             else

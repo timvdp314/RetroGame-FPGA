@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  7 17:05:54 2022
-# Process ID: 6252
+# Start of session at: Tue Apr 19 11:17:19 2022
+# Process ID: 17480
 # Current directory: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/clk_wiz_0_synth_1
 # Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
 # Log file: C:/Users/thoma/Documents/GitHub/RetroGame-FPGA/Snowshot.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
